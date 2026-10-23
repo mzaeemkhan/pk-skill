@@ -1,0 +1,6 @@
+{
+  "name": "hec-info",
+  "description": "Search HEC-recognized universities in Pakistan — filter by province, sector (public/private), discipline (medical, engineering, etc). 116 universities, offline database from hec.gov.pk.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: hec-info\ndescription: HEC-recognized universities in Pakistan — search, filter by province/sector/discipline. Offline database.\nlicense: MIT\nmetadata:\n  category: education\n  locale: en-PK\n  phase: v1"
+}

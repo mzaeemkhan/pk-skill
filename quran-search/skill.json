@@ -1,0 +1,6 @@
+{
+  "name": "quran-search",
+  "description": "Quran verse lookup, keyword search, and surah listing via alquran.cloud API. Arabic text, English (Sahih International) and Urdu (Jalandhry) translations. No API key needed.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: quran-search\ndescription: Quran verse lookup, search, and surah listing via alquran.cloud. Arabic + English + Urdu. No API key.\nlicense: MIT\nmetadata:\n  category: religious\n  locale: en-PK\n  phase: v1"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "pcb-cricket",
+  "description": "Live cricket scores, upcoming matches, recent results, and Pakistan team schedule via ESPN Cricinfo. All international and domestic cricket. Free, no API key.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pcb-cricket\ndescription: Live cricket scores, upcoming matches, results, Pakistan schedule via ESPN. No API key needed.\nlicense: MIT\nmetadata:\n  category: sports\n  locale: en-PK\n  phase: v1"
+}

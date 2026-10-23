@@ -1,0 +1,6 @@
+{
+  "name": "ppra-tenders",
+  "description": "Search PPRA (Public Procurement Regulatory Authority) active tenders, tender history, and tender details for Pakistan federal government procurement. Filter by keyword, category, sector, city.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: ppra-tenders\ndescription: Search Pakistan federal government procurement tenders — active tenders, history, details. Filter by keyword, category, sector, city.\nlicense: MIT\nmetadata:\n  category: government\n  locale: en-PK\n  phase: v1"
+}

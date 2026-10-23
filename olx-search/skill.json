@@ -1,0 +1,6 @@
+{
+  "name": "olx-search",
+  "description": "Search OLX Pakistan classifieds — buy/sell anything. Prices, locations, categories. Free, no API key.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: olx-search\ndescription: Search OLX Pakistan classifieds for listings with prices, locations, categories. No API key.\nlicense: MIT\nmetadata:\n  category: shopping\n  locale: en-PK\n  phase: v1"
+}

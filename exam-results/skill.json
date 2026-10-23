@@ -1,0 +1,6 @@
+{
+  "name": "exam-results",
+  "description": "PPSC and FPSC exam results — written/final results from Punjab and Federal Public Service Commissions. Live data from ppsc.gop.pk and fpsc.gov.pk.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: exam-results\ndescription: PPSC and FPSC exam results — written and final results from public service commissions.\nlicense: MIT\nmetadata:\n  category: education\n  locale: en-PK\n  phase: v1"
+}

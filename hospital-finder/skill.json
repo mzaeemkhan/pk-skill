@@ -1,0 +1,6 @@
+{
+  "name": "hospital-finder",
+  "description": "Find hospitals, clinics, pharmacies, dentists in Pakistani cities. Search by city or GPS coordinates. Powered by OpenStreetMap Nominatim.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: hospital-finder\ndescription: Find hospitals, clinics, pharmacies in Pakistani cities via OpenStreetMap.\nlicense: MIT\nmetadata:\n  category: health\n  locale: en-PK\n  phase: v1"
+}

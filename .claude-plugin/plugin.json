@@ -1,6 +1,6 @@
 {
   "name": "pk-skill",
-  "description": "Pakistan daily-life skills for coding agents — railways, flights, buses, utility bills, weather, prayer times, currency rates, prize bonds, parcel tracking",
+  "description": "Pakistan daily-life skills for coding agents — railways, flights, buses, utility bills, weather, prayer times, currency rates, prize bonds, parcel tracking, government tenders, stocks, gold prices, shopping, real estate, news, cricket, education, healthcare, Quran, mosques, Urdu tools",
   "version": "1.0.0",
   "author": {
     "name": "mzaeemkhan"
@@ -17,6 +17,21 @@
     "./prayer-times",
     "./currency-rates",
     "./prize-bonds",
-    "./pakistan-post"
+    "./pakistan-post",
+    "./ppra-tenders",
+    "./zameen-search",
+    "./psx-stocks",
+    "./gold-prices",
+    "./pcb-cricket",
+    "./daraz-search",
+    "./pakwheels-search",
+    "./olx-search",
+    "./pakistan-news",
+    "./quran-search",
+    "./mosque-finder",
+    "./urdu-tools",
+    "./hec-info",
+    "./exam-results",
+    "./hospital-finder"
   ]
 }

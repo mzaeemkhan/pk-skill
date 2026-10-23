@@ -1,0 +1,6 @@
+{
+  "name": "zameen-search",
+  "description": "Search Zameen.com property listings — buy, rent, or plot search across 14 Pakistan cities. Filter by price, bedrooms, area. Structured data from LD+JSON. Free, no API key.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: zameen-search\ndescription: Search Zameen.com property listings — buy, rent, plot across 14 Pakistan cities with price and bedroom filters. No API key needed.\nlicense: MIT\nmetadata:\n  category: real-estate\n  locale: en-PK\n  phase: v1"
+}

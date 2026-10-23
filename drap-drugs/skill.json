@@ -1,0 +1,6 @@
+{
+  "name": "drap-drugs",
+  "description": "DRAP drug registry lookup — UNSUPPORTED. drap.gov.pk is unreachable from automated tools. Placeholder for future implementation.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: drap-drugs\ndescription: DRAP drug registry — UNSUPPORTED (site unreachable). Placeholder.\nlicense: MIT\nmetadata:\n  category: health\n  locale: en-PK\n  phase: unsupported"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "daraz-search",
+  "description": "Search Daraz.pk products — Pakistan's largest e-commerce platform. Prices, ratings, sellers, discounts. Free, no API key.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: daraz-search\ndescription: Search Daraz.pk for products with prices, ratings, discounts, and seller info. No API key.\nlicense: MIT\nmetadata:\n  category: shopping\n  locale: en-PK\n  phase: v1"
+}

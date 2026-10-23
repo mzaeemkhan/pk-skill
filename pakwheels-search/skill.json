@@ -1,0 +1,6 @@
+{
+  "name": "pakwheels-search",
+  "description": "Search PakWheels.com used cars — Pakistan's largest automotive marketplace. Prices, specs, locations. Free, no API key.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakwheels-search\ndescription: Search PakWheels.com used cars with prices, specs, and seller locations. No API key.\nlicense: MIT\nmetadata:\n  category: shopping\n  locale: en-PK\n  phase: v1"
+}

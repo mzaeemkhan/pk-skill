@@ -1,0 +1,6 @@
+{
+  "name": "utility-bills",
+  "description": "Pakistani electricity bill lookup for all 11 WAPDA DISCOs (LESCO, FESCO, IESCO, MEPCO, PESCO, HESCO, SEPCO, QESCO, GEPCO, TESCO, HAZECO) and K-Electric. Read-only — no payment or account changes.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: utility-bills\ndescription: Pakistani electricity bill lookup for all 11 WAPDA DISCOs and K-Electric via PITC portal. Read-only — no payment or account changes.\nlicense: MIT\nmetadata:\n  category: utilities\n  locale: en-PK\n  phase: v1"
+}

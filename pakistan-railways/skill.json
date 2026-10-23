@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-railways",
+  "description": "Pakistan Railways train schedule, fare, and station lookup. Read-only — no booking, payment, or cancellation.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakistan-railways\ndescription: Pakistan Railways train schedule, fare, and station lookup. Read-only — no booking, payment, or cancellation.\nlicense: MIT\nmetadata:\n  category: travel\n  locale: en-PK\n  phase: v1"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "prize-bonds",
+  "description": "Check Pakistan National Savings prize bond draw results, latest draws, schedule, and denominations via savings.gov.pk. Read-only, no API key needed.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: prize-bonds\ndescription: Pakistan prize bond draw results, schedule, and denominations via savings.gov.pk. No API key needed.\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+}

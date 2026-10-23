@@ -1,0 +1,6 @@
+{
+  "name": "prayer-times",
+  "description": "Prayer times for 42+ Pakistani cities via Aladhan API. Today's times, monthly calendar with Hijri dates, next prayer countdown. Default: University of Islamic Sciences, Karachi method. No API key needed.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: prayer-times\ndescription: Prayer times for Pakistani cities via Aladhan API — today, monthly, next prayer. Karachi method default. No API key.\nlicense: MIT\nmetadata:\n  category: religious\n  locale: en-PK\n  phase: v1"
+}

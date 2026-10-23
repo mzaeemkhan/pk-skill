@@ -1,0 +1,6 @@
+{
+  "name": "bookme-search",
+  "description": "Bookme.pk aggregated bus search across 120+ operators. Schedules, fares, seat availability, and routes. Read-only — no booking or payment.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: bookme-search\ndescription: Bookme.pk aggregated bus search across 120+ operators. Schedules, fares, seat availability, and routes. Read-only — no booking or payment.\nlicense: MIT\nmetadata:\n  category: travel\n  locale: en-PK\n  phase: v1"
+}

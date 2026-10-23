@@ -16,16 +16,16 @@ Check electricity bills for all 11 WAPDA distribution companies (DISCOs) and K-E
 
 ```bash
 # Check bill by reference number
-node pk-skill/utility-bills/scripts/bills.mjs check --provider lesco --ref 01234567890123
+node scripts/bills.mjs check --provider lesco --ref 01234567890123
 
 # Check bill by customer ID
-node pk-skill/utility-bills/scripts/bills.mjs check --provider iesco --ref 0123456789 --by appno
+node scripts/bills.mjs check --provider iesco --ref 0123456789 --by appno
 
 # K-Electric bill
-node pk-skill/utility-bills/scripts/bills.mjs check --provider ke --ref 0123456789012
+node scripts/bills.mjs check --provider ke --ref 0123456789012
 
 # List all providers
-node pk-skill/utility-bills/scripts/bills.mjs providers
+node scripts/bills.mjs providers
 ```
 
 ## Providers

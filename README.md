@@ -16,7 +16,7 @@ npx --yes skills add mzaeemkhan/pk-skill --all -g
 npx --yes skills add mzaeemkhan/pk-skill --skill pakistan-railways -g
 ```
 
-Requires Node.js 18+ and npx. Some skills need Python 3.11+ and uv.
+Requires Node.js 18+ and npx.
 
 ## Transport Skills
 

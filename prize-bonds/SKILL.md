@@ -16,19 +16,19 @@ Check Pakistan National Savings prize bond draw results from savings.gov.pk.
 
 ```bash
 # Check if a bond number won (searches all draws)
-node pk-skill/prize-bonds/scripts/bonds.mjs check --number 123456 --denomination 750
+node scripts/bonds.mjs check --number 123456 --denomination 750
 
 # Check against a specific draw
-node pk-skill/prize-bonds/scripts/bonds.mjs check --number 123456 --denomination 750 --draw 456
+node scripts/bonds.mjs check --number 123456 --denomination 750 --draw 456
 
 # Latest draw info for a denomination
-node pk-skill/prize-bonds/scripts/bonds.mjs latest --denomination 200
+node scripts/bonds.mjs latest --denomination 200
 
 # Draw schedule for all active denominations
-node pk-skill/prize-bonds/scripts/bonds.mjs schedule
+node scripts/bonds.mjs schedule
 
 # List all denominations (active and discontinued)
-node pk-skill/prize-bonds/scripts/bonds.mjs denominations
+node scripts/bonds.mjs denominations
 ```
 
 ## Denomination Keys

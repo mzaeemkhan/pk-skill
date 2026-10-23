@@ -23,7 +23,7 @@ Read-only. No API key. No login.
 ### 1. Check a bond number
 
 ```bash
-node pk-skill/prize-bonds/scripts/bonds.mjs check --number <bond-number> --denomination <value>
+node scripts/bonds.mjs check --number <bond-number> --denomination <value>
 ```
 
 Searches all draws by default. Use `--draw <draw-id>` for a specific draw. Returns prize category, amount, draw place, draw number, and date if the bond won. Returns `found: false` if no match.
@@ -33,7 +33,7 @@ Denomination keys: `100`, `200`, `750`, `1500`, `25000p` (premium), `40000p` (pr
 ### 2. Latest draw info
 
 ```bash
-node pk-skill/prize-bonds/scripts/bonds.mjs latest --denomination <value>
+node scripts/bonds.mjs latest --denomination <value>
 ```
 
 Returns the latest draw date, draw ID, active status, total draws on record, and 8 most recent draw dates.
@@ -41,7 +41,7 @@ Returns the latest draw date, draw ID, active status, total draws on record, and
 ### 3. Draw schedule
 
 ```bash
-node pk-skill/prize-bonds/scripts/bonds.mjs schedule
+node scripts/bonds.mjs schedule
 ```
 
 Fetches latest draw dates for all active denominations. Shows the 4 most recent draws per denomination.
@@ -49,7 +49,7 @@ Fetches latest draw dates for all active denominations. Shows the 4 most recent 
 ### 4. List denominations
 
 ```bash
-node pk-skill/prize-bonds/scripts/bonds.mjs denominations
+node scripts/bonds.mjs denominations
 ```
 
 Lists all denominations (active and discontinued) with their API IDs.

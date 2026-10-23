@@ -27,7 +27,7 @@ All paths are read-only. No login, payment, complaint, or account modification.
 ### 1. Check a DISCO bill (LESCO, FESCO, IESCO, etc.)
 
 ```bash
-node pk-skill/utility-bills/scripts/bills.mjs check --provider lesco --ref 01234567890123
+node scripts/bills.mjs check --provider lesco --ref 01234567890123
 ```
 
 - `--provider`: DISCO code (lesco, fesco, iesco, mepco, pesco, hesco, sepco, qesco, gepco, tesco, hazeco)
@@ -38,7 +38,7 @@ node pk-skill/utility-bills/scripts/bills.mjs check --provider lesco --ref 01234
 ### 2. Check a K-Electric bill
 
 ```bash
-node pk-skill/utility-bills/scripts/bills.mjs check --provider ke --ref 0123456789012
+node scripts/bills.mjs check --provider ke --ref 0123456789012
 ```
 
 - `--ref`: 13-digit account number
@@ -47,7 +47,7 @@ node pk-skill/utility-bills/scripts/bills.mjs check --provider ke --ref 01234567
 ### 3. List all supported providers
 
 ```bash
-node pk-skill/utility-bills/scripts/bills.mjs providers
+node scripts/bills.mjs providers
 ```
 
 ## Output

@@ -1,0 +1,22 @@
+{
+  "name": "pk-skill",
+  "description": "Pakistan daily-life skills for coding agents — railways, flights, buses, utility bills, weather, prayer times, currency rates, prize bonds, parcel tracking",
+  "version": "1.0.0",
+  "author": {
+    "name": "mzaeemkhan"
+  },
+  "homepage": "https://github.com/mzaeemkhan/pk-skill",
+  "repository": "https://github.com/mzaeemkhan/pk-skill",
+  "license": "MIT",
+  "skills": [
+    "./pakistan-railways",
+    "./bookme-search",
+    "./pakistan-flights",
+    "./utility-bills",
+    "./pakistan-weather",
+    "./prayer-times",
+    "./currency-rates",
+    "./prize-bonds",
+    "./pakistan-post"
+  ]
+}

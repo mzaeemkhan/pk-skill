@@ -20,7 +20,7 @@ Tracks parcels through Pakistan Post (EMTTS) and TCS Express. Returns origin, de
 ### 1. Track a parcel
 
 ```bash
-node pk-skill/pakistan-post/scripts/tracking.mjs track --id <tracking_number> [--service pakpost|tcs]
+node scripts/tracking.mjs track --id <tracking_number> [--service pakpost|tcs]
 ```
 
 Service is auto-detected from the tracking number prefix:
@@ -34,7 +34,7 @@ Returns JSON with: trackingNo, origin, destination, events (date/time/location/s
 ### 2. List services
 
 ```bash
-node pk-skill/pakistan-post/scripts/tracking.mjs services
+node scripts/tracking.mjs services
 ```
 
 Lists supported and unsupported courier services with reasons.

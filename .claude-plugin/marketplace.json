@@ -1,0 +1,13 @@
+{
+  "name": "pk-skill",
+  "owner": {
+    "name": "mzaeemkhan"
+  },
+  "plugins": [
+    {
+      "name": "pk-skill",
+      "source": "./",
+      "description": "Pakistan daily-life skills for coding agents — railways, flights, buses, utility bills, weather, prayer times, currency, prize bonds, parcel tracking"
+    }
+  ]
+}

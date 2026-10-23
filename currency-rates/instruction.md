@@ -21,7 +21,7 @@ Provides daily exchange rates for 166 currencies against PKR, plus conversion be
 ### 1. Today's rates (key currencies against PKR)
 
 ```bash
-node pk-skill/currency-rates/scripts/rates.mjs today
+node scripts/rates.mjs today
 ```
 
 Returns 24 key currencies against PKR: USD, EUR, GBP, SAR, AED, CAD, AUD, CNY, JPY, CHF, SGD, MYR, KWD, OMR, QAR, BHD, INR, TRY, SEK, NOK, DKK, NZD, HKD, THB.
@@ -29,7 +29,7 @@ Returns 24 key currencies against PKR: USD, EUR, GBP, SAR, AED, CAD, AUD, CNY, J
 ### 2. Convert between currencies
 
 ```bash
-node pk-skill/currency-rates/scripts/rates.mjs convert --from USD --to PKR --amount 100
+node scripts/rates.mjs convert --from USD --to PKR --amount 100
 ```
 
 Works between any pair of the 166 supported currencies, not just PKR. Useful for remittance calculations (SAR→PKR, AED→PKR, GBP→PKR).
@@ -37,7 +37,7 @@ Works between any pair of the 166 supported currencies, not just PKR. Useful for
 ### 3. List supported currencies
 
 ```bash
-node pk-skill/currency-rates/scripts/rates.mjs currencies
+node scripts/rates.mjs currencies
 ```
 
 Returns all 166 currency codes.

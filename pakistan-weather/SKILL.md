@@ -16,22 +16,22 @@ Current weather, forecasts, air quality, and PMD severe weather alerts for Pakis
 
 ```bash
 # Current weather
-node pk-skill/pakistan-weather/scripts/weather.mjs current --city islamabad
+node scripts/weather.mjs current --city islamabad
 
 # 7-day forecast (default) or custom days (up to 16)
-node pk-skill/pakistan-weather/scripts/weather.mjs forecast --city lahore --days 7
+node scripts/weather.mjs forecast --city lahore --days 7
 
 # Air quality index
-node pk-skill/pakistan-weather/scripts/weather.mjs aqi --city karachi
+node scripts/weather.mjs aqi --city karachi
 
 # PMD severe weather alerts
-node pk-skill/pakistan-weather/scripts/weather.mjs alerts
+node scripts/weather.mjs alerts
 
 # Search for a city (geocoding)
-node pk-skill/pakistan-weather/scripts/weather.mjs search --query "abbottabad"
+node scripts/weather.mjs search --query "abbottabad"
 
 # List all built-in Pakistan cities
-node pk-skill/pakistan-weather/scripts/weather.mjs cities
+node scripts/weather.mjs cities
 ```
 
 ## Built-in Cities

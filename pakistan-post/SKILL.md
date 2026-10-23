@@ -16,16 +16,16 @@ Track parcels through Pakistan Post (EMTTS) and TCS Express.
 
 ```bash
 # Track a Pakistan Post parcel (auto-detected by prefix EP/CP/RP/RR/EG)
-node pk-skill/pakistan-post/scripts/tracking.mjs track --id EP123456789PK
+node scripts/tracking.mjs track --id EP123456789PK
 
 # Track a TCS Express shipment (auto-detected by prefix W)
-node pk-skill/pakistan-post/scripts/tracking.mjs track --id W123456789
+node scripts/tracking.mjs track --id W123456789
 
 # Force a specific service
-node pk-skill/pakistan-post/scripts/tracking.mjs track --id 123456789 --service pakpost
+node scripts/tracking.mjs track --id 123456789 --service pakpost
 
 # List supported and unsupported courier services
-node pk-skill/pakistan-post/scripts/tracking.mjs services
+node scripts/tracking.mjs services
 ```
 
 ## Supported Services

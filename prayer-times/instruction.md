@@ -25,7 +25,7 @@ All data is read-only. No API key needed.
 ### 1. Today's prayer times
 
 ```bash
-node pk-skill/prayer-times/scripts/prayers.mjs today --city Lahore
+node scripts/prayers.mjs today --city Lahore
 ```
 
 Returns: Fajr, Sunrise, Dhuhr, Asr, Maghrib, Isha times. Also returns Gregorian date, Hijri date, and calculation method.
@@ -33,7 +33,7 @@ Returns: Fajr, Sunrise, Dhuhr, Asr, Maghrib, Isha times. Also returns Gregorian 
 ### 2. Monthly calendar
 
 ```bash
-node pk-skill/prayer-times/scripts/prayers.mjs monthly --city Karachi [--month 10] [--year 2026]
+node scripts/prayers.mjs monthly --city Karachi [--month 10] [--year 2026]
 ```
 
 Returns all days in the month with prayer times, Hijri dates, and weekday names. Defaults to current month/year.
@@ -41,7 +41,7 @@ Returns all days in the month with prayer times, Hijri dates, and weekday names.
 ### 3. Next prayer
 
 ```bash
-node pk-skill/prayer-times/scripts/prayers.mjs next --city Islamabad
+node scripts/prayers.mjs next --city Islamabad
 ```
 
 Compares current PKT time against today's prayer schedule. Returns the next upcoming prayer and its time. If all prayers have passed, returns tomorrow's Fajr.
@@ -49,7 +49,7 @@ Compares current PKT time against today's prayer schedule. Returns the next upco
 ### 4. Calculation methods
 
 ```bash
-node pk-skill/prayer-times/scripts/prayers.mjs methods
+node scripts/prayers.mjs methods
 ```
 
 Lists all 23 available methods with IDs. Default is 1 (Karachi).
@@ -57,7 +57,7 @@ Lists all 23 available methods with IDs. Default is 1 (Karachi).
 ### 5. Built-in cities
 
 ```bash
-node pk-skill/prayer-times/scripts/prayers.mjs cities
+node scripts/prayers.mjs cities
 ```
 
 ## Output

@@ -25,7 +25,7 @@ The script calls pakrail.gov.pk ASP.NET AJAX endpoints. All output is JSON.
 ### 1. Search trains between two stations
 
 ```bash
-node pk-skill/pakistan-railways/scripts/pak_railways.mjs search --from "Lahore" --to "Karachi"
+node scripts/pak_railways.mjs search --from "Lahore" --to "Karachi"
 ```
 
 Station names resolve to codes automatically (e.g. "Lahore" → LHR). You can also pass codes directly: `--from LHR --to KC`.
@@ -33,7 +33,7 @@ Station names resolve to codes automatically (e.g. "Lahore" → LHR). You can al
 ### 2. Get full schedule for a train
 
 ```bash
-node pk-skill/pakistan-railways/scripts/pak_railways.mjs schedule --id 60
+node scripts/pak_railways.mjs schedule --id 60
 ```
 
 Train IDs come from the `search` command output. Optional: `--date MM/DD/YYYY`.
@@ -41,7 +41,7 @@ Train IDs come from the `search` command output. Optional: `--date MM/DD/YYYY`.
 ### 3. Get fares for a train
 
 ```bash
-node pk-skill/pakistan-railways/scripts/pak_railways.mjs fares --id 60
+node scripts/pak_railways.mjs fares --id 60
 ```
 
 Note: fare data may be incomplete on the API side.
@@ -49,13 +49,13 @@ Note: fare data may be incomplete on the API side.
 ### 4. List trains from a station
 
 ```bash
-node pk-skill/pakistan-railways/scripts/pak_railways.mjs station --code LHR
+node scripts/pak_railways.mjs station --code LHR
 ```
 
 ### 5. List trains by type
 
 ```bash
-node pk-skill/pakistan-railways/scripts/pak_railways.mjs type --type Express
+node scripts/pak_railways.mjs type --type Express
 ```
 
 Types: Express, Mail, Passenger, RailCar, Freight.
@@ -63,7 +63,7 @@ Types: Express, Mail, Passenger, RailCar, Freight.
 ### 6. List major stations
 
 ```bash
-node pk-skill/pakistan-railways/scripts/pak_railways.mjs stations
+node scripts/pak_railways.mjs stations
 ```
 
 ## Output

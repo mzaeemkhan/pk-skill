@@ -16,19 +16,19 @@ Daily prayer times, monthly calendar, and next-prayer lookup for Pakistani citie
 
 ```bash
 # Today's prayer times
-node pk-skill/prayer-times/scripts/prayers.mjs today --city Lahore
+node scripts/prayers.mjs today --city Lahore
 
 # Monthly calendar with Hijri dates
-node pk-skill/prayer-times/scripts/prayers.mjs monthly --city Karachi --month 10 --year 2026
+node scripts/prayers.mjs monthly --city Karachi --month 10 --year 2026
 
 # Next upcoming prayer
-node pk-skill/prayer-times/scripts/prayers.mjs next --city Islamabad
+node scripts/prayers.mjs next --city Islamabad
 
 # List calculation methods
-node pk-skill/prayer-times/scripts/prayers.mjs methods
+node scripts/prayers.mjs methods
 
 # List built-in Pakistan cities
-node pk-skill/prayer-times/scripts/prayers.mjs cities
+node scripts/prayers.mjs cities
 ```
 
 ## Calculation Method

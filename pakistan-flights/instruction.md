@@ -27,7 +27,7 @@ The script calls bookme.pk's sky API endpoints. All output is JSON.
 ### 1. Search flights between two cities
 
 ```bash
-node pk-skill/pakistan-flights/scripts/flights.mjs search --from "Lahore" --to "Islamabad" --date 2026-10-22
+node scripts/flights.mjs search --from "Lahore" --to "Islamabad" --date 2026-10-22
 ```
 
 City names and IATA codes both work. Date format: YYYY-MM-DD. Defaults to today if omitted. Optional flags: `--currency PKR` (also supports USD, AED, SAR, GBP, EUR), `--class economy` (also business, first).
@@ -37,7 +37,7 @@ The search queries ALL content providers for the route in parallel and aggregate
 ### 2. Search airports
 
 ```bash
-node pk-skill/pakistan-flights/scripts/flights.mjs airports --query "karachi"
+node scripts/flights.mjs airports --query "karachi"
 ```
 
 Returns matching airports with IATA code, name, city, and country.
@@ -45,7 +45,7 @@ Returns matching airports with IATA code, name, city, and country.
 ### 3. List popular airports
 
 ```bash
-node pk-skill/pakistan-flights/scripts/flights.mjs popular
+node scripts/flights.mjs popular
 ```
 
 Returns frequently searched airports.

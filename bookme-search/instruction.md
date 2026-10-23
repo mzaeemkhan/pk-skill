@@ -27,7 +27,7 @@ The script calls bookme.pk proxy endpoints. All output is JSON.
 ### 1. Search buses between two cities
 
 ```bash
-node pk-skill/bookme-search/scripts/bookme.mjs search --from "Lahore" --to "Islamabad" --date 2026-10-22
+node scripts/bookme.mjs search --from "Lahore" --to "Islamabad" --date 2026-10-22
 ```
 
 City names resolve to common IDs automatically. Date format: YYYY-MM-DD. Defaults to today if omitted. Optional `--currency PKR` (also supports SAR, USD, GBP, EUR, AED).
@@ -37,7 +37,7 @@ The search queries ALL operators serving that route in parallel and aggregates r
 ### 2. List all operators
 
 ```bash
-node pk-skill/bookme-search/scripts/bookme.mjs operators
+node scripts/bookme.mjs operators
 ```
 
 Returns 120+ bus companies with their service IDs and route counts.
@@ -45,7 +45,7 @@ Returns 120+ bus companies with their service IDs and route counts.
 ### 3. List all cities
 
 ```bash
-node pk-skill/bookme-search/scripts/bookme.mjs cities
+node scripts/bookme.mjs cities
 ```
 
 Returns 146 cities with IDs, codes, and destination counts.
@@ -53,7 +53,7 @@ Returns 146 cities with IDs, codes, and destination counts.
 ### 4. List routes from a city
 
 ```bash
-node pk-skill/bookme-search/scripts/bookme.mjs routes --city Lahore
+node scripts/bookme.mjs routes --city Lahore
 ```
 
 Shows all destinations reachable from the given city.

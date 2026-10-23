@@ -16,16 +16,16 @@ Search flights across Pakistani airlines and international routes via bookme.pk 
 
 ```bash
 # Search flights between cities
-node pk-skill/pakistan-flights/scripts/flights.mjs search --from Lahore --to Islamabad --date 2026-10-22
+node scripts/flights.mjs search --from Lahore --to Islamabad --date 2026-10-22
 
 # Search by IATA code
-node pk-skill/pakistan-flights/scripts/flights.mjs search --from LHE --to KHI --date 2026-10-22 --class economy
+node scripts/flights.mjs search --from LHE --to KHI --date 2026-10-22 --class economy
 
 # Search airports
-node pk-skill/pakistan-flights/scripts/flights.mjs airports --query karachi
+node scripts/flights.mjs airports --query karachi
 
 # List popular airports
-node pk-skill/pakistan-flights/scripts/flights.mjs popular
+node scripts/flights.mjs popular
 ```
 
 ## Prerequisites

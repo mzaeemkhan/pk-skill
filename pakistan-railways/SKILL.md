@@ -16,22 +16,22 @@ Query Pakistan Railways schedules from pakrail.gov.pk.
 
 ```bash
 # Search trains between stations
-node pk-skill/pakistan-railways/scripts/pak_railways.mjs search --from Lahore --to Karachi
+node scripts/pak_railways.mjs search --from Lahore --to Karachi
 
 # Get train schedule by train ID
-node pk-skill/pakistan-railways/scripts/pak_railways.mjs schedule --id 60
+node scripts/pak_railways.mjs schedule --id 60
 
 # Get fares for a train
-node pk-skill/pakistan-railways/scripts/pak_railways.mjs fares --id 60
+node scripts/pak_railways.mjs fares --id 60
 
 # List trains from a station
-node pk-skill/pakistan-railways/scripts/pak_railways.mjs station --code LHR
+node scripts/pak_railways.mjs station --code LHR
 
 # List trains by type
-node pk-skill/pakistan-railways/scripts/pak_railways.mjs type --type Express
+node scripts/pak_railways.mjs type --type Express
 
 # List major stations
-node pk-skill/pakistan-railways/scripts/pak_railways.mjs stations
+node scripts/pak_railways.mjs stations
 ```
 
 ## Prerequisites

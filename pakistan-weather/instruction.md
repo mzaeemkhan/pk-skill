@@ -22,7 +22,7 @@ Provides weather data for Pakistan: current conditions, multi-day forecasts, air
 ### 1. Current weather
 
 ```bash
-node pk-skill/pakistan-weather/scripts/weather.mjs current --city <name>
+node scripts/weather.mjs current --city <name>
 ```
 
 Returns: temperature, feels-like, humidity, wind speed/direction, precipitation, pressure, cloud cover, day/night, and WMO weather condition.
@@ -30,7 +30,7 @@ Returns: temperature, feels-like, humidity, wind speed/direction, precipitation,
 ### 2. Multi-day forecast
 
 ```bash
-node pk-skill/pakistan-weather/scripts/weather.mjs forecast --city <name> [--days 7]
+node scripts/weather.mjs forecast --city <name> [--days 7]
 ```
 
 - `--days`: 1 to 16 (default 7)
@@ -39,7 +39,7 @@ node pk-skill/pakistan-weather/scripts/weather.mjs forecast --city <name> [--day
 ### 3. Air quality index
 
 ```bash
-node pk-skill/pakistan-weather/scripts/weather.mjs aqi --city <name>
+node scripts/weather.mjs aqi --city <name>
 ```
 
 Returns: US AQI with label (Good/Moderate/Unhealthy/etc.), European AQI, PM2.5, PM10, CO, NO2, SO2, O3.
@@ -47,7 +47,7 @@ Returns: US AQI with label (Good/Moderate/Unhealthy/etc.), European AQI, PM2.5, 
 ### 4. PMD severe weather alerts
 
 ```bash
-node pk-skill/pakistan-weather/scripts/weather.mjs alerts
+node scripts/weather.mjs alerts
 ```
 
 Returns all active CAP alerts from Pakistan Meteorological Department. No city filter — alerts cover all of Pakistan.
@@ -55,7 +55,7 @@ Returns all active CAP alerts from Pakistan Meteorological Department. No city f
 ### 5. City search (geocoding)
 
 ```bash
-node pk-skill/pakistan-weather/scripts/weather.mjs search --query <name>
+node scripts/weather.mjs search --query <name>
 ```
 
 Finds cities by name. Prioritizes Pakistan results. Returns lat/lon, country, province, population.
@@ -63,7 +63,7 @@ Finds cities by name. Prioritizes Pakistan results. Returns lat/lon, country, pr
 ### 6. List built-in cities
 
 ```bash
-node pk-skill/pakistan-weather/scripts/weather.mjs cities
+node scripts/weather.mjs cities
 ```
 
 ## How it works internally

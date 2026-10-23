@@ -16,16 +16,16 @@ Search bus schedules across 120+ Pakistani operators via bookme.pk (Daewoo, Fais
 
 ```bash
 # Search buses between cities
-node pk-skill/bookme-search/scripts/bookme.mjs search --from Lahore --to Islamabad --date 2026-10-22
+node scripts/bookme.mjs search --from Lahore --to Islamabad --date 2026-10-22
 
 # List all bus operators
-node pk-skill/bookme-search/scripts/bookme.mjs operators
+node scripts/bookme.mjs operators
 
 # List all cities
-node pk-skill/bookme-search/scripts/bookme.mjs cities
+node scripts/bookme.mjs cities
 
 # List routes from a city
-node pk-skill/bookme-search/scripts/bookme.mjs routes --city Lahore
+node scripts/bookme.mjs routes --city Lahore
 ```
 
 ## Prerequisites

@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-army-ranks",
+  "description": "Pakistan Armed Forces ranks — Army, Navy, Air Force. NATO equivalents, insignia descriptions. Offline.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakistan-army-ranks\ndescription: Pakistan Armed Forces ranks — Army, Navy, Air Force. NATO equivalents. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+}

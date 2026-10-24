@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-constitution",
+  "description": "Constitution of Pakistan 1973 — articles, fundamental rights, principles of policy, amendments. Search and browse. Offline.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakistan-constitution\ndescription: Constitution of Pakistan 1973 — articles, rights, amendments. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+}

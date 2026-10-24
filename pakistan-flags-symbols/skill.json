@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-flags-symbols",
+  "description": "Pakistan national symbols — flag specs, anthem, emblem, national animal/bird/flower/tree/fruit, motto. All offline.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakistan-flags-symbols\ndescription: Pakistan national symbols — flag, anthem, emblem, markhor, jasmine, deodar, motto. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+}

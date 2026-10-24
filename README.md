@@ -218,6 +218,49 @@ Requires Node.js 18+ and npx.
 | Skill | Description | Status |
 |-------|-------------|--------|
 | pakistan-isps | Internet service providers — PTCL, StormFiber, Nayatel, Transworld, local ISPs. Packages, coverage, contact info. Offline. | Done |
+| pakistan-sim-packages | Mobile operator packages — Jazz, Telenor, Zong, Ufone, SCOM. 55+ packages with USSD activation codes. Compare data/call/SMS bundles. Offline. | Done |
+
+## Constitution & Law
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-constitution | Constitution of Pakistan 1973 — 100+ articles, 26 amendments, fundamental rights, principles of policy. Full text. Offline. | Done |
+
+## Military
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-army-ranks | Military ranks — Army, Navy, Air Force. 55 ranks with NATO equivalents, insignia descriptions. Offline. | Done |
+
+## University Rankings
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-universities-ranking | 65 Pakistani universities — HEC categories (W1-W4/X), QS rankings, programs, city, sector. Offline. | Done |
+
+## Administrative Divisions
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-provinces | 7 provinces/territories, 154 districts, 2023 census data, capitals, governors, chief ministers. Offline. | Done |
+
+## National Symbols
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-flags-symbols | Flag specs, national anthem (Urdu + English), state emblem, 15+ national symbols (markhor, jasmine, deodar, mango…). Offline. | Done |
+
+## Tax & Finance
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-tax-calculator | FBR income tax calculator — salaried/business slabs 2024-25, freelancer 0.25% IT export rate, withholding taxes, filer benefits. Offline. | Done |
+
+## History
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-history | 68 key events (1906-2023), 9 eras, heads of state, on-this-day lookup. Offline. | Done |
 
 ## License
 

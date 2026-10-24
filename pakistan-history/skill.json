@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-history",
+  "description": "Pakistan history — 65+ key events from 1906 to present, eras, heads of state, on-this-day lookup. Offline.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakistan-history\ndescription: Pakistan history — 65+ key events, eras, heads of state. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+}

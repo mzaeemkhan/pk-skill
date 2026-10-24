@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-tax-calculator",
+  "description": "Pakistan income tax calculator — FBR 2024-25 slabs for salaried/business, freelancer IT export rate, withholding taxes, filer benefits. Offline.",
+  "profiles": ["calculator"],
+  "frontmatter": "name: pakistan-tax-calculator\ndescription: Pakistan income tax calculator — FBR slabs, freelancer rate, withholding. Offline.\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+}

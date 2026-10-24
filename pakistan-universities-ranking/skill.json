@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-universities-ranking",
+  "description": "Pakistan university rankings — HEC categories, QS rankings, cities, sectors. 60+ institutions. Offline.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakistan-universities-ranking\ndescription: Pakistan university rankings — HEC categories, QS, 60+ institutions. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+}

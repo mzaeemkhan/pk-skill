@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-provinces",
+  "description": "Pakistan provinces and territories — 7 units, 160+ districts, 2023 census data, capitals, area. Offline.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakistan-provinces\ndescription: Pakistan provinces — 7 units, 160+ districts, census data. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+}

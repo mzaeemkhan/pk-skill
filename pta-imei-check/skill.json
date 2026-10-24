@@ -1,0 +1,6 @@
+{
+  "name": "pta-imei-check",
+  "description": "PTA IMEI validation — Luhn check, manufacturer identification, and PTA DIRBS registration info. Offline validation with DIRBS guidance.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pta-imei-check\ndescription: PTA IMEI validation — Luhn check, manufacturer ID, DIRBS registration info.\nlicense: MIT\nmetadata:\n  category: telecom\n  locale: en-PK\n  phase: v1"
+}

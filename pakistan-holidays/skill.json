@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-holidays",
+  "description": "Pakistan public holidays — gazetted, optional, and Islamic holidays for 2024-2027. Next holiday, monthly view, search by name. All offline.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakistan-holidays\ndescription: Pakistan public holidays 2024-2027 — gazetted and Islamic. Next holiday, search, monthly view. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+}

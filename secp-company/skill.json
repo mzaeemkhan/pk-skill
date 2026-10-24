@@ -1,0 +1,6 @@
+{
+  "name": "secp-company",
+  "description": "SECP company registration reference — company types, fees, required documents, regional offices, and key forms. Offline data.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: secp-company\ndescription: SECP company registration reference — types, fees, documents, offices.\nlicense: MIT\nmetadata:\n  category: government\n  locale: en-PK\n  phase: v1"
+}

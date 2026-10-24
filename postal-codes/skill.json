@@ -1,0 +1,6 @@
+{
+  "name": "postal-codes",
+  "description": "Pakistan postal codes lookup — search by area, city, or code. 150+ postal codes across 30+ cities. Offline database.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: postal-codes\ndescription: Pakistan postal codes — search by area, city, or code. Offline database.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+}

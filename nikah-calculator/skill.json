@@ -1,0 +1,6 @@
+{
+  "name": "nikah-calculator",
+  "description": "Islamic nikah (marriage) financial calculator — Mehr calculation (Mehr-e-Fatimi, minimum), wedding cost estimator, nikah documentation checklist. Offline.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: nikah-calculator\ndescription: Islamic nikah financial calculator — Mehr, wedding costs, documentation checklist. Offline.\nlicense: MIT\nmetadata:\n  category: religious\n  locale: en-PK\n  phase: v1"
+}

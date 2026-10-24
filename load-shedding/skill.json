@@ -1,0 +1,6 @@
+{
+  "name": "load-shedding",
+  "description": "Pakistan electricity load shedding info — all 11 DISCOs + K-Electric. Helplines, SMS codes, websites, schedule lookup guidance.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: load-shedding\ndescription: Pakistan electricity load shedding info — DISCOs, helplines, SMS codes, schedule guidance.\nlicense: MIT\nmetadata:\n  category: utility\n  locale: en-PK\n  phase: v1"
+}

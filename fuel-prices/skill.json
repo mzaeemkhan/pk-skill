@@ -1,0 +1,6 @@
+{
+  "name": "fuel-prices",
+  "description": "Pakistan petroleum fuel prices — petrol, diesel, kerosene, LDO. Current prices, history, and comparison. OGRA-sourced with offline fallback.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: fuel-prices\ndescription: Pakistan petroleum fuel prices — petrol, diesel, kerosene, LDO via OGRA.\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+}

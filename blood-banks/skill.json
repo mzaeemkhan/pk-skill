@@ -1,0 +1,6 @@
+{
+  "name": "blood-banks",
+  "description": "Find blood banks and donation centers in Pakistani cities via OpenStreetMap Nominatim. Major organizations (Fatimid, Sundas, Indus, Red Crescent) included.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: blood-banks\ndescription: Find blood banks and donation centers in Pakistani cities via OpenStreetMap.\nlicense: MIT\nmetadata:\n  category: health\n  locale: en-PK\n  phase: v1"
+}

@@ -1,6 +1,6 @@
 {
   "name": "pk-skill",
-  "description": "Pakistan daily-life skills for coding agents — railways, flights, buses, utility bills, weather, prayer times, currency rates, prize bonds, parcel tracking, government tenders, stocks, gold prices, shopping, real estate, news, cricket, education, healthcare, Quran, mosques, Urdu tools",
+  "description": "Pakistan daily-life skills for coding agents — railways, flights, buses, utility bills, weather, prayer times, currency rates, prize bonds, parcel tracking, government tenders, stocks, gold prices, shopping, real estate, news, cricket, education, healthcare, Quran, mosques, Urdu tools, zakat, holidays, emergency numbers, postal codes, nikah, blood banks, fuel prices, PTA IMEI, load shedding, SECP, passports, maps",
   "version": "1.0.0",
   "author": {
     "name": "mzaeemkhan"
@@ -32,6 +32,18 @@
     "./urdu-tools",
     "./hec-info",
     "./exam-results",
-    "./hospital-finder"
+    "./hospital-finder",
+    "./zakat-calculator",
+    "./pakistan-holidays",
+    "./emergency-numbers",
+    "./postal-codes",
+    "./nikah-calculator",
+    "./blood-banks",
+    "./fuel-prices",
+    "./pta-imei-check",
+    "./load-shedding",
+    "./secp-company",
+    "./passport-tracking",
+    "./pakistan-maps"
   ]
 }

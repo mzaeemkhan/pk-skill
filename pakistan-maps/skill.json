@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-maps",
+  "description": "Pakistan routing, distance calculator, and nearby place search. Driving routes between 30+ cities via OSRM. Nearby places via Nominatim.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakistan-maps\ndescription: Pakistan routing, distance, and nearby place search via OSRM and Nominatim.\nlicense: MIT\nmetadata:\n  category: maps\n  locale: en-PK\n  phase: v1"
+}

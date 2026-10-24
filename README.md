@@ -33,8 +33,9 @@ Requires Node.js 18+ and npx.
 | Skill | Description | Status |
 |-------|-------------|--------|
 | utility-bills | Electricity bill check for all 11 WAPDA DISCOs (LESCO, FESCO, IESCO, MEPCO, PESCO, HESCO, SEPCO, QESCO, GEPCO, TESCO, HAZECO) + K-Electric | Done |
+| load-shedding | Load shedding reference — all 11 DISCOs + K-Electric with helplines, SMS codes, complaint numbers, schedule categories. Offline reference. | Done |
 
-> **Note:** Gas bills not supported — SNGPL blocked by image CAPTCHA, SSGC blocked by Google reCAPTCHA v2.
+> **Note:** Gas bills not supported — SNGPL blocked by image CAPTCHA, SSGC blocked by Google reCAPTCHA v2. Live load shedding schedules not available — DISCOs don't expose schedules via API; use SMS codes listed in the skill.
 
 ## Weather & Environment
 
@@ -49,6 +50,8 @@ Requires Node.js 18+ and npx.
 | prayer-times | Daily prayer times, monthly calendar with Hijri dates, and next-prayer lookup for 42+ Pakistan cities via Aladhan API. Karachi method default. | Done |
 | quran-search | Quran verse lookup by surah:ayah, keyword search, Arabic + English + Urdu translations via alquran.cloud API | Done |
 | mosque-finder | Find mosques near any Pakistan city using OpenStreetMap Overpass API spatial queries. 28+ built-in cities. | Done |
+| zakat-calculator | Zakat calculator — gold/silver nisab, asset categories, 2.5% calculation. Hanafi fiqh. All offline. | Done |
+| nikah-calculator | Islamic marriage financial calculator — Mehr (gold/silver tola), Mehr-e-Fatimi reference, wedding cost estimator by city tier, nikah documentation checklist. All offline. | Done |
 
 ## Finance
 
@@ -59,6 +62,8 @@ Requires Node.js 18+ and npx.
 | psx-stocks | Pakistan Stock Exchange — live quotes for 50+ major companies, market summary, top gainers/losers via Yahoo Finance .KA tickers | Done |
 | gold-prices | Gold, silver, platinum, palladium prices in PKR and USD — per tola, per gram, per ounce via Yahoo Finance futures + ExchangeRate-API | Done |
 
+| fuel-prices | Pakistan petroleum prices — Petrol, HSD, Kerosene, LDO. OGRA rates with price history. | Done |
+
 > **Note:** JazzCash/Easypaisa not supported — require authenticated sessions. Hawala rates not available via public API.
 
 ## Government
@@ -67,7 +72,10 @@ Requires Node.js 18+ and npx.
 |-------|-------------|--------|
 | ppra-tenders | Search PPRA federal government procurement tenders — active tenders, history, details. Filter by keyword, category, sector, city. 29 sectors, 4 categories. | Done |
 
-> **Note:** NADRA (CNIC verification requires biometric/login), FBR (Active Taxpayer List blocked by image CAPTCHA), and ECP (voter verification only via SMS 8300) are not supported — no public API available.
+| secp-company | SECP company registration reference — company types, fees, required documents, regional offices, key forms. Offline reference. | Done |
+| passport-tracking | Pakistan passport office directory, fee schedule (normal/urgent/fast-track), requirements and process. Track via DGIP redirect. | Done |
+
+> **Note:** NADRA (CNIC verification requires biometric/login), FBR (Active Taxpayer List blocked by image CAPTCHA), and ECP (voter verification only via SMS 8300) are not supported — no public API available. SECP company search requires login at efiling.secp.gov.pk. DGIP passport tracking requires session auth.
 
 ## Real Estate
 
@@ -115,6 +123,7 @@ Requires Node.js 18+ and npx.
 | Skill | Description | Status |
 |-------|-------------|--------|
 | hospital-finder | Find hospitals, clinics, and pharmacies near any Pakistan city via OpenStreetMap Nominatim search | Done |
+| blood-banks | Find blood banks and donation centers — Nominatim search + curated list of 10 major organizations (Fatimid, Sundas, Indus, AFIP, etc.) with phone numbers. 28+ cities. | Done |
 
 > **Note:** DRAP drug lookup not supported — drap.gov.pk unreachable. PIMS/Shifa appointment booking requires login.
 
@@ -131,6 +140,23 @@ Requires Node.js 18+ and npx.
 | pakistan-post | Track parcels via Pakistan Post (EMTTS) and TCS Express — origin, destination, status, and full event history | Done |
 
 > **Note:** Leopards Courier and CallCourier are not supported — no public API available.
+
+## Mobile & Devices
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pta-imei-check | PTA IMEI validator — Luhn check, manufacturer identification from TAC prefix, device registration info and fee reference. Offline validation + DIRBS reference. | Done |
+
+> **Note:** Live PTA DIRBS lookup requires session auth. The skill validates IMEI format and identifies manufacturer offline; for registration status check dirbs.pta.gov.pk.
+
+## Reference & Tools
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-holidays | Pakistan public holidays 2024-2027 — gazetted and Islamic holidays, next upcoming, search by name. Offline. | Done |
+| emergency-numbers | Pakistan emergency numbers — police, fire, ambulance, rescue, helplines, utility. 32+ entries with city-specific numbers. Offline. | Done |
+| postal-codes | Pakistan postal codes — 122 codes across 49 cities. Search by area, reverse lookup, city listing. Offline. | Done |
+| pakistan-maps | Driving routes and distances between 30+ Pakistan cities via OSRM. Nearby places via Nominatim. | Done |
 
 ## License
 

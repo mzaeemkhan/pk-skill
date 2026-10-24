@@ -50,9 +50,12 @@ Requires Node.js 18+ and npx.
 |-------|-------------|--------|
 | prayer-times | Daily prayer times, monthly calendar with Hijri dates, and next-prayer lookup for 42+ Pakistan cities via Aladhan API. Karachi method default. | Done |
 | quran-search | Quran verse lookup by surah:ayah, keyword search, Arabic + English + Urdu translations via alquran.cloud API | Done |
+| hadith-search | Hadith search — Bukhari, Muslim, Tirmidhi, Abu Dawud, and more via sunnah.com API. Search, random, browse collections. | Done |
 | mosque-finder | Find mosques near any Pakistan city using OpenStreetMap Overpass API spatial queries. 28+ built-in cities. | Done |
 | zakat-calculator | Zakat calculator — gold/silver nisab, asset categories, 2.5% calculation. Hanafi fiqh. All offline. | Done |
 | nikah-calculator | Islamic marriage financial calculator — Mehr (gold/silver tola), Mehr-e-Fatimi reference, wedding cost estimator by city tier, nikah documentation checklist. All offline. | Done |
+| hajj-umrah-guide | Hajj & Umrah guide — step-by-step rituals, packing checklists, costs, airlines, Saudi offices, essential duas. Offline. | Done |
+| qurbani-calculator | Qurbani/Udhiyah calculator — animal shares, meat distribution (1/3 rule), weight estimates, cost breakdown. Offline. | Done |
 
 ## Finance
 
@@ -135,6 +138,7 @@ Requires Node.js 18+ and npx.
 |-------|-------------|--------|
 | urdu-tools | Urdu text utilities — Roman-to-Urdu transliteration, word count, number-to-Urdu-words (lakh/crore system), numeral conversion. All offline. | Done |
 | urdu-dictionary | Urdu-English dictionary — 200+ words across 12 categories, romanized + Urdu script + English meanings. Offline. | Done |
+| urdu-proverbs | Urdu proverbs & idioms (muhavare/kahawatein) — 120+ entries with meanings, categories, usage examples. Offline. | Done |
 
 ## Courier & Tracking
 
@@ -190,6 +194,30 @@ Requires Node.js 18+ and npx.
 | Skill | Description | Status |
 |-------|-------------|--------|
 | pakistan-courts | Judiciary hierarchy — 9 constitutional courts, 13 special courts, 8 bar councils, fee schedules. Offline. | Done |
+
+## Food & Culture
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-recipes | 43 authentic Pakistani recipes — biryani, nihari, haleem, chapli kebab, gulab jamun and more. Ingredients, steps, tips. Offline. | Done |
+
+## Telecom
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-phone-codes | STD/area codes for 100+ cities, mobile network prefixes (Jazz, Zong, Telenor, Ufone, SCO). Offline. | Done |
+
+## Travel & Immigration
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-visa | Visa requirements for Pakistani passport holders — 50+ countries, visa-free, on-arrival, e-visa, and embassy info. Offline. | Done |
+
+## Internet & ISPs
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-isps | Internet service providers — PTCL, StormFiber, Nayatel, Transworld, local ISPs. Packages, coverage, contact info. Offline. | Done |
 
 ## License
 

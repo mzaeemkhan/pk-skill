@@ -1,0 +1,6 @@
+{
+  "name": "qurbani-calculator",
+  "description": "Qurbani/Udhiyah calculator — meat distribution, animal eligibility, price estimates, Islamic rules (Hanafi fiqh). Offline.",
+  "profiles": ["calculator"],
+  "frontmatter": "name: qurbani-calculator\ndescription: Qurbani calculator — meat distribution, animal prices, Islamic rules. Offline.\nlicense: MIT\nmetadata:\n  category: religious\n  locale: en-PK\n  phase: v1"
+}

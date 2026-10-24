@@ -1,0 +1,12 @@
+{
+  "name": "pakistan-recipes",
+  "description": "Pakistani traditional recipes — 50+ dishes with ingredients, steps, and tips. Offline.",
+  "version": "1.0.0",
+  "author": "mzaeemkhan",
+  "license": "MIT",
+  "profiles": {
+    "default": {
+      "tools": ["bash"]
+    }
+  }
+}

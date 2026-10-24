@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-visa",
+  "description": "Visa requirements for Pakistani passport holders — visa-free, visa-on-arrival, e-visa, and visa-required countries. 100+ countries. Offline.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakistan-visa\ndescription: Visa requirements for Pakistani passport holders. 100+ countries. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+}

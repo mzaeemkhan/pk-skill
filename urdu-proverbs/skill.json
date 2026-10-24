@@ -1,0 +1,12 @@
+{
+  "name": "urdu-proverbs",
+  "description": "Urdu proverbs and idioms (muhavare/kahawatein) — 120+ entries with meanings and examples. Offline.",
+  "version": "1.0.0",
+  "author": "mzaeemkhan",
+  "license": "MIT",
+  "profiles": {
+    "default": {
+      "tools": ["bash"]
+    }
+  }
+}

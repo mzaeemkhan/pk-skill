@@ -1,6 +1,6 @@
 {
   "name": "pk-skill",
-  "description": "Pakistan daily-life skills for coding agents — 44 skills covering transport, utility, weather, religion, finance, government, real estate, shopping, news, sports, education, healthcare, Urdu, courier, maps, banking, census, courts, radio, and more",
+  "description": "Pakistan daily-life skills for coding agents — 52 skills covering transport, utility, weather, religion, finance, government, real estate, shopping, news, sports, education, healthcare, Urdu, courier, maps, banking, census, courts, radio, telecom, recipes, pilgrimage, and more",
   "version": "1.0.0",
   "author": {
     "name": "mzaeemkhan"
@@ -52,6 +52,14 @@
     "./pakistan-banks",
     "./urdu-dictionary",
     "./pakistan-census",
-    "./pakistan-courts"
+    "./pakistan-courts",
+    "./hadith-search",
+    "./pakistan-recipes",
+    "./urdu-proverbs",
+    "./hajj-umrah-guide",
+    "./qurbani-calculator",
+    "./pakistan-phone-codes",
+    "./pakistan-visa",
+    "./pakistan-isps"
   ]
 }

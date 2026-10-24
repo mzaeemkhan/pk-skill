@@ -1,0 +1,12 @@
+{
+  "name": "hajj-umrah-guide",
+  "description": "Hajj and Umrah guide — rituals, checklists, costs, airlines, Saudi embassy offices, and duas. Offline.",
+  "version": "1.0.0",
+  "author": "mzaeemkhan",
+  "license": "MIT",
+  "profiles": {
+    "default": {
+      "tools": ["bash"]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-isps",
+  "description": "Pakistan internet service providers — PTCL, StormFiber, Nayatel, and 12+ more. Packages, coverage, speed comparison. Offline.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakistan-isps\ndescription: Pakistan ISPs — packages, coverage, speed comparison. 15+ providers. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+}

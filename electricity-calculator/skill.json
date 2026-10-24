@@ -1,0 +1,6 @@
+{
+  "name": "electricity-calculator",
+  "description": "NEPRA electricity bill calculator — residential tariff slabs, surcharges, tax. Compare across DISCOs. Offline.",
+  "profiles": ["calculator"],
+  "frontmatter": "name: electricity-calculator\ndescription: NEPRA electricity bill calculator — residential tariff slabs, surcharges, tax. Compare across DISCOs. Offline.\nlicense: MIT\nmetadata:\n  category: utility\n  locale: en-PK\n  phase: v1"
+}

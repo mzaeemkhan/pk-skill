@@ -1,0 +1,6 @@
+{
+  "name": "cnic-calculator",
+  "description": "Pakistan CNIC parser — extract region, province, gender from CNIC number. Validate format. 50+ region codes. Offline.",
+  "profiles": ["calculator"],
+  "frontmatter": "name: cnic-calculator\ndescription: Pakistan CNIC parser — extract region, province, gender from CNIC number. Validate format. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+}

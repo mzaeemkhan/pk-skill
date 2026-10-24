@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-radio",
+  "description": "Pakistan FM radio stations directory — frequencies, cities, categories. 60+ stations across 10+ cities. Offline.",
+  "profiles": ["reference"],
+  "frontmatter": "name: pakistan-radio\ndescription: Pakistan FM radio stations directory — frequencies, cities, categories. 60+ stations. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+}

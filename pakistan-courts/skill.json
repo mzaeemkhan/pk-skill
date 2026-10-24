@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-courts",
+  "description": "Pakistan judiciary reference — court hierarchy, high courts, district courts, bar councils. Contact info and jurisdiction. Offline.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakistan-courts\ndescription: Pakistan judiciary — court hierarchy, high courts, contact info. Offline.\nlicense: MIT\nmetadata:\n  category: government\n  locale: en-PK\n  phase: v1"
+}

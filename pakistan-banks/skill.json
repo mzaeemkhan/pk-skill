@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-banks",
+  "description": "Pakistan banks reference — IBAN validator, SWIFT codes, 20+ banks. Branch locator via Nominatim. Offline + live.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakistan-banks\ndescription: Pakistan banks — IBAN validator, SWIFT codes, branch locator. 20+ banks.\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+}

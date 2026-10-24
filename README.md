@@ -33,6 +33,7 @@ Requires Node.js 18+ and npx.
 | Skill | Description | Status |
 |-------|-------------|--------|
 | utility-bills | Electricity bill check for all 11 WAPDA DISCOs (LESCO, FESCO, IESCO, MEPCO, PESCO, HESCO, SEPCO, QESCO, GEPCO, TESCO, HAZECO) + K-Electric | Done |
+| electricity-calculator | NEPRA electricity bill calculator — 8 tariff slabs, 12 DISCOs, FPA/QTA/GST/TV fee breakdown, cross-DISCO comparison. Offline. | Done |
 | load-shedding | Load shedding reference — all 11 DISCOs + K-Electric with helplines, SMS codes, complaint numbers, schedule categories. Offline reference. | Done |
 
 > **Note:** Gas bills not supported — SNGPL blocked by image CAPTCHA, SSGC blocked by Google reCAPTCHA v2. Live load shedding schedules not available — DISCOs don't expose schedules via API; use SMS codes listed in the skill.
@@ -74,6 +75,7 @@ Requires Node.js 18+ and npx.
 
 | secp-company | SECP company registration reference — company types, fees, required documents, regional offices, key forms. Offline reference. | Done |
 | passport-tracking | Pakistan passport office directory, fee schedule (normal/urgent/fast-track), requirements and process. Track via DGIP redirect. | Done |
+| cnic-calculator | CNIC number parser — province, division, district, gender from 13-digit number. 100+ region codes. Offline. | Done |
 
 > **Note:** NADRA (CNIC verification requires biometric/login), FBR (Active Taxpayer List blocked by image CAPTCHA), and ECP (voter verification only via SMS 8300) are not supported — no public API available. SECP company search requires login at efiling.secp.gov.pk. DGIP passport tracking requires session auth.
 
@@ -132,6 +134,7 @@ Requires Node.js 18+ and npx.
 | Skill | Description | Status |
 |-------|-------------|--------|
 | urdu-tools | Urdu text utilities — Roman-to-Urdu transliteration, word count, number-to-Urdu-words (lakh/crore system), numeral conversion. All offline. | Done |
+| urdu-dictionary | Urdu-English dictionary — 200+ words across 12 categories, romanized + Urdu script + English meanings. Offline. | Done |
 
 ## Courier & Tracking
 
@@ -157,6 +160,36 @@ Requires Node.js 18+ and npx.
 | emergency-numbers | Pakistan emergency numbers — police, fire, ambulance, rescue, helplines, utility. 32+ entries with city-specific numbers. Offline. | Done |
 | postal-codes | Pakistan postal codes — 122 codes across 49 cities. Search by area, reverse lookup, city listing. Offline. | Done |
 | pakistan-maps | Driving routes and distances between 30+ Pakistan cities via OSRM. Nearby places via Nominatim. | Done |
+
+## Banking
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-banks | 22 Pakistani banks — IBAN validator (PK format, 24 chars), SWIFT codes, branch locator via Nominatim. Offline + API. | Done |
+
+## Vehicles & Transport Tax
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| vehicle-tax | Token tax calculator — 7 provinces, car + motorcycle slabs, age-based depreciation. Offline. | Done |
+
+## Media & Entertainment
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-radio | FM radio directory — 64+ stations across 12+ cities, 5 categories. Offline. | Done |
+
+## Population & Demographics
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-census | 2023 digital census data — 7 provinces/territories, 40+ cities, population, growth rate, density. Offline. | Done |
+
+## Legal & Judiciary
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| pakistan-courts | Judiciary hierarchy — 9 constitutional courts, 13 special courts, 8 bar councils, fee schedules. Offline. | Done |
 
 ## License
 

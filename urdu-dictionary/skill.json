@@ -1,0 +1,6 @@
+{
+  "name": "urdu-dictionary",
+  "description": "Urdu-English dictionary — 500+ words across 12 categories. Search romanized, Urdu script, or English. Offline.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: urdu-dictionary\ndescription: Urdu-English dictionary — 500+ words, 12 categories. Search romanized, Urdu, English. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+}

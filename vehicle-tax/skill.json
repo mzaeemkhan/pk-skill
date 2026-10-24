@@ -1,0 +1,6 @@
+{
+  "name": "vehicle-tax",
+  "description": "Pakistan vehicle token tax / excise duty calculator by engine CC, province, and vehicle type. All offline.",
+  "profiles": ["calculator"],
+  "frontmatter": "name: vehicle-tax\ndescription: Pakistan vehicle token tax / excise duty calculator by engine CC, province, and vehicle type. Offline.\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+}

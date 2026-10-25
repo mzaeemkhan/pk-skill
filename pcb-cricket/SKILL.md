@@ -1,6 +1,6 @@
 ---
 name: pcb-cricket
-description: Live cricket scores, upcoming matches, results, Pakistan schedule via ESPN. No API key needed.
+description: "Pakistan cricket via ESPN Cricinfo (live): scores, fixtures, results, international player career stats (Test/ODI/T20I) and PSL points table/matches. Use for \"Pakistan match score\", \"Babar Azam stats\", \"PSL table\". No domestic/PSL player stats."
 license: MIT
 metadata:
   category: sports
@@ -32,6 +32,15 @@ node scripts/cricket.mjs all
 
 # Matches in a specific series (get league ID from 'all')
 node scripts/cricket.mjs series --id 24756
+
+# Player international career stats (Test/ODI/T20I batting + bowling)
+node scripts/cricket.mjs player --name "Babar Azam"
+
+# PSL points table (current season, or latest completed one off-season)
+node scripts/cricket.mjs psl-table
+
+# PSL fixtures and results
+node scripts/cricket.mjs psl-matches
 ```
 
 ## Prerequisites
@@ -42,5 +51,5 @@ node scripts/cricket.mjs series --id 24756
 
 - Shows current/recent matches only — no historical archive
 - No ball-by-ball commentary or detailed scorecards
-- No player stats or rankings
+- Player stats are international only (no PSL/domestic player stats), no rankings
 - Pakistan filter catches Pakistan team, PSL, and major domestic tournaments but may miss obscure club matches

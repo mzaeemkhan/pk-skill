@@ -1,6 +1,6 @@
 {
   "name": "pakistan-provinces",
-  "description": "Pakistan provinces and territories — 7 units, 160+ districts, 2023 census data, capitals, area. Offline.",
+  "description": "Offline Pakistan provinces/territories — capitals, area, districts and divisions, governors, CMs. Use for \"districts of Punjab\", \"capital of GB\". Not for detailed population figures — use pakistan-census.",
   "profiles": ["lookup"],
-  "frontmatter": "name: pakistan-provinces\ndescription: Pakistan provinces — 7 units, 160+ districts, census data. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pakistan-provinces\ndescription: \"Offline Pakistan provinces/territories — capitals, area, districts and divisions, governors, CMs. Use for \\\"districts of Punjab\\\", \\\"capital of GB\\\". Not for detailed population figures — use pakistan-census.\"\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
 }

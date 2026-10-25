@@ -1,6 +1,6 @@
 {
   "name": "secp-company",
-  "description": "SECP company registration reference — company types, fees, required documents, regional offices, and key forms. Offline data.",
+  "description": "Offline SECP company registration reference — company types, fees, documents, offices, forms. Use for \"register a company in Pakistan\", \"private limited fees\". Live company search is unsupported.",
   "profiles": ["lookup"],
-  "frontmatter": "name: secp-company\ndescription: SECP company registration reference — types, fees, documents, offices.\nlicense: MIT\nmetadata:\n  category: government\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: secp-company\ndescription: \"Offline SECP company registration reference — company types, fees, documents, offices, forms. Use for \\\"register a company in Pakistan\\\", \\\"private limited fees\\\". Live company search is unsupported.\"\nlicense: MIT\nmetadata:\n  category: government\n  locale: en-PK\n  phase: v1"
 }

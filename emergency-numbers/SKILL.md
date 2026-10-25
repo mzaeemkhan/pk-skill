@@ -1,6 +1,6 @@
 ---
 name: emergency-numbers
-description: Pakistan emergency numbers — police, fire, ambulance, rescue, helplines, utilities. National + city-specific. Offline.
+description: "Offline Pakistan emergency and helpline numbers — police 15, Rescue 1122, Edhi 115, fire, utilities, city-specific. Use for \"ambulance number\", \"emergency helpline\"."
 license: MIT
 metadata:
   category: reference

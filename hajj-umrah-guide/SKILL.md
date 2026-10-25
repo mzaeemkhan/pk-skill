@@ -1,6 +1,6 @@
 ---
 name: hajj-umrah-guide
-description: Hajj and Umrah guide — rituals, checklists, costs, airlines, Saudi embassy offices, and duas. Offline.
+description: "Offline Hajj and Umrah guide — rituals step by step, checklists, cost estimates, airlines, offices, duas, FAQ. Use for \"Umrah steps\", \"Hajj packing list\", \"Umrah cost\"."
 tools:
   - bash
 ---

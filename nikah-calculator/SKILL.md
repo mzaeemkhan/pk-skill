@@ -1,6 +1,6 @@
 ---
 name: nikah-calculator
-description: Islamic nikah financial calculator — Mehr, wedding costs, documentation checklist. Offline.
+description: "Offline nikah financial helper — Haq Mehr in gold/silver (Mehr-e-Fatimi, minimum), wedding cost estimate by city tier, nikah document checklist. Use for \"haq mehr kitna\", \"shadi kharcha\"."
 license: MIT
 metadata:
   category: religious

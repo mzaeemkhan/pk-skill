@@ -1,6 +1,6 @@
 ---
 name: hec-info
-description: HEC-recognized universities in Pakistan — search, filter by province/sector/discipline. Offline database.
+description: "Offline list of HEC-recognized universities — search and filter by province, sector, discipline. Use for \"is X university HEC recognized\". Not for rankings (pakistan-universities-ranking) or results (exam-results)."
 license: MIT
 metadata:
   category: education

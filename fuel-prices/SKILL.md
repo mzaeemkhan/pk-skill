@@ -1,6 +1,6 @@
 ---
 name: fuel-prices
-description: Pakistan petroleum fuel prices — petrol, diesel, kerosene, LDO via OGRA.
+description: "Offline OGRA petrol, diesel, kerosene, LDO price table with history — may lag the latest fortnightly revision. Use for \"petrol price\", \"diesel rate per litre\"."
 license: MIT
 metadata:
   category: finance

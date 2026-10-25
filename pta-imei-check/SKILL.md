@@ -1,6 +1,6 @@
 ---
 name: pta-imei-check
-description: PTA IMEI validation — Luhn check, manufacturer ID, DIRBS registration info.
+description: "Offline IMEI validator — Luhn check, manufacturer from TAC, PTA DIRBS registration guidance and fees. Use for \"is my phone PTA approved\", \"IMEI check\". Live DIRBS status needs dirbs.pta.gov.pk."
 license: MIT
 metadata:
   category: telecom

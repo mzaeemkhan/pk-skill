@@ -1,6 +1,6 @@
 {
   "name": "pakistan-visa",
-  "description": "Visa requirements for Pakistani passport holders — visa-free, visa-on-arrival, e-visa, and visa-required countries. 100+ countries. Offline.",
+  "description": "Offline visa requirements for Pakistani passport holders — visa-free, on-arrival, e-visa, visa-required by country/region. Use for \"visa for Turkey\", \"visa-free countries\". Not for passports — use passport-tracking.",
   "profiles": ["lookup"],
-  "frontmatter": "name: pakistan-visa\ndescription: Visa requirements for Pakistani passport holders. 100+ countries. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pakistan-visa\ndescription: \"Offline visa requirements for Pakistani passport holders — visa-free, on-arrival, e-visa, visa-required by country/region. Use for \\\"visa for Turkey\\\", \\\"visa-free countries\\\". Not for passports — use passport-tracking.\"\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
 }

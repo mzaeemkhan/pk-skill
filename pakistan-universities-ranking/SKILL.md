@@ -1,6 +1,6 @@
 ---
 name: pakistan-universities-ranking
-description: Pakistan university rankings — HEC categories, QS, 60+ institutions. Offline.
+description: "Offline Pakistani university rankings — HEC category (W4–X), QS rank, city, sector for 60+ institutions. Use for \"top engineering universities\", \"LUMS rank\". Not for HEC recognition (hec-info)."
 license: MIT
 metadata:
   category: reference

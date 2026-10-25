@@ -1,6 +1,6 @@
 {
   "name": "pakistan-courts",
-  "description": "Pakistan judiciary reference — court hierarchy, high courts, district courts, bar councils. Contact info and jurisdiction. Offline.",
+  "description": "Offline Pakistan judiciary reference — court hierarchy, high courts, special courts, bar councils, jurisdiction and contacts. Use for \"which court handles\", \"Lahore High Court\". Not for law text — use pakistan-constitution.",
   "profiles": ["lookup"],
-  "frontmatter": "name: pakistan-courts\ndescription: Pakistan judiciary — court hierarchy, high courts, contact info. Offline.\nlicense: MIT\nmetadata:\n  category: government\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pakistan-courts\ndescription: \"Offline Pakistan judiciary reference — court hierarchy, high courts, special courts, bar councils, jurisdiction and contacts. Use for \\\"which court handles\\\", \\\"Lahore High Court\\\". Not for law text — use pakistan-constitution.\"\nlicense: MIT\nmetadata:\n  category: government\n  locale: en-PK\n  phase: v1"
 }

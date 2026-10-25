@@ -1,6 +1,6 @@
 ---
 name: load-shedding
-description: Pakistan electricity load shedding info — DISCOs, helplines, SMS codes, schedule guidance.
+description: "Offline load shedding reference for 11 DISCOs + K-Electric — helplines, SMS codes, complaint numbers, schedule categories. Use for \"bijli kab jayegi\", \"LESCO complaint\". Not for bills (utility-bills, electricity-calculator)."
 license: MIT
 metadata:
   category: utility

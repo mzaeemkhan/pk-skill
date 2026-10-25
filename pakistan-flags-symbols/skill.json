@@ -1,6 +1,6 @@
 {
   "name": "pakistan-flags-symbols",
-  "description": "Pakistan national symbols — flag specs, anthem, emblem, national animal/bird/flower/tree/fruit, motto. All offline.",
+  "description": "Offline Pakistan national symbols — flag specs, Qaumi Taranah text, state emblem, national animal/bird/flower/tree, motto. Use for \"national anthem lyrics\", \"national bird\".",
   "profiles": ["lookup"],
-  "frontmatter": "name: pakistan-flags-symbols\ndescription: Pakistan national symbols — flag, anthem, emblem, markhor, jasmine, deodar, motto. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pakistan-flags-symbols\ndescription: \"Offline Pakistan national symbols — flag specs, Qaumi Taranah text, state emblem, national animal/bird/flower/tree, motto. Use for \\\"national anthem lyrics\\\", \\\"national bird\\\".\"\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
 }

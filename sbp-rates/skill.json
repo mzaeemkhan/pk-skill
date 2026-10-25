@@ -1,6 +1,6 @@
 {
   "name": "sbp-rates",
-  "description": "State Bank of Pakistan live rates — policy rate and corridor, KIBOR, T-bill and PIB auction cut-offs, FX reserves, interbank USD/PKR. Read from sbp.org.pk. No API key.",
+  "description": "Live State Bank of Pakistan rates — policy rate, KIBOR, T-bill/PIB cut-offs, FX reserves, interbank USD/PKR. Use for \"interest rate\", \"KIBOR today\". Not for kerb (open-market-forex) or general conversion (currency-rates).",
   "profiles": ["lookup"],
-  "frontmatter": "name: sbp-rates\ndescription: State Bank of Pakistan live rates — policy rate, KIBOR, T-bill/PIB cut-off yields, FX reserves, interbank USD/PKR. From sbp.org.pk, with as-of dates. No API key.\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: sbp-rates\ndescription: \"Live State Bank of Pakistan rates — policy rate, KIBOR, T-bill/PIB cut-offs, FX reserves, interbank USD/PKR. Use for \\\"interest rate\\\", \\\"KIBOR today\\\". Not for kerb (open-market-forex) or general conversion (currency-rates).\"\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
 }

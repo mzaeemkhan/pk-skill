@@ -1,6 +1,6 @@
 ---
 name: qurbani-calculator
-description: Qurbani calculator — meat distribution, animal prices, Islamic rules. Offline.
+description: "Offline Qurbani helper — animal shares and eligibility, meat yield from weight, 1/3 distribution, rules (Hanafi), estimated animal prices by city. Use for \"bakra price\", \"cow hissa\". Prices are estimates."
 license: MIT
 metadata:
   category: religious

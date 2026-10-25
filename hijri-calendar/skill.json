@@ -1,6 +1,6 @@
 {
   "name": "hijri-calendar",
-  "description": "Hijri (Islamic) calendar via Aladhan API — today's Hijri date, Gregorian↔Hijri conversion, monthly calendar, and upcoming Islamic events (Ramadan, Eids, Ashura, Shab-e-Barat, 12 Rabi ul Awal). Dates are calculated; Pakistan's Ruet-e-Hilal sighting can differ by ±1 day. No API key.",
+  "description": "Hijri (Islamic) dates — today's date, Gregorian↔Hijri conversion, month calendar, upcoming Ramadan/Eid/Ashura (calculated; Ruet-e-Hilal may differ ±1 day). Not for namaz times (prayer-times) or public holidays (pakistan-holidays).",
   "profiles": ["lookup"],
-  "frontmatter": "name: hijri-calendar\ndescription: Hijri calendar — today's Islamic date, Gregorian↔Hijri conversion, monthly calendar, upcoming Ramadan/Eid/Ashura dates. Aladhan API, no key.\nlicense: MIT\nmetadata:\n  category: religious\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: hijri-calendar\ndescription: \"Hijri (Islamic) dates — today's date, Gregorian↔Hijri conversion, month calendar, upcoming Ramadan/Eid/Ashura (calculated; Ruet-e-Hilal may differ ±1 day). Not for namaz times (prayer-times) or public holidays (pakistan-holidays).\"\nlicense: MIT\nmetadata:\n  category: religious\n  locale: en-PK\n  phase: v1"
 }

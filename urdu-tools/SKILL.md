@@ -1,6 +1,6 @@
 ---
 name: urdu-tools
-description: Urdu text utilities — transliteration, word count, number conversion. Offline, no API.
+description: "Offline Urdu text utilities — Roman Urdu to Urdu script, word count, numbers to Urdu words (lakh/crore), Urdu numerals. Not for word meanings (urdu-dictionary) or muhavare (urdu-proverbs)."
 license: MIT
 metadata:
   category: language

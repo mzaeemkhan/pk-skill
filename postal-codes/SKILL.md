@@ -1,6 +1,6 @@
 ---
 name: postal-codes
-description: Pakistan postal codes — search by area, city, or code. Offline database.
+description: "Offline Pakistan postal/ZIP codes — search by area or city, reverse lookup by code. Use for \"postal code of DHA Lahore\", \"zip code\". Not for parcel tracking (pakistan-post) or phone codes (pakistan-phone-codes)."
 license: MIT
 metadata:
   category: reference

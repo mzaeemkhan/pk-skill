@@ -1,6 +1,6 @@
 {
   "name": "emergency-numbers",
-  "description": "Pakistan emergency numbers — police, fire, ambulance, rescue 1122, Edhi 115, helplines, utilities. National + city-specific. All offline.",
+  "description": "Offline Pakistan emergency and helpline numbers — police 15, Rescue 1122, Edhi 115, fire, utilities, city-specific. Use for \"ambulance number\", \"emergency helpline\".",
   "profiles": ["lookup"],
-  "frontmatter": "name: emergency-numbers\ndescription: Pakistan emergency numbers — police, fire, ambulance, rescue, helplines, utilities. National + city-specific. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: emergency-numbers\ndescription: \"Offline Pakistan emergency and helpline numbers — police 15, Rescue 1122, Edhi 115, fire, utilities, city-specific. Use for \\\"ambulance number\\\", \\\"emergency helpline\\\".\"\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
 }

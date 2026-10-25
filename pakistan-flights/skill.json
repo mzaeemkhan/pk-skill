@@ -1,6 +1,6 @@
 {
   "name": "pakistan-flights",
-  "description": "Flight search across Pakistani and international routes via bookme.pk. PIA, Airblue, AirSial, Fly Jinnah, Serene Air. Schedules, fares, aircraft info. Read-only — no booking or payment.",
+  "description": "Flight search and fares on PIA, Airblue, AirSial, Fly Jinnah, Serene Air via bookme.pk. Use for \"flight price\", \"cheap ticket Lahore to Jeddah\". Not for live arrival/departure status — use airport-flights.",
   "profiles": ["lookup"],
-  "frontmatter": "name: pakistan-flights\ndescription: Flight search across Pakistani and international routes via bookme.pk. PIA, Airblue, AirSial, Fly Jinnah, Serene Air. Schedules, fares, aircraft info. Read-only — no booking or payment.\nlicense: MIT\nmetadata:\n  category: travel\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pakistan-flights\ndescription: \"Flight search and fares on PIA, Airblue, AirSial, Fly Jinnah, Serene Air via bookme.pk. Use for \\\"flight price\\\", \\\"cheap ticket Lahore to Jeddah\\\". Not for live arrival/departure status — use airport-flights.\"\nlicense: MIT\nmetadata:\n  category: travel\n  locale: en-PK\n  phase: v1"
 }

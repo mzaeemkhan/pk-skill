@@ -1,6 +1,6 @@
 {
   "name": "pakistan-army-ranks",
-  "description": "Pakistan Armed Forces ranks — Army, Navy, Air Force. NATO equivalents, insignia descriptions. Offline.",
+  "description": "Offline Pakistan Army, Navy and Air Force ranks — order, insignia, NATO codes, cross-service equivalents. Use for \"is brigadier above colonel\", \"navy equivalent of major\".",
   "profiles": ["lookup"],
-  "frontmatter": "name: pakistan-army-ranks\ndescription: Pakistan Armed Forces ranks — Army, Navy, Air Force. NATO equivalents. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pakistan-army-ranks\ndescription: \"Offline Pakistan Army, Navy and Air Force ranks — order, insignia, NATO codes, cross-service equivalents. Use for \\\"is brigadier above colonel\\\", \\\"navy equivalent of major\\\".\"\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
 }

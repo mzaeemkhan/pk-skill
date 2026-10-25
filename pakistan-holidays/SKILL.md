@@ -1,6 +1,6 @@
 ---
 name: pakistan-holidays
-description: Pakistan public holidays 2024-2027 — gazetted and Islamic. Next holiday, search, monthly view. Offline.
+description: "Offline Pakistan public holidays 2024-2027 — gazetted and Islamic, next holiday, monthly view. Use for \"next chutti\", \"is Monday a holiday\". Not for Hijri date conversion (hijri-calendar) or prayer times."
 license: MIT
 metadata:
   category: reference

@@ -1,6 +1,6 @@
 {
   "name": "fuel-prices",
-  "description": "Pakistan petroleum fuel prices — petrol, diesel, kerosene, LDO. Current prices, history, and comparison. OGRA-sourced with offline fallback.",
+  "description": "Offline OGRA petrol, diesel, kerosene, LDO price table with history — may lag the latest fortnightly revision. Use for \"petrol price\", \"diesel rate per litre\".",
   "profiles": ["lookup"],
-  "frontmatter": "name: fuel-prices\ndescription: Pakistan petroleum fuel prices — petrol, diesel, kerosene, LDO via OGRA.\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: fuel-prices\ndescription: \"Offline OGRA petrol, diesel, kerosene, LDO price table with history — may lag the latest fortnightly revision. Use for \\\"petrol price\\\", \\\"diesel rate per litre\\\".\"\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
 }

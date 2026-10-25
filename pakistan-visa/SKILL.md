@@ -1,6 +1,6 @@
 ---
 name: pakistan-visa
-description: Visa requirements for Pakistani passport holders. 100+ countries. Offline.
+description: "Offline visa requirements for Pakistani passport holders — visa-free, on-arrival, e-visa, visa-required by country/region. Use for \"visa for Turkey\", \"visa-free countries\". Not for passports — use passport-tracking."
 license: MIT
 metadata:
   category: reference

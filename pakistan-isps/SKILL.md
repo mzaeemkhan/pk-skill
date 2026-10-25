@@ -1,6 +1,6 @@
 ---
 name: pakistan-isps
-description: Pakistan ISPs — packages, coverage, speed comparison. 15+ providers. Offline.
+description: "Offline Pakistan home internet providers — PTCL, StormFiber, Nayatel and more; packages, coverage by city, speed comparison (prices partly estimates). Use for \"best internet in Lahore\". Not for mobile data — use pakistan-sim-packages."
 license: MIT
 metadata:
   category: reference

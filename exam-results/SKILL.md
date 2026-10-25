@@ -1,6 +1,6 @@
 ---
 name: exam-results
-description: PPSC and FPSC exam results — written and final results from public service commissions.
+description: "Live PPSC and FPSC exam results — search written/final results by name, roll number, post. Use for \"PPSC result\", \"FPSC merit list\". Not for BISE board results (unsupported) or university info (hec-info)."
 license: MIT
 metadata:
   category: education

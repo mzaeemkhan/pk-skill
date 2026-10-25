@@ -1,6 +1,6 @@
 {
   "name": "urdu-tools",
-  "description": "Urdu text utilities — Roman-to-Urdu transliteration, word count, number-to-Urdu-words conversion, and Urdu numeral conversion. No API needed, runs offline.",
+  "description": "Offline Urdu text utilities — Roman Urdu to Urdu script, word count, numbers to Urdu words (lakh/crore), Urdu numerals. Not for word meanings (urdu-dictionary) or muhavare (urdu-proverbs).",
   "profiles": ["utility"],
-  "frontmatter": "name: urdu-tools\ndescription: Urdu text utilities — transliteration, word count, number conversion. Offline, no API.\nlicense: MIT\nmetadata:\n  category: language\n  locale: ur-PK\n  phase: v1"
+  "frontmatter": "name: urdu-tools\ndescription: \"Offline Urdu text utilities — Roman Urdu to Urdu script, word count, numbers to Urdu words (lakh/crore), Urdu numerals. Not for word meanings (urdu-dictionary) or muhavare (urdu-proverbs).\"\nlicense: MIT\nmetadata:\n  category: language\n  locale: ur-PK\n  phase: v1"
 }

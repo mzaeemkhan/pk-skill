@@ -1,6 +1,6 @@
 {
   "name": "pakistan-census",
-  "description": "Pakistan 2023 census data — population by province, district, city. Compare, rank, search. Offline.",
+  "description": "Offline 2023 census population figures by province, district and city — rank, compare, growth. Use for \"population of Karachi\", \"largest cities\". Not for admin structure/districts — use pakistan-provinces.",
   "profiles": ["lookup"],
-  "frontmatter": "name: pakistan-census\ndescription: Pakistan 2023 census — population by province, district, city. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pakistan-census\ndescription: \"Offline 2023 census population figures by province, district and city — rank, compare, growth. Use for \\\"population of Karachi\\\", \\\"largest cities\\\". Not for admin structure/districts — use pakistan-provinces.\"\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
 }

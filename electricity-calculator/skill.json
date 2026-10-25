@@ -1,6 +1,6 @@
 {
   "name": "electricity-calculator",
-  "description": "NEPRA electricity bill calculator — residential tariff slabs, surcharges, tax. Compare across DISCOs. Offline.",
+  "description": "Offline NEPRA bill estimator from units used — tariff slabs, FPA, GST, TV fee, compare DISCOs. Use for \"300 units ka bill\", \"protected vs unprotected slab\". Not for your actual bill — use utility-bills.",
   "profiles": ["calculator"],
-  "frontmatter": "name: electricity-calculator\ndescription: NEPRA electricity bill calculator — residential tariff slabs, surcharges, tax. Compare across DISCOs. Offline.\nlicense: MIT\nmetadata:\n  category: utility\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: electricity-calculator\ndescription: \"Offline NEPRA bill estimator from units used — tariff slabs, FPA, GST, TV fee, compare DISCOs. Use for \\\"300 units ka bill\\\", \\\"protected vs unprotected slab\\\". Not for your actual bill — use utility-bills.\"\nlicense: MIT\nmetadata:\n  category: utility\n  locale: en-PK\n  phase: v1"
 }

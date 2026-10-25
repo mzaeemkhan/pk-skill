@@ -1,6 +1,6 @@
 ---
 name: pakistan-census
-description: Pakistan 2023 census — population by province, district, city. Offline.
+description: "Offline 2023 census population figures by province, district and city — rank, compare, growth. Use for \"population of Karachi\", \"largest cities\". Not for admin structure/districts — use pakistan-provinces."
 license: MIT
 metadata:
   category: reference

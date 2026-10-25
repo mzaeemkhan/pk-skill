@@ -1,6 +1,6 @@
 {
   "name": "currency-rates",
-  "description": "Currency exchange rates against PKR — 166 currencies via ExchangeRate-API. Convert between any pair, key Pakistan-relevant rates at a glance. Free, no API key.",
+  "description": "Interbank mid-market exchange rates and conversion for 166 currencies vs PKR. Use for \"dollar rate\", \"convert 100 USD to PKR\". Not for kerb buy/sell rates (open-market-forex) or SBP official rates/KIBOR (sbp-rates).",
   "profiles": ["lookup"],
-  "frontmatter": "name: currency-rates\ndescription: Currency exchange rates against PKR — 166 currencies, conversion, daily mid-market rates. No API key needed.\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: currency-rates\ndescription: \"Interbank mid-market exchange rates and conversion for 166 currencies vs PKR. Use for \\\"dollar rate\\\", \\\"convert 100 USD to PKR\\\". Not for kerb buy/sell rates (open-market-forex) or SBP official rates/KIBOR (sbp-rates).\"\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
 }

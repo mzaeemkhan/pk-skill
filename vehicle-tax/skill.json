@@ -1,6 +1,6 @@
 {
   "name": "vehicle-tax",
-  "description": "Pakistan vehicle token tax / excise duty calculator by engine CC, province, and vehicle type. All offline.",
+  "description": "Offline vehicle token tax calculator by province, engine CC, car/motorcycle and age. Use for \"token tax 1300cc Punjab\", \"bike tax\". Not for income tax — use pakistan-tax-calculator.",
   "profiles": ["calculator"],
-  "frontmatter": "name: vehicle-tax\ndescription: Pakistan vehicle token tax / excise duty calculator by engine CC, province, and vehicle type. Offline.\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: vehicle-tax\ndescription: \"Offline vehicle token tax calculator by province, engine CC, car/motorcycle and age. Use for \\\"token tax 1300cc Punjab\\\", \\\"bike tax\\\". Not for income tax — use pakistan-tax-calculator.\"\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
 }

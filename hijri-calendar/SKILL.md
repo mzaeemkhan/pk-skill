@@ -1,6 +1,6 @@
 ---
 name: hijri-calendar
-description: Hijri calendar — today's Islamic date, Gregorian↔Hijri conversion, monthly calendar, upcoming Ramadan/Eid/Ashura dates. Aladhan API, no key.
+description: "Hijri (Islamic) dates — today's date, Gregorian↔Hijri conversion, month calendar, upcoming Ramadan/Eid/Ashura (calculated; Ruet-e-Hilal may differ ±1 day). Not for namaz times (prayer-times) or public holidays (pakistan-holidays)."
 license: MIT
 metadata:
   category: religious

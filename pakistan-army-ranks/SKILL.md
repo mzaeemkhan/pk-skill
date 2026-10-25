@@ -1,6 +1,6 @@
 ---
 name: pakistan-army-ranks
-description: Pakistan Armed Forces ranks — Army, Navy, Air Force. NATO equivalents. Offline.
+description: "Offline Pakistan Army, Navy and Air Force ranks — order, insignia, NATO codes, cross-service equivalents. Use for \"is brigadier above colonel\", \"navy equivalent of major\"."
 license: MIT
 metadata:
   category: reference

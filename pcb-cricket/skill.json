@@ -1,6 +1,8 @@
 {
   "name": "pcb-cricket",
-  "description": "Live cricket scores, upcoming matches, recent results, and Pakistan team schedule via ESPN Cricinfo. All international and domestic cricket. Free, no API key.",
-  "profiles": ["lookup"],
-  "frontmatter": "name: pcb-cricket\ndescription: Live cricket scores, upcoming matches, results, Pakistan schedule via ESPN. No API key needed.\nlicense: MIT\nmetadata:\n  category: sports\n  locale: en-PK\n  phase: v1"
+  "description": "Pakistan cricket via ESPN Cricinfo (live): scores, fixtures, results, international player career stats (Test/ODI/T20I) and PSL points table/matches. Use for \"Pakistan match score\", \"Babar Azam stats\", \"PSL table\". No domestic/PSL player stats.",
+  "profiles": [
+    "lookup"
+  ],
+  "frontmatter": "name: pcb-cricket\ndescription: \"Pakistan cricket via ESPN Cricinfo (live): scores, fixtures, results, international player career stats (Test/ODI/T20I) and PSL points table/matches. Use for \\\"Pakistan match score\\\", \\\"Babar Azam stats\\\", \\\"PSL table\\\". No domestic/PSL player stats.\"\nlicense: MIT\nmetadata:\n  category: sports\n  locale: en-PK\n  phase: v1"
 }

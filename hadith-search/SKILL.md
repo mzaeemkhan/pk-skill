@@ -1,6 +1,6 @@
 ---
 name: hadith-search
-description: Search Hadith collections — Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah. English, Arabic, Urdu. Keyless (fawazahmed0/hadith-api via jsDelivr)
+description: "Search hadith in Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah — by number or keyword, English/Arabic/Urdu (live, keyless). Use for \"hadith about\", \"Bukhari 1\". Not for Quran — use quran-search."
 tools:
   - bash
 ---

@@ -1,6 +1,6 @@
 ---
 name: cnic-calculator
-description: Pakistan CNIC parser — extract region, province, gender from CNIC number. Validate format. Offline.
+description: "Offline CNIC number decoder — province, division, district, gender, format validation, CNIC eligibility age. Use for \"which city is this CNIC from\", \"validate CNIC\". No NADRA lookup."
 license: MIT
 metadata:
   category: reference

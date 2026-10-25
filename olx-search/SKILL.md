@@ -1,6 +1,6 @@
 ---
 name: olx-search
-description: Search OLX Pakistan classifieds for listings with prices, locations, categories. No API key.
+description: "Search live OLX Pakistan classifieds — phones, furniture, electronics, bikes and more. Use for \"second-hand on OLX\", \"used mobile price\". Not for new products (daraz-search)."
 license: MIT
 metadata:
   category: shopping

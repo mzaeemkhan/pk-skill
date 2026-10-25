@@ -1,6 +1,6 @@
 ---
 name: ppra-tenders
-description: Search Pakistan federal government procurement tenders — active tenders, history, details. Filter by keyword, category, sector, city.
+description: "Search live PPRA federal government procurement tenders — active, history, details, filter by sector/city. Use for \"government tenders\", \"PPRA tender\". Not for government jobs — use govt-jobs."
 license: MIT
 metadata:
   category: government

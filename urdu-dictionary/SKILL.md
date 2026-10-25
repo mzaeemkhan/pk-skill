@@ -1,6 +1,6 @@
 ---
 name: urdu-dictionary
-description: Urdu-English dictionary — 500+ words, 12 categories. Search romanized, Urdu, English. Offline.
+description: "Offline Urdu–English dictionary, 500+ words in 12 categories — search romanized, Urdu script or English. Use for \"meaning of\", \"Urdu word for\". Not for proverbs (urdu-proverbs) or transliteration (urdu-tools)."
 license: MIT
 metadata:
   category: reference

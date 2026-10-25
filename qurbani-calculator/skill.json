@@ -1,6 +1,6 @@
 {
   "name": "qurbani-calculator",
-  "description": "Qurbani/Udhiyah calculator — meat distribution, animal eligibility, price estimates, Islamic rules (Hanafi fiqh). Offline.",
+  "description": "Offline Qurbani helper — animal shares and eligibility, meat yield from weight, 1/3 distribution, rules (Hanafi), estimated animal prices by city. Use for \"bakra price\", \"cow hissa\". Prices are estimates.",
   "profiles": ["calculator"],
-  "frontmatter": "name: qurbani-calculator\ndescription: Qurbani calculator — meat distribution, animal prices, Islamic rules. Offline.\nlicense: MIT\nmetadata:\n  category: religious\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: qurbani-calculator\ndescription: \"Offline Qurbani helper — animal shares and eligibility, meat yield from weight, 1/3 distribution, rules (Hanafi), estimated animal prices by city. Use for \\\"bakra price\\\", \\\"cow hissa\\\". Prices are estimates.\"\nlicense: MIT\nmetadata:\n  category: religious\n  locale: en-PK\n  phase: v1"
 }

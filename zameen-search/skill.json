@@ -1,6 +1,6 @@
 {
   "name": "zameen-search",
-  "description": "Search Zameen.com property listings — buy, rent, or plot search across 14 Pakistan cities. Filter by price, bedrooms, area. Structured data from LD+JSON. Free, no API key.",
+  "description": "Live Zameen.com property listings in 14 cities — buy, rent, plots with price/bedroom filters. Use for \"house for rent in Lahore\", \"5 marla plot price\". Not for cars — use pakwheels-search.",
   "profiles": ["lookup"],
-  "frontmatter": "name: zameen-search\ndescription: Search Zameen.com property listings — buy, rent, plot across 14 Pakistan cities with price and bedroom filters. No API key needed.\nlicense: MIT\nmetadata:\n  category: real-estate\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: zameen-search\ndescription: \"Live Zameen.com property listings in 14 cities — buy, rent, plots with price/bedroom filters. Use for \\\"house for rent in Lahore\\\", \\\"5 marla plot price\\\". Not for cars — use pakwheels-search.\"\nlicense: MIT\nmetadata:\n  category: real-estate\n  locale: en-PK\n  phase: v1"
 }

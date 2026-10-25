@@ -1,6 +1,6 @@
 {
   "name": "pakistan-history",
-  "description": "Pakistan history — 65+ key events from 1906 to present, eras, heads of state, on-this-day lookup. Offline.",
+  "description": "Offline Pakistan history — 65+ events 1906–2023, eras, governors-general, presidents, PMs, on-this-day. Use for \"what happened in 1971\", \"list of prime ministers\".",
   "profiles": ["lookup"],
-  "frontmatter": "name: pakistan-history\ndescription: Pakistan history — 65+ key events, eras, heads of state. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pakistan-history\ndescription: \"Offline Pakistan history — 65+ events 1906–2023, eras, governors-general, presidents, PMs, on-this-day. Use for \\\"what happened in 1971\\\", \\\"list of prime ministers\\\".\"\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
 }

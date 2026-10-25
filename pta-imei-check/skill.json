@@ -1,6 +1,6 @@
 {
   "name": "pta-imei-check",
-  "description": "PTA IMEI validation — Luhn check, manufacturer identification, and PTA DIRBS registration info. Offline validation with DIRBS guidance.",
+  "description": "Offline IMEI validator — Luhn check, manufacturer from TAC, PTA DIRBS registration guidance and fees. Use for \"is my phone PTA approved\", \"IMEI check\". Live DIRBS status needs dirbs.pta.gov.pk.",
   "profiles": ["lookup"],
-  "frontmatter": "name: pta-imei-check\ndescription: PTA IMEI validation — Luhn check, manufacturer ID, DIRBS registration info.\nlicense: MIT\nmetadata:\n  category: telecom\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pta-imei-check\ndescription: \"Offline IMEI validator — Luhn check, manufacturer from TAC, PTA DIRBS registration guidance and fees. Use for \\\"is my phone PTA approved\\\", \\\"IMEI check\\\". Live DIRBS status needs dirbs.pta.gov.pk.\"\nlicense: MIT\nmetadata:\n  category: telecom\n  locale: en-PK\n  phase: v1"
 }

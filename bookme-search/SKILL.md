@@ -1,6 +1,6 @@
 ---
 name: bookme-search
-description: Bookme.pk aggregated bus search across 120+ operators. Schedules, fares, seat availability, and routes. Read-only — no booking or payment.
+description: "Intercity bus search across 120+ operators (Daewoo, Faisal Movers, Skyways) via bookme.pk — schedules, fares, seats. Use for \"bus ticket\", \"Daewoo timings\". Not for flights — use pakistan-flights."
 license: MIT
 metadata:
   category: travel

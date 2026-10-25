@@ -1,6 +1,6 @@
 ---
 name: passport-tracking
-description: Pakistan passport reference — offices, fees, requirements, process.
+description: "Offline Pakistan passport reference — DGIP offices, normal/urgent/fast-track fees, requirements, process; links to the official tracker. Use for \"passport fee\", \"passport office Lahore\". Not for visas — use pakistan-visa."
 license: MIT
 metadata:
   category: government

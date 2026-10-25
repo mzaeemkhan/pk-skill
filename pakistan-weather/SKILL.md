@@ -1,6 +1,6 @@
 ---
 name: pakistan-weather
-description: Pakistan weather — current conditions, forecast, AQI, and PMD alerts for 45+ cities via Open-Meteo and CAP RSS.
+description: "Live weather for 45+ Pakistani cities — current, 7-day forecast, AQI/smog, PMD weather alerts. Use for \"mausam\", \"Lahore smog\", \"rain forecast\". Not for earthquakes (earthquake-alerts) or flood advisories (ndma-alerts)."
 license: MIT
 metadata:
   category: weather

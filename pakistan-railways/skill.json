@@ -1,6 +1,6 @@
 {
   "name": "pakistan-railways",
-  "description": "Pakistan Railways train schedule, fare, and station lookup. Read-only — no booking, payment, or cancellation.",
+  "description": "Pakistan Railways train schedules, fares, routes and stations (live, read-only). Use for \"train timings\", \"Lahore to Karachi train\", \"Green Line fare\". No live train location (no public source).",
   "profiles": ["lookup"],
-  "frontmatter": "name: pakistan-railways\ndescription: Pakistan Railways train schedule, fare, and station lookup. Read-only — no booking, payment, or cancellation.\nlicense: MIT\nmetadata:\n  category: travel\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pakistan-railways\ndescription: \"Pakistan Railways train schedules, fares, routes and stations (live, read-only). Use for \\\"train timings\\\", \\\"Lahore to Karachi train\\\", \\\"Green Line fare\\\". No live train location (no public source).\"\nlicense: MIT\nmetadata:\n  category: travel\n  locale: en-PK\n  phase: v1"
 }

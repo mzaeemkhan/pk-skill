@@ -1,6 +1,6 @@
 ---
 name: sbp-rates
-description: State Bank of Pakistan live rates — policy rate, KIBOR, T-bill/PIB cut-off yields, FX reserves, interbank USD/PKR. From sbp.org.pk, with as-of dates. No API key.
+description: "Live State Bank of Pakistan rates — policy rate, KIBOR, T-bill/PIB cut-offs, FX reserves, interbank USD/PKR. Use for \"interest rate\", \"KIBOR today\". Not for kerb (open-market-forex) or general conversion (currency-rates)."
 license: MIT
 metadata:
   category: finance

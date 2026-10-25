@@ -1,6 +1,6 @@
 {
   "name": "passport-tracking",
-  "description": "Pakistan passport reference — offices, fees, requirements, and process info. Offline data from DGIP.",
+  "description": "Offline Pakistan passport reference — DGIP offices, normal/urgent/fast-track fees, requirements, process; links to the official tracker. Use for \"passport fee\", \"passport office Lahore\". Not for visas — use pakistan-visa.",
   "profiles": ["lookup"],
-  "frontmatter": "name: passport-tracking\ndescription: Pakistan passport reference — offices, fees, requirements, process.\nlicense: MIT\nmetadata:\n  category: government\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: passport-tracking\ndescription: \"Offline Pakistan passport reference — DGIP offices, normal/urgent/fast-track fees, requirements, process; links to the official tracker. Use for \\\"passport fee\\\", \\\"passport office Lahore\\\". Not for visas — use pakistan-visa.\"\nlicense: MIT\nmetadata:\n  category: government\n  locale: en-PK\n  phase: v1"
 }

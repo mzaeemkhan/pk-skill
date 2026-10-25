@@ -1,6 +1,6 @@
 ---
 name: secp-company
-description: SECP company registration reference — types, fees, documents, offices.
+description: "Offline SECP company registration reference — company types, fees, documents, offices, forms. Use for \"register a company in Pakistan\", \"private limited fees\". Live company search is unsupported."
 license: MIT
 metadata:
   category: government

@@ -1,6 +1,6 @@
 {
   "name": "psx-stocks",
-  "description": "Pakistan Stock Exchange (PSX) stock prices — 50 major KSE stocks via Yahoo Finance. Quotes, market overview, price history. Free, no API key.",
+  "description": "Live PSX share prices for ~50 major KSE stocks — quotes, market overview, price history. Use for \"OGDC share price\", \"KSE-100 today\". Not for dividends/announcements (psx-announcements) or fund NAVs (mutual-funds).",
   "profiles": ["lookup"],
-  "frontmatter": "name: psx-stocks\ndescription: PSX stock prices for 50 major companies — quotes, market overview, history via Yahoo Finance. No API key.\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: psx-stocks\ndescription: \"Live PSX share prices for ~50 major KSE stocks — quotes, market overview, price history. Use for \\\"OGDC share price\\\", \\\"KSE-100 today\\\". Not for dividends/announcements (psx-announcements) or fund NAVs (mutual-funds).\"\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
 }

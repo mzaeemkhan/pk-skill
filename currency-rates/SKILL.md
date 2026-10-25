@@ -1,6 +1,6 @@
 ---
 name: currency-rates
-description: Currency exchange rates against PKR — 166 currencies, conversion, daily mid-market rates. No API key needed.
+description: "Interbank mid-market exchange rates and conversion for 166 currencies vs PKR. Use for \"dollar rate\", \"convert 100 USD to PKR\". Not for kerb buy/sell rates (open-market-forex) or SBP official rates/KIBOR (sbp-rates)."
 license: MIT
 metadata:
   category: finance

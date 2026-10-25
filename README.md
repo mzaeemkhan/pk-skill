@@ -16,6 +16,8 @@ npx --yes skills add mzaeemkhan/pk-skill --all -g
 npx --yes skills add mzaeemkhan/pk-skill --skill pakistan-railways -g
 ```
 
+[اردو میں پڑھیں](README.ur.md) · [Changelog](CHANGELOG.md)
+
 Requires Node.js 18+ and npx.
 
 ## Transport
@@ -50,7 +52,7 @@ Requires Node.js 18+ and npx.
 |-------|-------------|--------|
 | prayer-times | Daily prayer times, monthly calendar with Hijri dates, and next-prayer lookup for 42+ Pakistan cities via Aladhan API. Karachi method default. | Done |
 | quran-search | Quran verse lookup by surah:ayah, keyword search, Arabic + English + Urdu translations via alquran.cloud API | Done |
-| hadith-search | Hadith search — Bukhari, Muslim, Tirmidhi, Abu Dawud, and more via sunnah.com API. Search, random, browse collections. | Done |
+| hadith-search | Hadith search — Bukhari, Muslim, Tirmidhi, Abu Dawud, Nasai, Ibn Majah via keyless fawazahmed0/hadith-api (jsDelivr). English, Arabic, Urdu. Search, random, browse collections. | Done |
 | mosque-finder | Find mosques near any Pakistan city using OpenStreetMap Overpass API spatial queries. 28+ built-in cities. | Done |
 | zakat-calculator | Zakat calculator — gold/silver nisab, asset categories, 2.5% calculation. Hanafi fiqh. All offline. | Done |
 | nikah-calculator | Islamic marriage financial calculator — Mehr (gold/silver tola), Mehr-e-Fatimi reference, wedding cost estimator by city tier, nikah documentation checklist. All offline. | Done |
@@ -110,7 +112,7 @@ Requires Node.js 18+ and npx.
 
 | Skill | Description | Status |
 |-------|-------------|--------|
-| pcb-cricket | Pakistan cricket — live scores, upcoming matches, recent results, series details via ESPN Cricinfo API | Done |
+| pcb-cricket | Pakistan cricket — live scores, upcoming matches, recent results, series details, international player stats (Statsguru), PSL points table and matches via ESPN Cricinfo | Done |
 
 > **Note:** Pakistan Football Federation (PFF) not supported — no public API or data source.
 
@@ -254,7 +256,7 @@ Requires Node.js 18+ and npx.
 
 | Skill | Description | Status |
 |-------|-------------|--------|
-| pakistan-tax-calculator | FBR income tax calculator — salaried/business slabs 2024-25, freelancer 0.25% IT export rate, withholding taxes, filer benefits. Offline. | Done |
+| pakistan-tax-calculator | FBR income tax calculator — salaried/business slabs FY2026-27 (default), FY2025-26 and FY2024-25 selectable, freelancer 0.25% PSEB / 1% IT export rate, withholding taxes, filer benefits. Offline. | Done |
 
 ## History
 

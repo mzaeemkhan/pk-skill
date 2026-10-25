@@ -1,6 +1,6 @@
 {
   "name": "urdu-dictionary",
-  "description": "Urdu-English dictionary — 500+ words across 12 categories. Search romanized, Urdu script, or English. Offline.",
+  "description": "Offline Urdu–English dictionary, 500+ words in 12 categories — search romanized, Urdu script or English. Use for \"meaning of\", \"Urdu word for\". Not for proverbs (urdu-proverbs) or transliteration (urdu-tools).",
   "profiles": ["lookup"],
-  "frontmatter": "name: urdu-dictionary\ndescription: Urdu-English dictionary — 500+ words, 12 categories. Search romanized, Urdu, English. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: urdu-dictionary\ndescription: \"Offline Urdu–English dictionary, 500+ words in 12 categories — search romanized, Urdu script or English. Use for \\\"meaning of\\\", \\\"Urdu word for\\\". Not for proverbs (urdu-proverbs) or transliteration (urdu-tools).\"\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
 }

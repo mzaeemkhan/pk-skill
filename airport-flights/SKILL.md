@@ -1,6 +1,6 @@
 ---
 name: airport-flights
-description: Live arrivals/departures and flight status at 8 Pakistani airports from the Pakistan Airports Authority feed. No API key.
+description: "Live arrivals/departures and flight status at LHE, KHI, ISB, PEW, MUX, UET, LYP, GWD (PAA feed). Use for \"is PK303 on time\", \"Lahore arrivals\". Not for fares or booking — use pakistan-flights."
 license: MIT
 metadata:
   category: transport

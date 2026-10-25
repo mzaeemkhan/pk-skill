@@ -1,6 +1,6 @@
 ---
 name: pakistan-provinces
-description: Pakistan provinces — 7 units, 160+ districts, census data. Offline.
+description: "Offline Pakistan provinces/territories — capitals, area, districts and divisions, governors, CMs. Use for \"districts of Punjab\", \"capital of GB\". Not for detailed population figures — use pakistan-census."
 license: MIT
 metadata:
   category: reference

@@ -1,6 +1,6 @@
 ---
 name: open-market-forex
-description: Pakistan open-market currency rates — buy/sell PKR rates for USD, SAR, AED, GBP, EUR and 18 more, compared with interbank mid-market. Live, no API key.
+description: "Live open-market (kerb) buy/sell PKR rates for USD, SAR, AED, GBP, EUR and more, with gap to interbank. Use for \"dollar open market rate\", \"riyal rate today\". Not for conversion (currency-rates) or SBP rates (sbp-rates)."
 license: MIT
 metadata:
   category: finance

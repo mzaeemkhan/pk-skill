@@ -1,6 +1,6 @@
 {
   "name": "postal-codes",
-  "description": "Pakistan postal codes lookup — search by area, city, or code. 150+ postal codes across 30+ cities. Offline database.",
+  "description": "Offline Pakistan postal/ZIP codes — search by area or city, reverse lookup by code. Use for \"postal code of DHA Lahore\", \"zip code\". Not for parcel tracking (pakistan-post) or phone codes (pakistan-phone-codes).",
   "profiles": ["lookup"],
-  "frontmatter": "name: postal-codes\ndescription: Pakistan postal codes — search by area, city, or code. Offline database.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: postal-codes\ndescription: \"Offline Pakistan postal/ZIP codes — search by area or city, reverse lookup by code. Use for \\\"postal code of DHA Lahore\\\", \\\"zip code\\\". Not for parcel tracking (pakistan-post) or phone codes (pakistan-phone-codes).\"\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
 }

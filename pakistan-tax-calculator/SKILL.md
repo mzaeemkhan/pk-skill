@@ -1,6 +1,6 @@
 ---
 name: pakistan-tax-calculator
-description: Pakistan income tax calculator — FBR slabs, freelancer rate, withholding. Offline.
+description: "Offline FBR income tax calculator — salaried/business slabs FY2024-25 to FY2026-27, freelancer/IT export rate, withholding, filer status. Use for \"salary tax\", \"tax on 2 lakh salary\". Not for zakat or vehicle tax."
 license: MIT
 metadata:
   category: finance

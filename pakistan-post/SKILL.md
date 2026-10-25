@@ -1,6 +1,6 @@
 ---
 name: pakistan-post
-description: Pakistan Post and TCS Express parcel tracking — origin, destination, status, and event history.
+description: "Track parcels via Pakistan Post (EMTTS) and TCS — status and event history. Use for \"track my parcel\", \"TCS tracking\", \"EMS tracking number\". Not for postal codes — use postal-codes."
 license: MIT
 metadata:
   category: courier

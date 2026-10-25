@@ -1,6 +1,6 @@
 {
   "name": "gold-prices",
-  "description": "Gold, silver, platinum, palladium spot prices in PKR and USD — per tola, gram, troy oz. Convert weight and value. Free APIs, no key needed.",
+  "description": "Live gold, silver, platinum prices in PKR per tola, gram and ounce, with weight/value conversion. Use for \"sone ka rate\", \"gold price per tola\". Not for zakat — use zakat-calculator.",
   "profiles": ["lookup"],
-  "frontmatter": "name: gold-prices\ndescription: Precious metal spot prices in PKR — gold, silver, platinum, palladium per tola, gram, troy oz. No API key needed.\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: gold-prices\ndescription: \"Live gold, silver, platinum prices in PKR per tola, gram and ounce, with weight/value conversion. Use for \\\"sone ka rate\\\", \\\"gold price per tola\\\". Not for zakat — use zakat-calculator.\"\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
 }

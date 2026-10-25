@@ -1,6 +1,6 @@
 ---
 name: mosque-finder
-description: Find mosques near Pakistani cities via OpenStreetMap Overpass API. 28+ cities. No API key.
+description: "Find mosques/masjids near a Pakistani city via OpenStreetMap (live). Use for \"masjid near me in Karachi\". Not for prayer timings — use prayer-times."
 license: MIT
 metadata:
   category: religious

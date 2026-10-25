@@ -1,6 +1,6 @@
 ---
 name: pakistan-railways
-description: Pakistan Railways train schedule, fare, and station lookup. Read-only — no booking, payment, or cancellation.
+description: "Pakistan Railways train schedules, fares, routes and stations (live, read-only). Use for \"train timings\", \"Lahore to Karachi train\", \"Green Line fare\". No live train location (no public source)."
 license: MIT
 metadata:
   category: travel

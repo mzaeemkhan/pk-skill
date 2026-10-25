@@ -1,6 +1,6 @@
 ---
 name: govt-jobs
-description: Pakistan government jobs from National Job Portal (njp.gov.pk) — latest, search, details with BPS grade and last date. Live, read-only.
+description: "Live federal government jobs from the National Job Portal — latest openings, keyword search, details with BPS and last date. Use for \"sarkari naukri\", \"govt jobs\". Not for exam results (exam-results) or tenders (ppra-tenders)."
 license: MIT
 metadata:
   category: government

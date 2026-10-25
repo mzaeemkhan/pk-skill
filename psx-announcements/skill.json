@@ -1,6 +1,6 @@
 {
   "name": "psx-announcements",
-  "description": "Pakistan Stock Exchange corporate announcements, dividends/bonus payouts and upcoming book closures from the PSX Data Portal. Live, no API key.",
+  "description": "Live PSX corporate announcements, dividends, bonus/right shares and book closures. Use for \"OGDC dividend\", \"book closure dates\". Not for share prices (psx-stocks) or fund NAVs (mutual-funds).",
   "profiles": ["lookup"],
-  "frontmatter": "name: psx-announcements\ndescription: PSX corporate announcements, dividends, bonus/right shares and book closures from dps.psx.com.pk. Live, no API key.\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: psx-announcements\ndescription: \"Live PSX corporate announcements, dividends, bonus/right shares and book closures. Use for \\\"OGDC dividend\\\", \\\"book closure dates\\\". Not for share prices (psx-stocks) or fund NAVs (mutual-funds).\"\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
 }

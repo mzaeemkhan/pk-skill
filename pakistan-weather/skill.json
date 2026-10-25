@@ -1,6 +1,6 @@
 {
   "name": "pakistan-weather",
-  "description": "Pakistan weather — current conditions, 7-day forecast, air quality index, and PMD severe weather alerts for 45+ cities. Powered by Open-Meteo (free, no API key) and PMD CAP alerts RSS.",
+  "description": "Live weather for 45+ Pakistani cities — current, 7-day forecast, AQI/smog, PMD weather alerts. Use for \"mausam\", \"Lahore smog\", \"rain forecast\". Not for earthquakes (earthquake-alerts) or flood advisories (ndma-alerts).",
   "profiles": ["lookup"],
-  "frontmatter": "name: pakistan-weather\ndescription: Pakistan weather — current conditions, forecast, AQI, and PMD alerts for 45+ cities via Open-Meteo and CAP RSS.\nlicense: MIT\nmetadata:\n  category: weather\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pakistan-weather\ndescription: \"Live weather for 45+ Pakistani cities — current, 7-day forecast, AQI/smog, PMD weather alerts. Use for \\\"mausam\\\", \\\"Lahore smog\\\", \\\"rain forecast\\\". Not for earthquakes (earthquake-alerts) or flood advisories (ndma-alerts).\"\nlicense: MIT\nmetadata:\n  category: weather\n  locale: en-PK\n  phase: v1"
 }

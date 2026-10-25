@@ -1,6 +1,6 @@
 ---
 name: pakistan-news
-description: Pakistan news headlines from 5 major sources via RSS feeds. Search, filter by source. No API key.
+description: "Latest Pakistan headlines from Dawn, Geo, Express Tribune, The News, Business Recorder via RSS; search by keyword. Use for \"Pakistan news today\", \"latest khabar\"."
 license: MIT
 metadata:
   category: news

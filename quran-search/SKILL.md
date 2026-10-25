@@ -1,6 +1,6 @@
 ---
 name: quran-search
-description: Quran verse lookup, search, and surah listing via alquran.cloud. Arabic + English + Urdu. No API key.
+description: "Quran ayah lookup by surah:ayah, keyword search, surah list — Arabic with English and Urdu translation (live). Use for \"Surah Yaseen\", \"ayat about patience\". Not for hadith — use hadith-search."
 license: MIT
 metadata:
   category: religious

@@ -1,6 +1,6 @@
 ---
 name: pakistan-phone-codes
-description: Pakistan STD area codes and mobile operator prefixes. Offline.
+description: "Offline Pakistan landline STD/area codes (100+ cities) and mobile prefixes by operator. Use for \"042 is which city\", \"0345 which network\". Not for packages (pakistan-sim-packages)."
 license: MIT
 metadata:
   category: reference

@@ -1,6 +1,6 @@
 ---
 name: pakistan-history
-description: Pakistan history — 65+ key events, eras, heads of state. Offline.
+description: "Offline Pakistan history — 65+ events 1906–2023, eras, governors-general, presidents, PMs, on-this-day. Use for \"what happened in 1971\", \"list of prime ministers\"."
 license: MIT
 metadata:
   category: reference

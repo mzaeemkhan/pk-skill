@@ -1,6 +1,6 @@
 ---
 name: zakat-calculator
-description: Zakat calculator — gold, silver, cash, investments, property, debts. Nisab check + 2.5% calculation. Offline.
+description: "Offline zakat calculator (Hanafi) — 2.5% on gold, silver, cash, investments minus debts, nisab check. Use for \"how much zakat\", \"nisab\". Not for income tax (pakistan-tax-calculator) or Qurbani (qurbani-calculator)."
 license: MIT
 metadata:
   category: religious

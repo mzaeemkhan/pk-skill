@@ -1,6 +1,6 @@
 ---
 name: earthquake-alerts
-description: Recent and significant earthquakes in and around Pakistan via the USGS live API — magnitude, depth, location, PKT time, near-city search. No API key.
+description: "Live earthquakes in and around Pakistan from USGS — recent, significant, near a city, magnitude/depth/PKT time. Use for \"zalzala\", \"earthquake today\". Not for weather (pakistan-weather) or floods (ndma-alerts)."
 license: MIT
 metadata:
   category: safety

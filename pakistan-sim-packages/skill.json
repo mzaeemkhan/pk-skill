@@ -1,6 +1,6 @@
 {
   "name": "pakistan-sim-packages",
-  "description": "Pakistan mobile operator packages — Jazz, Telenor, Zong, Ufone, SCOM. Data/call/SMS/bundle packages with USSD activation codes. Offline.",
+  "description": "Offline Jazz, Telenor, Zong, Ufone, SCOM bundles — data/call/SMS packages, USSD subscribe and balance codes (prices partly estimates). Use for \"Jazz weekly package\", \"Zong internet code\". Not for prefixes (pakistan-phone-codes).",
   "profiles": ["lookup"],
-  "frontmatter": "name: pakistan-sim-packages\ndescription: Pakistan SIM packages — Jazz, Telenor, Zong, Ufone. Prices, USSD codes. Offline.\nlicense: MIT\nmetadata:\n  category: telecom\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pakistan-sim-packages\ndescription: \"Offline Jazz, Telenor, Zong, Ufone, SCOM bundles — data/call/SMS packages, USSD subscribe and balance codes (prices partly estimates). Use for \\\"Jazz weekly package\\\", \\\"Zong internet code\\\". Not for prefixes (pakistan-phone-codes).\"\nlicense: MIT\nmetadata:\n  category: telecom\n  locale: en-PK\n  phase: v1"
 }

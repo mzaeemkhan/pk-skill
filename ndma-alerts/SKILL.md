@@ -1,6 +1,6 @@
 ---
 name: ndma-alerts
-description: NDMA Pakistan disaster advisories, flood/weather alerts and situation reports (sitreps) from ndma.gov.pk. Live, no API key.
+description: "Live NDMA disaster advisories, flood/weather alerts and sitreps (PDF links). Use for \"flood alert\", \"NDMA advisory\", \"heatwave warning\". Not for forecasts (pakistan-weather) or earthquakes (earthquake-alerts)."
 license: MIT
 metadata:
   category: safety

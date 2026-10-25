@@ -1,6 +1,6 @@
 ---
 name: zameen-search
-description: Search Zameen.com property listings — buy, rent, plot across 14 Pakistan cities with price and bedroom filters. No API key needed.
+description: "Live Zameen.com property listings in 14 cities — buy, rent, plots with price/bedroom filters. Use for \"house for rent in Lahore\", \"5 marla plot price\". Not for cars — use pakwheels-search."
 license: MIT
 metadata:
   category: real-estate

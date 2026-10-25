@@ -1,6 +1,6 @@
 ---
 name: daraz-search
-description: Search Daraz.pk for products with prices, ratings, discounts, and seller info. No API key.
+description: "Search Daraz.pk products — live prices, ratings, discounts, sellers. Use for \"price on Daraz\", \"buy online in Pakistan\". Not for used/classified items (olx-search) or cars (pakwheels-search)."
 license: MIT
 metadata:
   category: shopping

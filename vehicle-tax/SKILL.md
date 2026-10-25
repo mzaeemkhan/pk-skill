@@ -1,6 +1,6 @@
 ---
 name: vehicle-tax
-description: Pakistan vehicle token tax / excise duty calculator by engine CC, province, and vehicle type. Offline.
+description: "Offline vehicle token tax calculator by province, engine CC, car/motorcycle and age. Use for \"token tax 1300cc Punjab\", \"bike tax\". Not for income tax — use pakistan-tax-calculator."
 license: MIT
 metadata:
   category: finance

@@ -1,6 +1,6 @@
 ---
 name: pakistan-banks
-description: Pakistan banks — IBAN validator, SWIFT codes, branch locator. 20+ banks.
+description: "Pakistani banks reference — IBAN validator, SWIFT/BIC codes for 20+ banks (offline), live branch finder via OpenStreetMap. Use for \"Meezan SWIFT code\", \"validate IBAN\". Not for rates — use sbp-rates."
 license: MIT
 metadata:
   category: finance

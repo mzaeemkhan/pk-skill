@@ -1,6 +1,6 @@
 ---
 name: prayer-times
-description: Prayer times for Pakistani cities via Aladhan API — today, monthly, next prayer. Karachi method default. No API key.
+description: "Daily namaz timings for 42+ Pakistani cities — today, monthly table, next prayer, sehri/iftar (Fajr/Maghrib). Use for \"namaz timings\", \"Maghrib time\". Not for Hijri dates — use hijri-calendar."
 license: MIT
 metadata:
   category: religious

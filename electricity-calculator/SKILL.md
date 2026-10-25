@@ -1,6 +1,6 @@
 ---
 name: electricity-calculator
-description: NEPRA electricity bill calculator — residential tariff slabs, surcharges, tax. Compare across DISCOs. Offline.
+description: "Offline NEPRA bill estimator from units used — tariff slabs, FPA, GST, TV fee, compare DISCOs. Use for \"300 units ka bill\", \"protected vs unprotected slab\". Not for your actual bill — use utility-bills."
 license: MIT
 metadata:
   category: utility

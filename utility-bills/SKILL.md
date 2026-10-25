@@ -1,6 +1,6 @@
 ---
 name: utility-bills
-description: Pakistani electricity bill lookup for all 11 WAPDA DISCOs and K-Electric via PITC portal. Read-only — no payment or account changes.
+description: "Look up an actual electricity bill by reference number for all 11 DISCOs (LESCO, MEPCO, IESCO…) and K-Electric. Use for \"check my bijli bill\", \"bill due date\". Not for estimating a bill from units — use electricity-calculator."
 license: MIT
 metadata:
   category: utilities

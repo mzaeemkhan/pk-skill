@@ -1,6 +1,6 @@
 ---
 name: pakistan-sim-packages
-description: Pakistan SIM packages — Jazz, Telenor, Zong, Ufone. Prices, USSD codes. Offline.
+description: "Offline Jazz, Telenor, Zong, Ufone, SCOM bundles — data/call/SMS packages, USSD subscribe and balance codes (prices partly estimates). Use for \"Jazz weekly package\", \"Zong internet code\". Not for prefixes (pakistan-phone-codes)."
 license: MIT
 metadata:
   category: telecom

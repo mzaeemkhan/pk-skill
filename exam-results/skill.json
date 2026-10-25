@@ -1,6 +1,6 @@
 {
   "name": "exam-results",
-  "description": "PPSC and FPSC exam results — written/final results from Punjab and Federal Public Service Commissions. Live data from ppsc.gop.pk and fpsc.gov.pk.",
+  "description": "Live PPSC and FPSC exam results — search written/final results by name, roll number, post. Use for \"PPSC result\", \"FPSC merit list\". Not for BISE board results (unsupported) or university info (hec-info).",
   "profiles": ["lookup"],
-  "frontmatter": "name: exam-results\ndescription: PPSC and FPSC exam results — written and final results from public service commissions.\nlicense: MIT\nmetadata:\n  category: education\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: exam-results\ndescription: \"Live PPSC and FPSC exam results — search written/final results by name, roll number, post. Use for \\\"PPSC result\\\", \\\"FPSC merit list\\\". Not for BISE board results (unsupported) or university info (hec-info).\"\nlicense: MIT\nmetadata:\n  category: education\n  locale: en-PK\n  phase: v1"
 }

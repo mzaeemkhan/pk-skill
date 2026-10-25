@@ -1,6 +1,6 @@
 {
   "name": "load-shedding",
-  "description": "Pakistan electricity load shedding info — all 11 DISCOs + K-Electric. Helplines, SMS codes, websites, schedule lookup guidance.",
+  "description": "Offline load shedding reference for 11 DISCOs + K-Electric — helplines, SMS codes, complaint numbers, schedule categories. Use for \"bijli kab jayegi\", \"LESCO complaint\". Not for bills (utility-bills, electricity-calculator).",
   "profiles": ["lookup"],
-  "frontmatter": "name: load-shedding\ndescription: Pakistan electricity load shedding info — DISCOs, helplines, SMS codes, schedule guidance.\nlicense: MIT\nmetadata:\n  category: utility\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: load-shedding\ndescription: \"Offline load shedding reference for 11 DISCOs + K-Electric — helplines, SMS codes, complaint numbers, schedule categories. Use for \\\"bijli kab jayegi\\\", \\\"LESCO complaint\\\". Not for bills (utility-bills, electricity-calculator).\"\nlicense: MIT\nmetadata:\n  category: utility\n  locale: en-PK\n  phase: v1"
 }

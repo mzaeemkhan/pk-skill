@@ -1,6 +1,6 @@
 ---
 name: pakistan-flags-symbols
-description: Pakistan national symbols — flag, anthem, emblem, markhor, jasmine, deodar, motto. Offline.
+description: "Offline Pakistan national symbols — flag specs, Qaumi Taranah text, state emblem, national animal/bird/flower/tree, motto. Use for \"national anthem lyrics\", \"national bird\"."
 license: MIT
 metadata:
   category: reference

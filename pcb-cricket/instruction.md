@@ -12,6 +12,8 @@ Provides live cricket scores, upcoming fixtures, recent results, and Pakistan-sp
 - "Upcoming cricket matches"
 - "Recent cricket results"
 - "PSL scores"
+- "Babar Azam ODI average" / "Shaheen Afridi T20I wickets"
+- "PSL points table" / "Who won PSL 2026?"
 
 ## Prerequisites
 
@@ -67,11 +69,32 @@ node scripts/cricket.mjs series --id <league_id>
 
 Get league ID from the `all` command output.
 
+### 7. Player career stats
+
+```bash
+node scripts/cricket.mjs player --name "Babar Azam"
+```
+
+Searches ESPN for the player, then returns international career summary per format (Test, ODI, T20I): batting (Mat, Inns, Runs, HS, Ave, SR, hundreds, fifties, ducks, 4s, 6s) and bowling (Wkts, BBI, Ave, Econ, SR, fiveWickets). Formats a player never batted/bowled in are omitted.
+
+### 8. PSL table and matches
+
+```bash
+node scripts/cricket.mjs psl-table
+node scripts/cricket.mjs psl-matches
+```
+
+Both return a `season` field. Off-season (PSL runs roughly Feb–May) they return the latest completed season.
+
 ## How it works internally
 
 **ESPN scoreboard header API**: `site.web.api.espn.com/apis/v2/scoreboard/header?sport=cricket&lang=en&region=pk` — returns all current cricket series and matches globally in one call. Free, no auth, no rate limit for normal use.
 
 For Pakistan filtering, matches team names and series names against keywords: pakistan, pak, psl, pcb, national t20, quaid-e-azam.
+
+`player`: ESPN search `site.web.api.espn.com/apis/common/v3/search?type=player&sport=cricket` for the ID, profile from `.../common/v3/sports/cricket/athletes/<id>`, stats parsed from the "Career summary" table on Statsguru `stats.cricinfo.com/ci/engine/player/<id>.html?class=11;template=results;type=batting|bowling`. (The espncricinfo.com site and hs-consumer-api are Akamai-blocked; Statsguru is not.)
+
+PSL (ESPN league 8679): `site.web.api.espn.com/apis/v2/sports/cricket/8679/standings?season=<year>` and `.../apis/site/v2/sports/cricket/8679/scoreboard?season=<year>&limit=100`.
 
 The `series` command uses ESPN's league-specific scoreboard: `site.web.api.espn.com/apis/site/v2/sports/cricket/<league_id>/scoreboard`.
 
@@ -85,6 +108,6 @@ The `series` command uses ESPN's league-specific scoreboard: `site.web.api.espn.
 
 - No ball-by-ball commentary or wagon wheels
 - No detailed scorecards (batting/bowling figures per player)
-- No player statistics, rankings, or career records
+- Player stats: international career summary only — no PSL/domestic player stats, rankings, or match-by-match logs
 - No historical match archive beyond current ESPN window
 - Read-only — no ticket booking or fantasy cricket

@@ -1,6 +1,6 @@
 ---
 name: psx-announcements
-description: PSX corporate announcements, dividends, bonus/right shares and book closures from dps.psx.com.pk. Live, no API key.
+description: "Live PSX corporate announcements, dividends, bonus/right shares and book closures. Use for \"OGDC dividend\", \"book closure dates\". Not for share prices (psx-stocks) or fund NAVs (mutual-funds)."
 license: MIT
 metadata:
   category: finance

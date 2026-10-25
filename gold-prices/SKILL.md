@@ -1,6 +1,6 @@
 ---
 name: gold-prices
-description: Precious metal spot prices in PKR — gold, silver, platinum, palladium per tola, gram, troy oz. No API key needed.
+description: "Live gold, silver, platinum prices in PKR per tola, gram and ounce, with weight/value conversion. Use for \"sone ka rate\", \"gold price per tola\". Not for zakat — use zakat-calculator."
 license: MIT
 metadata:
   category: finance

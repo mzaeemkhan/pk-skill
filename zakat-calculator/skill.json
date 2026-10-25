@@ -1,6 +1,6 @@
 {
   "name": "zakat-calculator",
-  "description": "Zakat calculator — compute 2.5% zakat on gold, silver, cash, investments, property minus debts. Nisab thresholds (7.5 tola gold / 52.5 tola silver). All offline.",
+  "description": "Offline zakat calculator (Hanafi) — 2.5% on gold, silver, cash, investments minus debts, nisab check. Use for \"how much zakat\", \"nisab\". Not for income tax (pakistan-tax-calculator) or Qurbani (qurbani-calculator).",
   "profiles": ["calculator"],
-  "frontmatter": "name: zakat-calculator\ndescription: Zakat calculator — gold, silver, cash, investments, property, debts. Nisab check + 2.5% calculation. Offline.\nlicense: MIT\nmetadata:\n  category: religious\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: zakat-calculator\ndescription: \"Offline zakat calculator (Hanafi) — 2.5% on gold, silver, cash, investments minus debts, nisab check. Use for \\\"how much zakat\\\", \\\"nisab\\\". Not for income tax (pakistan-tax-calculator) or Qurbani (qurbani-calculator).\"\nlicense: MIT\nmetadata:\n  category: religious\n  locale: en-PK\n  phase: v1"
 }

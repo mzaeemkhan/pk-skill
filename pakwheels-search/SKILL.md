@@ -1,6 +1,6 @@
 ---
 name: pakwheels-search
-description: Search PakWheels.com used cars with prices, specs, and seller locations. No API key.
+description: "Search live PakWheels used-car listings — prices, model year, mileage, city. Use for \"used Corolla price\", \"Alto 2018 for sale\". Not for property (zameen-search) or general classifieds (olx-search)."
 license: MIT
 metadata:
   category: shopping

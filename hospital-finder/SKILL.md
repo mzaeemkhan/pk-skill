@@ -1,6 +1,6 @@
 ---
 name: hospital-finder
-description: Find hospitals, clinics, pharmacies in Pakistani cities via OpenStreetMap.
+description: "Find hospitals, clinics, pharmacies, dentists by Pakistani city or coordinates via OpenStreetMap (live). Use for \"hospital near me\", \"pharmacy in Multan\". Not for blood — use blood-banks."
 license: MIT
 metadata:
   category: health

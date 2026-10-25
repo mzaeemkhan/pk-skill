@@ -1,6 +1,6 @@
 {
   "name": "pakistan-holidays",
-  "description": "Pakistan public holidays — gazetted, optional, and Islamic holidays for 2024-2027. Next holiday, monthly view, search by name. All offline.",
+  "description": "Offline Pakistan public holidays 2024-2027 — gazetted and Islamic, next holiday, monthly view. Use for \"next chutti\", \"is Monday a holiday\". Not for Hijri date conversion (hijri-calendar) or prayer times.",
   "profiles": ["lookup"],
-  "frontmatter": "name: pakistan-holidays\ndescription: Pakistan public holidays 2024-2027 — gazetted and Islamic. Next holiday, search, monthly view. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pakistan-holidays\ndescription: \"Offline Pakistan public holidays 2024-2027 — gazetted and Islamic, next holiday, monthly view. Use for \\\"next chutti\\\", \\\"is Monday a holiday\\\". Not for Hijri date conversion (hijri-calendar) or prayer times.\"\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
 }

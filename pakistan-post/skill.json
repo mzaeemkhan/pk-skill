@@ -1,6 +1,6 @@
 {
   "name": "pakistan-post",
-  "description": "Track parcels via Pakistan Post (EMTTS) and TCS Express. Returns origin, destination, and full event history as JSON.",
+  "description": "Track parcels via Pakistan Post (EMTTS) and TCS — status and event history. Use for \"track my parcel\", \"TCS tracking\", \"EMS tracking number\". Not for postal codes — use postal-codes.",
   "profiles": ["lookup"],
-  "frontmatter": "name: pakistan-post\ndescription: Pakistan Post and TCS Express parcel tracking — origin, destination, status, and event history.\nlicense: MIT\nmetadata:\n  category: courier\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pakistan-post\ndescription: \"Track parcels via Pakistan Post (EMTTS) and TCS — status and event history. Use for \\\"track my parcel\\\", \\\"TCS tracking\\\", \\\"EMS tracking number\\\". Not for postal codes — use postal-codes.\"\nlicense: MIT\nmetadata:\n  category: courier\n  locale: en-PK\n  phase: v1"
 }

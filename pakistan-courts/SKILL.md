@@ -1,6 +1,6 @@
 ---
 name: pakistan-courts
-description: Pakistan judiciary — court hierarchy, high courts, contact info. Offline.
+description: "Offline Pakistan judiciary reference — court hierarchy, high courts, special courts, bar councils, jurisdiction and contacts. Use for \"which court handles\", \"Lahore High Court\". Not for law text — use pakistan-constitution."
 license: MIT
 metadata:
   category: government

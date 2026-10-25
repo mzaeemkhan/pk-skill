@@ -1,6 +1,6 @@
 {
   "name": "pakistan-phone-codes",
-  "description": "Pakistan STD area codes for 100+ cities and mobile operator prefixes (Jazz, Telenor, Zong, Ufone, SCOM). Offline.",
+  "description": "Offline Pakistan landline STD/area codes (100+ cities) and mobile prefixes by operator. Use for \"042 is which city\", \"0345 which network\". Not for packages (pakistan-sim-packages).",
   "profiles": ["lookup"],
-  "frontmatter": "name: pakistan-phone-codes\ndescription: Pakistan STD area codes and mobile operator prefixes. Offline.\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: pakistan-phone-codes\ndescription: \"Offline Pakistan landline STD/area codes (100+ cities) and mobile prefixes by operator. Use for \\\"042 is which city\\\", \\\"0345 which network\\\". Not for packages (pakistan-sim-packages).\"\nlicense: MIT\nmetadata:\n  category: reference\n  locale: en-PK\n  phase: v1"
 }

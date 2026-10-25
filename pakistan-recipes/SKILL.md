@@ -1,6 +1,6 @@
 ---
 name: pakistan-recipes
-description: Pakistani traditional recipes — 50+ dishes with ingredients, steps, and tips. Offline.
+description: "Offline Pakistani recipes — biryani, nihari, karahi, haleem, desserts, street food with ingredients and steps. Use for \"biryani recipe\", \"how to make nihari\"."
 tools:
   - bash
 ---

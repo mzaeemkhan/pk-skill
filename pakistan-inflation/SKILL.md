@@ -1,6 +1,6 @@
 ---
 name: pakistan-inflation
-description: Latest Pakistan CPI inflation (national/urban/rural), weekly SPI and WPI from PBS releases. Live, no key.
+description: "Live Pakistan inflation from PBS — latest CPI (national/urban/rural, YoY/MoM), weekly SPI, WPI with release links. Use for \"inflation rate\", \"mehngai\", \"SPI this week\"."
 license: MIT
 metadata:
   category: finance

@@ -1,6 +1,6 @@
 ---
 name: urdu-proverbs
-description: Urdu proverbs and idioms (muhavare/kahawatein) — 120+ entries with meanings and examples. Offline.
+description: "Offline Urdu muhavare and kahawatein (120+) with meanings and example sentences. Use for \"Urdu proverb\", \"meaning of muhavara\". Not for single-word meanings — use urdu-dictionary."
 tools:
   - bash
 ---

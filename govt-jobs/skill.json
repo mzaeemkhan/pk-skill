@@ -1,6 +1,6 @@
 {
   "name": "govt-jobs",
-  "description": "Live Pakistan federal government jobs from the National Job Portal (njp.gov.pk) — latest openings, keyword search, and job details (department, grade/BPS, vacancies, experience, last date). Read-only, no API key.",
+  "description": "Live federal government jobs from the National Job Portal — latest openings, keyword search, details with BPS and last date. Use for \"sarkari naukri\", \"govt jobs\". Not for exam results (exam-results) or tenders (ppra-tenders).",
   "profiles": ["lookup"],
-  "frontmatter": "name: govt-jobs\ndescription: Pakistan government jobs from National Job Portal (njp.gov.pk) — latest, search, details with BPS grade and last date. Live, read-only.\nlicense: MIT\nmetadata:\n  category: government\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: govt-jobs\ndescription: \"Live federal government jobs from the National Job Portal — latest openings, keyword search, details with BPS and last date. Use for \\\"sarkari naukri\\\", \\\"govt jobs\\\". Not for exam results (exam-results) or tenders (ppra-tenders).\"\nlicense: MIT\nmetadata:\n  category: government\n  locale: en-PK\n  phase: v1"
 }

@@ -1,6 +1,6 @@
 ---
 name: pakistan-radio
-description: Pakistan FM radio stations directory — frequencies, cities, categories. 60+ stations. Offline.
+description: "Offline directory of 60+ Pakistani FM radio stations — frequencies by city and category. Use for \"FM 101 frequency\", \"radio stations in Karachi\"."
 license: MIT
 metadata:
   category: reference

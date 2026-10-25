@@ -1,6 +1,6 @@
 ---
 name: blood-banks
-description: Find blood banks and donation centers in Pakistani cities via OpenStreetMap.
+description: "Find blood banks and donation centres in Pakistani cities (OpenStreetMap, live) plus major organisations (Fatimid, Sundas, Indus) with phones. Use for \"blood chahiye\", \"O negative donor\". Not for hospitals — use hospital-finder."
 license: MIT
 metadata:
   category: health

@@ -1,6 +1,6 @@
 ---
 name: pakistan-maps
-description: Pakistan routing, distance, and nearby place search via OSRM and Nominatim.
+description: "Driving route, distance and travel time between 30+ Pakistani cities (OSRM) and nearby place search (OpenStreetMap). Use for \"Lahore to Islamabad distance\", \"restaurants near\"."
 license: MIT
 metadata:
   category: maps

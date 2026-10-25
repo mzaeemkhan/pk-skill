@@ -1,6 +1,6 @@
 {
   "name": "olx-search",
-  "description": "Search OLX Pakistan classifieds — buy/sell anything. Prices, locations, categories. Free, no API key.",
+  "description": "Search live OLX Pakistan classifieds — phones, furniture, electronics, bikes and more. Use for \"second-hand on OLX\", \"used mobile price\". Not for new products (daraz-search).",
   "profiles": ["lookup"],
-  "frontmatter": "name: olx-search\ndescription: Search OLX Pakistan classifieds for listings with prices, locations, categories. No API key.\nlicense: MIT\nmetadata:\n  category: shopping\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: olx-search\ndescription: \"Search live OLX Pakistan classifieds — phones, furniture, electronics, bikes and more. Use for \\\"second-hand on OLX\\\", \\\"used mobile price\\\". Not for new products (daraz-search).\"\nlicense: MIT\nmetadata:\n  category: shopping\n  locale: en-PK\n  phase: v1"
 }

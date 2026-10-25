@@ -1,6 +1,6 @@
 ---
 name: pakistan-constitution
-description: Constitution of Pakistan 1973 — articles, rights, amendments. Offline.
+description: "Offline Constitution of Pakistan 1973 — articles by number, fundamental rights, principles of policy, parts, amendments. Use for \"Article 19\", \"18th amendment\". Not for courts — use pakistan-courts."
 license: MIT
 metadata:
   category: reference

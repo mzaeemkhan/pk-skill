@@ -1,6 +1,6 @@
 ---
 name: mutual-funds
-description: Pakistan mutual funds — search 560+ funds, latest NAV and date, returns, costs, top funds by category (equity, money market, income, Islamic). Live, no API key.
+description: "Live Pakistan mutual and pension fund NAVs and returns (560+ funds) — search, top by category, expense ratios. Use for \"Meezan fund NAV\", \"best money market fund\". Not for shares — use psx-stocks."
 license: MIT
 metadata:
   category: finance

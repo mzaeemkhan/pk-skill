@@ -1,6 +1,6 @@
 ---
 name: prize-bonds
-description: Pakistan prize bond draw results, schedule, and denominations via savings.gov.pk. No API key needed.
+description: "Check prize bond numbers against National Savings draw results; latest draws, schedule, denominations (live, savings.gov.pk). Use for \"prize bond result\", \"750 bond draw\"."
 license: MIT
 metadata:
   category: finance

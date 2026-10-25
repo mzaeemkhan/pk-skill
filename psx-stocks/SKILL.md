@@ -1,6 +1,6 @@
 ---
 name: psx-stocks
-description: PSX stock prices for 50 major companies — quotes, market overview, history via Yahoo Finance. No API key.
+description: "Live PSX share prices for ~50 major KSE stocks — quotes, market overview, price history. Use for \"OGDC share price\", \"KSE-100 today\". Not for dividends/announcements (psx-announcements) or fund NAVs (mutual-funds)."
 license: MIT
 metadata:
   category: finance

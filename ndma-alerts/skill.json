@@ -1,0 +1,6 @@
+{
+  "name": "ndma-alerts",
+  "description": "NDMA (National Disaster Management Authority) weather/flood advisories, situation reports and active alerts for Pakistan. Live from ndma.gov.pk, no API key.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: ndma-alerts\ndescription: NDMA Pakistan disaster advisories, flood/weather alerts and situation reports (sitreps) from ndma.gov.pk. Live, no API key.\nlicense: MIT\nmetadata:\n  category: safety\n  locale: en-PK\n  phase: v1"
+}

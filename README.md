@@ -273,8 +273,23 @@ Requires Node.js 18+ and npx.
 | hijri-calendar | Gregorian↔Hijri conversion, monthly calendar, upcoming Islamic events — Aladhan API. Dates may shift ±1 day per Ruet-e-Hilal. | Done |
 | pakistan-inflation | Latest monthly CPI (national/urban/rural) and weekly SPI — PBS releases. | Done |
 | govt-jobs | Federal government job listings, search, details — National Job Portal (njp.gov.pk). No city filter. | Done |
+| psx-announcements | PSX corporate announcements, dividends/payouts, book closures — dps.psx.com.pk. | Done |
+| airport-flights | Live arrivals/departures for LHE, KHI, ISB, PEW, MUX, UET, LYP, GWD — PAA flight feed. Sialkot not covered (private airport). | Done |
+| ndma-alerts | NDMA advisories, situation reports, alerts — ndma.gov.pk (PDF links). | Done |
 
 > **Note:** Prices in pakistan-sim-packages, pakistan-isps, and qurbani-calculator are partly estimates (`estimate: true` in output) — confirm with the operator/vendor.
+
+## Smoke tests
+
+Every skill has a cheap read-only check in `smoke.json`.
+
+```bash
+node scripts/smoke.mjs                 # all skills
+node scripts/smoke.mjs --only offline  # no network
+node scripts/smoke.mjs --skill sbp-rates
+```
+
+GitHub Actions runs offline checks on every push/PR touching scripts, and the full suite daily at 08:00 PKT. A failing scheduled run opens a "Smoke test failures" issue; the next passing run closes it. Cloudflare may block GitHub runner IPs, so a CI failure on a scraped source may not reproduce locally.
 
 ## License
 

@@ -1,0 +1,592 @@
+{
+  "pakistan-railways": {
+    "script": "scripts/pak_railways.mjs",
+    "args": [
+      "search",
+      "--from",
+      "Lahore",
+      "--to",
+      "Karachi"
+    ],
+    "live": true
+  },
+  "bookme-search": {
+    "script": "scripts/bookme.mjs",
+    "args": [
+      "cities"
+    ],
+    "live": true
+  },
+  "pakistan-flights": {
+    "script": "scripts/flights.mjs",
+    "args": [
+      "airports",
+      "--query",
+      "karachi"
+    ],
+    "live": true
+  },
+  "utility-bills": {
+    "script": "scripts/bills.mjs",
+    "args": [
+      "providers"
+    ],
+    "live": true
+  },
+  "pakistan-weather": {
+    "script": "scripts/weather.mjs",
+    "args": [
+      "current",
+      "--city",
+      "islamabad"
+    ],
+    "live": true
+  },
+  "prayer-times": {
+    "script": "scripts/prayers.mjs",
+    "args": [
+      "today",
+      "--city",
+      "Lahore"
+    ],
+    "live": true
+  },
+  "currency-rates": {
+    "script": "scripts/rates.mjs",
+    "args": [
+      "today"
+    ],
+    "live": true
+  },
+  "prize-bonds": {
+    "script": "scripts/bonds.mjs",
+    "args": [
+      "latest",
+      "--denomination",
+      "200"
+    ],
+    "live": true
+  },
+  "pakistan-post": {
+    "script": "scripts/tracking.mjs",
+    "args": [
+      "services"
+    ],
+    "live": true
+  },
+  "ppra-tenders": {
+    "script": "scripts/tenders.mjs",
+    "args": [
+      "search"
+    ],
+    "live": true
+  },
+  "zameen-search": {
+    "script": "scripts/zameen.mjs",
+    "args": [
+      "search",
+      "--city",
+      "Lahore"
+    ],
+    "live": true
+  },
+  "psx-stocks": {
+    "script": "scripts/stocks.mjs",
+    "args": [
+      "market"
+    ],
+    "live": true
+  },
+  "gold-prices": {
+    "script": "scripts/gold.mjs",
+    "args": [
+      "today"
+    ],
+    "live": true
+  },
+  "pcb-cricket": {
+    "script": "scripts/cricket.mjs",
+    "args": [
+      "recent"
+    ],
+    "live": true
+  },
+  "daraz-search": {
+    "script": "scripts/daraz.mjs",
+    "args": [
+      "search",
+      "--query",
+      "laptop"
+    ],
+    "live": true
+  },
+  "pakwheels-search": {
+    "script": "scripts/pakwheels.mjs",
+    "args": [
+      "search",
+      "--query",
+      "civic"
+    ],
+    "live": true
+  },
+  "olx-search": {
+    "script": "scripts/olx.mjs",
+    "args": [
+      "search",
+      "--query",
+      "iphone"
+    ],
+    "live": true
+  },
+  "pakistan-news": {
+    "script": "scripts/news.mjs",
+    "args": [
+      "headlines",
+      "--limit",
+      "5"
+    ],
+    "live": true
+  },
+  "quran-search": {
+    "script": "scripts/quran.mjs",
+    "args": [
+      "ayah",
+      "--ref",
+      "2:255"
+    ],
+    "live": true
+  },
+  "mosque-finder": {
+    "script": "scripts/mosques.mjs",
+    "args": [
+      "find",
+      "--city",
+      "Lahore",
+      "--limit",
+      "5"
+    ],
+    "live": true
+  },
+  "urdu-tools": {
+    "script": "scripts/urdu.mjs",
+    "args": [
+      "number",
+      "--value",
+      "12345"
+    ],
+    "live": false
+  },
+  "hec-info": {
+    "script": "scripts/hec.mjs",
+    "args": [
+      "stats"
+    ],
+    "live": false
+  },
+  "exam-results": {
+    "script": "scripts/results.mjs",
+    "args": [
+      "fpsc"
+    ],
+    "live": true
+  },
+  "hospital-finder": {
+    "script": "scripts/hospitals.mjs",
+    "args": [
+      "search",
+      "--city",
+      "Islamabad",
+      "--type",
+      "hospital",
+      "--limit",
+      "5"
+    ],
+    "live": true
+  },
+  "zakat-calculator": {
+    "script": "scripts/zakat.mjs",
+    "args": [
+      "nisab"
+    ],
+    "live": false
+  },
+  "pakistan-holidays": {
+    "script": "scripts/holidays.mjs",
+    "args": [
+      "list",
+      "--year",
+      "2026"
+    ],
+    "live": false
+  },
+  "emergency-numbers": {
+    "script": "scripts/emergency.mjs",
+    "args": [
+      "list"
+    ],
+    "live": false
+  },
+  "postal-codes": {
+    "script": "scripts/postcodes.mjs",
+    "args": [
+      "lookup",
+      "--code",
+      "54000"
+    ],
+    "live": false
+  },
+  "nikah-calculator": {
+    "script": "scripts/nikah.mjs",
+    "args": [
+      "reference"
+    ],
+    "live": false
+  },
+  "blood-banks": {
+    "script": "scripts/blood.mjs",
+    "args": [
+      "major"
+    ],
+    "live": true
+  },
+  "fuel-prices": {
+    "script": "scripts/fuel.mjs",
+    "args": [
+      "current"
+    ],
+    "live": false
+  },
+  "pta-imei-check": {
+    "script": "scripts/imei.mjs",
+    "args": [
+      "validate",
+      "--imei",
+      "353456789012345"
+    ],
+    "live": false
+  },
+  "load-shedding": {
+    "script": "scripts/loadshedding.mjs",
+    "args": [
+      "discos"
+    ],
+    "live": false
+  },
+  "secp-company": {
+    "script": "scripts/secp.mjs",
+    "args": [
+      "fees"
+    ],
+    "live": false
+  },
+  "passport-tracking": {
+    "script": "scripts/passport.mjs",
+    "args": [
+      "fees"
+    ],
+    "live": false
+  },
+  "pakistan-maps": {
+    "script": "scripts/maps.mjs",
+    "args": [
+      "distance",
+      "--from",
+      "Karachi",
+      "--to",
+      "Peshawar"
+    ],
+    "live": true
+  },
+  "cnic-calculator": {
+    "script": "scripts/cnic.mjs",
+    "args": [
+      "parse",
+      "--cnic",
+      "42201-1234567-1"
+    ],
+    "live": false
+  },
+  "vehicle-tax": {
+    "script": "scripts/vehicletax.mjs",
+    "args": [
+      "calculate",
+      "--cc",
+      "1300",
+      "--province",
+      "punjab"
+    ],
+    "live": false
+  },
+  "electricity-calculator": {
+    "script": "scripts/electricity.mjs",
+    "args": [
+      "calculate",
+      "--units",
+      "300"
+    ],
+    "live": false
+  },
+  "pakistan-radio": {
+    "script": "scripts/radio.mjs",
+    "args": [
+      "list"
+    ],
+    "live": false
+  },
+  "pakistan-banks": {
+    "script": "scripts/banks.mjs",
+    "args": [
+      "iban",
+      "--number",
+      "PK36SCBL0000001123456702"
+    ],
+    "live": true
+  },
+  "urdu-dictionary": {
+    "script": "scripts/dictionary.mjs",
+    "args": [
+      "categories"
+    ],
+    "live": false
+  },
+  "pakistan-census": {
+    "script": "scripts/census.mjs",
+    "args": [
+      "summary"
+    ],
+    "live": false
+  },
+  "pakistan-courts": {
+    "script": "scripts/courts.mjs",
+    "args": [
+      "hierarchy"
+    ],
+    "live": false
+  },
+  "hadith-search": {
+    "script": "scripts/hadith.mjs",
+    "args": [
+      "hadith",
+      "--collection",
+      "bukhari",
+      "--number",
+      "1"
+    ],
+    "live": true
+  },
+  "pakistan-recipes": {
+    "script": "scripts/recipes.mjs",
+    "args": [
+      "search",
+      "--query",
+      "biryani"
+    ],
+    "live": false
+  },
+  "urdu-proverbs": {
+    "script": "scripts/proverbs.mjs",
+    "args": [
+      "random"
+    ],
+    "live": false
+  },
+  "hajj-umrah-guide": {
+    "script": "scripts/hajjumrah.mjs",
+    "args": [
+      "costs"
+    ],
+    "live": false
+  },
+  "qurbani-calculator": {
+    "script": "scripts/qurbani.mjs",
+    "args": [
+      "animals"
+    ],
+    "live": false
+  },
+  "pakistan-phone-codes": {
+    "script": "scripts/phonecodes.mjs",
+    "args": [
+      "lookup",
+      "--code",
+      "042"
+    ],
+    "live": false
+  },
+  "pakistan-visa": {
+    "script": "scripts/visa.mjs",
+    "args": [
+      "search",
+      "--country",
+      "Turkey"
+    ],
+    "live": false
+  },
+  "pakistan-isps": {
+    "script": "scripts/isps.mjs",
+    "args": [
+      "list",
+      "--type",
+      "fiber"
+    ],
+    "live": false
+  },
+  "pakistan-constitution": {
+    "script": "scripts/constitution.mjs",
+    "args": [
+      "article",
+      "--number",
+      "19"
+    ],
+    "live": false
+  },
+  "pakistan-army-ranks": {
+    "script": "scripts/ranks.mjs",
+    "args": [
+      "branch",
+      "--name",
+      "army"
+    ],
+    "live": false
+  },
+  "pakistan-universities-ranking": {
+    "script": "scripts/universities.mjs",
+    "args": [
+      "top",
+      "--limit",
+      "5"
+    ],
+    "live": false
+  },
+  "pakistan-provinces": {
+    "script": "scripts/provinces.mjs",
+    "args": [
+      "list"
+    ],
+    "live": false
+  },
+  "pakistan-flags-symbols": {
+    "script": "scripts/symbols.mjs",
+    "args": [
+      "flag"
+    ],
+    "live": false
+  },
+  "pakistan-tax-calculator": {
+    "script": "scripts/tax.mjs",
+    "args": [
+      "calculate",
+      "--income",
+      "1500000",
+      "--type",
+      "salaried"
+    ],
+    "live": false
+  },
+  "pakistan-sim-packages": {
+    "script": "scripts/simpackages.mjs",
+    "args": [
+      "list",
+      "--operator",
+      "jazz"
+    ],
+    "live": false
+  },
+  "pakistan-history": {
+    "script": "scripts/history.mjs",
+    "args": [
+      "year",
+      "--year",
+      "1947"
+    ],
+    "live": false
+  },
+  "earthquake-alerts": {
+    "script": "scripts/quakes.mjs",
+    "args": [
+      "recent",
+      "--days",
+      "30",
+      "--min-mag",
+      "2.5"
+    ],
+    "live": true
+  },
+  "mutual-funds": {
+    "script": "scripts/funds.mjs",
+    "args": [
+      "search",
+      "--query",
+      "meezan"
+    ],
+    "live": true
+  },
+  "sbp-rates": {
+    "script": "scripts/sbp.mjs",
+    "args": [
+      "policy-rate"
+    ],
+    "live": true
+  },
+  "open-market-forex": {
+    "script": "scripts/forex.mjs",
+    "args": [
+      "rate",
+      "--currency",
+      "usd"
+    ],
+    "live": true
+  },
+  "hijri-calendar": {
+    "script": "scripts/hijri.mjs",
+    "args": [
+      "today"
+    ],
+    "live": true
+  },
+  "pakistan-inflation": {
+    "script": "scripts/inflation.mjs",
+    "args": [
+      "spi"
+    ],
+    "live": true
+  },
+  "govt-jobs": {
+    "script": "scripts/jobs.mjs",
+    "args": [
+      "latest",
+      "--count",
+      "5"
+    ],
+    "live": true
+  },
+  "psx-announcements": {
+    "script": "scripts/psx.mjs",
+    "args": [
+      "latest",
+      "--count",
+      "3"
+    ],
+    "live": true
+  },
+  "airport-flights": {
+    "script": "scripts/flights.mjs",
+    "args": [
+      "arrivals",
+      "--airport",
+      "LHE"
+    ],
+    "live": true
+  },
+  "ndma-alerts": {
+    "script": "scripts/ndma.mjs",
+    "args": [
+      "type",
+      "--name",
+      "advisory",
+      "--count",
+      "3"
+    ],
+    "live": true
+  }
+}

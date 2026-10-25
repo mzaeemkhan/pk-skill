@@ -52,7 +52,8 @@ async function findMosques(cityName, radius = 2000, limit = 20) {
 
   const res = await fetch("https://overpass-api.de/api/interpreter", {
     method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    // Overpass returns 406 to requests without a User-Agent.
+    headers: { "Content-Type": "application/x-www-form-urlencoded", "User-Agent": "pk-skill/1.0 (+https://github.com/mzaeemkhan/pk-skill)" },
     body: "data=" + encodeURIComponent(query),
     signal: AbortSignal.timeout(20000),
   });

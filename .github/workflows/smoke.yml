@@ -1,0 +1,87 @@
+name: Smoke test
+
+# Runs one cheap subcommand per skill (smoke.json) and checks it returns non-empty JSON.
+# Note: Cloudflare-fronted sources may block GitHub runner IPs, so "blocked" results here
+# may not reproduce locally. Check those with `node scripts/smoke.mjs --skill <name>`.
+
+on:
+  schedule:
+    - cron: "0 3 * * *" # 08:00 PKT
+  workflow_dispatch:
+  push:
+    paths: ["**/scripts/**", "smoke.json"]
+  pull_request:
+    paths: ["**/scripts/**", "smoke.json"]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run smoke test
+        id: smoke
+        continue-on-error: true
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] || [ "${{ github.event_name }}" = "pull_request" ]; then
+            node scripts/smoke.mjs --only offline
+          else
+            node scripts/smoke.mjs
+          fi
+
+      - name: Open, update or close the failure issue
+        if: github.event_name == 'schedule'
+        uses: actions/github-script@v7
+        env:
+          OUTCOME: ${{ steps.smoke.outcome }}
+        with:
+          script: |
+            const fs = require('fs');
+            const title = 'Smoke test failures';
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo, state: 'open', labels: 'smoke-test',
+            });
+            const existing = open.find(i => i.title === title);
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+
+            if (process.env.OUTCOME === 'success') {
+              if (existing) {
+                await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo,
+                  issue_number: existing.number, body: `All skills passed in ${runUrl}. Closing.` });
+                await github.rest.issues.update({ owner: context.repo.owner, repo: context.repo.repo,
+                  issue_number: existing.number, state: 'closed' });
+              }
+              return;
+            }
+
+            let body = `Smoke test failed: ${runUrl}\n\n`;
+            if (fs.existsSync('smoke-report.json')) {
+              const report = JSON.parse(fs.readFileSync('smoke-report.json', 'utf8'));
+              const bad = report.results.filter(r => r.status !== 'pass');
+              body += `${report.summary.pass}/${report.summary.total} passed (${report.ranAt})\n\n`;
+              body += '| Skill | Status | Command | Reason |\n|---|---|---|---|\n';
+              body += bad.map(r => `| ${r.skill} | ${r.status} | \`${r.args}\` | ${r.reason.replace(/\|/g, '\\|')} |`).join('\n');
+              body += '\n\n"blocked" usually means Cloudflare rejected the GitHub runner IP. Check locally before fixing.';
+            } else {
+              body += 'smoke-report.json was not written. The runner itself crashed; see the run log.';
+            }
+
+            if (existing) {
+              await github.rest.issues.update({ owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: existing.number, body });
+            } else {
+              await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo,
+                title, body, labels: ['smoke-test'] });
+            }
+
+      - name: Fail the job if the smoke test failed
+        if: steps.smoke.outcome == 'failure'
+        run: exit 1

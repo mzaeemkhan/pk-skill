@@ -1,0 +1,6 @@
+{
+  "name": "airport-flights",
+  "description": "Live arrivals and departures at Pakistani airports (LHE, KHI, ISB, PEW, MUX, UET, LYP, GWD) from the Pakistan Airports Authority feed. Flight status lookup. No API key.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: airport-flights\ndescription: Live arrivals/departures and flight status at 8 Pakistani airports from the Pakistan Airports Authority feed. No API key.\nlicense: MIT\nmetadata:\n  category: transport\n  locale: en-PK\n  phase: v1"
+}

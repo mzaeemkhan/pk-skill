@@ -15,20 +15,23 @@ FBR income tax calculator — salaried/business slabs, freelancer IT export rate
 ## Commands
 
 ```bash
-# Calculate annual income tax (salaried)
+# Calculate annual income tax (salaried, default FY2026-27)
 node scripts/tax.mjs calculate --income 1500000 --type salaried
+
+# Earlier year
+node scripts/tax.mjs calculate --income 1500000 --year 2025-26
 
 # Monthly salary tax
 node scripts/tax.mjs calculate --income 200000 --type salaried --period monthly
 
 # Show tax slabs
-node scripts/tax.mjs slabs --year 2024
+node scripts/tax.mjs slabs --year 2025-26
 
 # Business income slabs
 node scripts/tax.mjs slabs --type business
 
 # Freelancer / IT export tax
-node scripts/tax.mjs freelancer --income 5000 --currency usd
+node scripts/tax.mjs freelancer --income 5000 --currency usd --rate 280 --pseb yes
 
 # Withholding tax rates
 node scripts/tax.mjs withholding
@@ -46,7 +49,10 @@ node scripts/tax.mjs deadlines
 
 ## Limitations
 
-- FBR 2024-25 slabs — update when new finance bill passes
-- Freelancer rate uses approximate USD/PKR conversion
+- Years: 2026-27 (default, Finance Act 2026), 2025-26, 2024-25 — update after each budget
+- Slabs verified from payroll-firm/advisor summaries (Mercans, Vialto), not FBR gazette text
+- Non-salaried slabs assumed unchanged since Finance Act 2024; withholding rows with `verified: false` unconfirmed
+- Surcharge on income > PKR 10M: salaried 10%/9%/none (FY25/26/27), non-salaried 10%
+- Freelancer rate (0.25% PSEB / 1% otherwise) from a single secondary source
 - Does not cover sales tax, customs, or provincial taxes
 - Not a substitute for professional tax advice

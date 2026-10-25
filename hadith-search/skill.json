@@ -1,12 +1,14 @@
 {
   "name": "hadith-search",
-  "description": "Search Hadith collections — Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah via sunnah.com API",
+  "description": "Search Hadith collections — Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah. English, Arabic, Urdu. Keyless (fawazahmed0/hadith-api via jsDelivr)",
   "version": "1.0.0",
   "author": "mzaeemkhan",
   "license": "MIT",
   "profiles": {
     "default": {
-      "tools": ["bash"]
+      "tools": [
+        "bash"
+      ]
     }
   }
 }

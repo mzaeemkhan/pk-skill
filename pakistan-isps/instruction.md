@@ -64,7 +64,7 @@ All commands return JSON.
 ## Sources and failure modes
 
 - Offline data from ISP websites — prices change frequently
-- 2024 approximate rates
+- Mixed data: check each package's `estimate` / `lastVerified`; always tell the user to confirm prices with the ISP
 
 ## Hard boundaries
 

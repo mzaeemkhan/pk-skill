@@ -207,6 +207,7 @@ function main() {
         validate: "--cnic <number> — Check format validity",
         regions: "List all region codes",
         search: "--region <query> — Search regions by name",
+        age: "--dob <YYYY-MM-DD> — Age and CNIC eligibility (18+). CNIC itself does not encode DOB",
       },
     }, null, 2));
     return;
@@ -238,6 +239,28 @@ function main() {
       process.exit(1);
     }
     console.log(JSON.stringify(searchRegion(args[i + 1]), null, 2));
+  } else if (cmd === "age") {
+    const i = flagIndex("--dob");
+    const m = i === -1 ? null : /^(\d{4})-(\d{2})-(\d{2})$/.exec(args[i + 1] || "");
+    const dob = m && new Date(+m[1], +m[2] - 1, +m[3]);
+    if (!dob || dob.getMonth() !== +m[2] - 1 || dob > new Date()) {
+      console.error(JSON.stringify({ error: "Missing or invalid --dob <YYYY-MM-DD>" }));
+      process.exit(1);
+    }
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    let age = today.getFullYear() - dob.getFullYear();
+    if (today < new Date(today.getFullYear(), dob.getMonth(), dob.getDate())) age--;
+    const next = new Date(today.getFullYear(), dob.getMonth(), dob.getDate());
+    if (next <= today) next.setFullYear(next.getFullYear() + 1);
+    console.log(JSON.stringify({
+      dateOfBirth: args[i + 1],
+      ageYears: age,
+      daysUntilBirthday: Math.round((next - today) / 86400000),
+      cnicEligible: age >= 18,
+      cnicEligibleFrom: `${dob.getFullYear() + 18}-${m[2]}-${m[3]}`,
+      note: age >= 18 ? "Eligible for adult CNIC (18+)" : "Not yet eligible. Under-18s use B-Form/Juvenile card.",
+    }, null, 2));
   } else {
     console.error(JSON.stringify({ error: `Unknown command: ${cmd}` }));
     process.exit(1);

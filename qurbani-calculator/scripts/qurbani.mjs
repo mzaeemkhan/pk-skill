@@ -38,7 +38,7 @@ const DISTRIBUTION = {
   selfFamily: { fraction: '1/3', description: 'For yourself and your household' },
   relativesFriends: { fraction: '1/3', description: 'For relatives, friends, and neighbors' },
   poorNeedy: { fraction: '1/3', description: 'For the poor and needy (Sadaqah)' },
-  note: 'This is the recommended Sunnah distribution. It is permissible to give all to the poor, but not to keep all for yourself.',
+  note: 'This is the recommended Sunnah distribution. The 1/3 split is mustahab (recommended), not required: per Hanafi fiqh it is permissible to give all away or to keep all (especially for a large or needy family), though giving to the poor is more virtuous.',
 };
 
 const CHECKLIST = [
@@ -102,24 +102,49 @@ function calculate(flags) {
   };
 }
 
+const REPORTED_2026 = {
+  eid: 'Eid ul Adha 2026 (late May 2026)',
+  estimate: false,
+  lastVerified: '2026-10-25',
+  source: 'Pre-Eid market reports: ProPakistani (14 May 2026), Daily Ausaf, Dunya News, The Nation (May 2026)',
+  national: [
+    { animal: 'goat', minPKR: 60000, maxPKR: 250000 },
+    { animal: 'cow', minPKR: 200000, maxPKR: 700000 },
+    { animal: 'bull', minPKR: 300000, maxPKR: 1000000 },
+    { animal: 'camel', minPKR: 400000, maxPKR: null, note: 'from ~Rs 400,000 upward' },
+  ],
+  lahore: [
+    { animal: 'goat (small)', minPKR: 90000, maxPKR: 120000 },
+    { animal: 'goat/sheep (medium)', minPKR: 150000, maxPKR: 150000, note: 'about Rs 150,000' },
+    { animal: 'goat/sheep (large)', minPKR: 300000, maxPKR: 400000 },
+  ],
+  note: 'Sources conflict (one reports similar goats at Rs 60-70K). Sheep and buffalo 2026 ranges were not reported.',
+};
+
+const DISCLAIMER = 'Prices change often and vary by weight, breed and market; confirm at the mandi or with sellers. City table below is unverified 2024 data.';
+
+function cityRows(animals) {
+  return Object.entries(animals).map(([animal, [min, max]]) => ({ animal, minPKR: min, maxPKR: max }));
+}
+
 function prices(flags) {
   const city = flags.city || 'all';
+  const legacy = { estimate: true, lastVerified: null, basis: 'v1 2024 estimates' };
   if (city.toLowerCase() === 'all') {
-    return { cities: Object.entries(PRICES).map(([name, animals]) => ({
-      city: name,
-      prices: Object.entries(animals).map(([animal, [min, max]]) => ({
-        animal, minPKR: min, maxPKR: max,
-      })),
-    }))};
+    return {
+      reported2026: REPORTED_2026,
+      cities: Object.entries(PRICES).map(([name, animals]) => ({ city: name, ...legacy, prices: cityRows(animals) })),
+      disclaimer: DISCLAIMER,
+    };
   }
   const match = Object.entries(PRICES).find(([k]) => k.toLowerCase() === city.toLowerCase());
   if (!match) return { error: `City not found: ${city}. Available: ${Object.keys(PRICES).join(', ')}` };
   return {
     city: match[0],
-    prices: Object.entries(match[1]).map(([animal, [min, max]]) => ({
-      animal, minPKR: min, maxPKR: max,
-    })),
-    note: 'Prices are approximate 2024 estimates. Actual prices vary by season, quality, and market conditions.',
+    ...legacy,
+    prices: cityRows(match[1]),
+    reported2026: { national: REPORTED_2026.national, ...(match[0] === 'Lahore' ? { lahore: REPORTED_2026.lahore } : {}), source: REPORTED_2026.source },
+    disclaimer: DISCLAIMER,
   };
 }
 

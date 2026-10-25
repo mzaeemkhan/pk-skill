@@ -262,6 +262,20 @@ Requires Node.js 18+ and npx.
 |-------|-------------|--------|
 | pakistan-history | 68 key events (1906-2023), 9 eras, heads of state, on-this-day lookup. Offline. | Done |
 
+## Live Data
+
+| Skill | Description | Status |
+|-------|-------------|--------|
+| earthquake-alerts | Recent and significant earthquakes in/around Pakistan, near-city search — USGS FDSN API. | Done |
+| mutual-funds | Mutual fund NAVs, returns, top funds by category — Sarmaaya public API (MUFAP is behind Cloudflare). | Done |
+| sbp-rates | SBP policy rate, daily KIBOR, T-bill cut-offs — sbp.org.pk. Needs `curl`. | Done |
+| open-market-forex | Open-market buy/sell PKR rates vs interbank — hamariweb.com + open.er-api.com. Needs `curl`. | Done |
+| hijri-calendar | Gregorian↔Hijri conversion, monthly calendar, upcoming Islamic events — Aladhan API. Dates may shift ±1 day per Ruet-e-Hilal. | Done |
+| pakistan-inflation | Latest monthly CPI (national/urban/rural) and weekly SPI — PBS releases. | Done |
+| govt-jobs | Federal government job listings, search, details — National Job Portal (njp.gov.pk). No city filter. | Done |
+
+> **Note:** Prices in pakistan-sim-packages, pakistan-isps, and qurbani-calculator are partly estimates (`estimate: true` in output) — confirm with the operator/vendor.
+
 ## License
 
 MIT

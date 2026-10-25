@@ -8,12 +8,13 @@ const ISPS = [
       { name: 'CharJi 8', speed: 8, upload: 1, dataLimit: 'Unlimited', pricePKR: 1799, type: 'dsl' },
       { name: 'CharJi 15', speed: 15, upload: 2, dataLimit: 'Unlimited', pricePKR: 2299, type: 'dsl' },
       { name: 'CharJi 25', speed: 25, upload: 3, dataLimit: 'Unlimited', pricePKR: 2799, type: 'dsl' },
-      { name: 'Flash Fiber 25', speed: 25, upload: 5, dataLimit: 'Unlimited', pricePKR: 3199, type: 'fiber' },
-      { name: 'Flash Fiber 50', speed: 50, upload: 10, dataLimit: 'Unlimited', pricePKR: 4199, type: 'fiber' },
-      { name: 'Flash Fiber 100', speed: 100, upload: 20, dataLimit: 'Unlimited', pricePKR: 5999, type: 'fiber' },
-      { name: 'Flash Fiber 150', speed: 150, upload: 30, dataLimit: 'Unlimited', pricePKR: 7999, type: 'fiber' },
-      { name: 'Flash Fiber 200', speed: 200, upload: 40, dataLimit: 'Unlimited', pricePKR: 9999, type: 'fiber' },
+      { name: 'Flash Fiber 30', speed: 30, upload: null, dataLimit: 'Unlimited', pricePKR: 3499, type: 'fiber', estimate: false, lastVerified: '2026-09', note: 'Tax incl.' },
+      { name: 'Flash Fiber 40', speed: 40, upload: null, dataLimit: 'Unlimited', pricePKR: 4999, type: 'fiber', estimate: false, lastVerified: '2026-09', note: 'Tax incl.' },
+      { name: 'Flash Fiber 50', speed: 50, upload: null, dataLimit: 'Unlimited', pricePKR: 5999, type: 'fiber', estimate: false, lastVerified: '2026-09', note: 'Tax incl.' },
+      { name: 'Flash Fiber 100', speed: 100, upload: null, dataLimit: 'Unlimited', pricePKR: 9449, type: 'fiber', estimate: false, lastVerified: '2026-09', note: 'Tax incl.' },
+      { name: 'Flash Fiber 300', speed: 300, upload: null, dataLimit: 'Unlimited', pricePKR: 25999, type: 'fiber', estimate: false, lastVerified: '2026-09', note: 'Tax incl.' },
     ],
+    note: 'Flash Fiber installation PKR 5,000 (pakera.pk reading ptcl.com.pk, Sep 2026; confirmed by mymobile.com.pk)',
   },
   {
     name: 'StormFiber', slug: 'stormfiber', type: ['fiber'], website: 'stormfiber.com', helpline: '0800-11-786',
@@ -25,6 +26,9 @@ const ISPS = [
       { name: 'Storm 75', speed: 75, upload: 75, dataLimit: 'Unlimited', pricePKR: 5500 },
       { name: 'Storm 100', speed: 100, upload: 100, dataLimit: 'Unlimited', pricePKR: 7000 },
       { name: 'Storm 150', speed: 150, upload: 150, dataLimit: 'Unlimited', pricePKR: 9000 },
+      { name: '115 Mbps', speed: 115, upload: null, dataLimit: 'Unlimited', pricePKR: 7399, estimate: false, lastVerified: '2026', note: 'Before tax; single source (mymobile.com.pk); city-specific/promotional' },
+      { name: '200 Mbps', speed: 200, upload: null, dataLimit: 'Unlimited', pricePKR: 12299, estimate: false, lastVerified: '2026', note: 'Before tax; single source (mymobile.com.pk); city-specific/promotional' },
+      { name: '275 Mbps', speed: 275, upload: null, dataLimit: 'Unlimited', pricePKR: 15399, estimate: false, lastVerified: '2026', note: 'Before tax; single source (mymobile.com.pk); city-specific/promotional' },
     ],
   },
   {
@@ -129,7 +133,7 @@ const ISPS = [
     name: 'Starlink', slug: 'starlink', type: ['satellite'], website: 'starlink.com', helpline: 'N/A',
     cities: [],
     packages: [],
-    note: 'Not yet available in Pakistan as of 2024. Pre-orders may be accepted but service date is unknown.',
+    note: 'Was not available in Pakistan as of 2024; current licensing status unverified — check PTA/starlink.com.',
   },
   {
     name: 'Qubee (Discontinued)', slug: 'qubee', type: ['wireless'], website: 'N/A', helpline: 'N/A',
@@ -138,6 +142,12 @@ const ISPS = [
     note: 'Discontinued WiMAX service. Was available in Islamabad, Rawalpindi, Karachi, Lahore.',
   },
 ];
+
+const DISCLAIMER = 'Prices change often; confirm with the ISP via website/helpline before subscribing. Entries with estimate:true are unverified v1 data.';
+
+for (const isp of ISPS) {
+  isp.packages = isp.packages.map(p => ({ estimate: true, lastVerified: null, ...p }));
+}
 
 function parseArgs(args) {
   const flags = {};
@@ -176,7 +186,7 @@ function packages(flags) {
   const isp = ISPS.find(i => i.slug === slug);
   if (!isp) return { error: `ISP not found: ${slug}` };
   if (!isp.packages.length) return { isp: isp.name, packages: [], note: isp.note || 'No packages available' };
-  return { isp: isp.name, website: isp.website, helpline: isp.helpline, packages: isp.packages };
+  return { isp: isp.name, website: isp.website, helpline: isp.helpline, packages: isp.packages, note: isp.note, disclaimer: DISCLAIMER };
 }
 
 function coverage(flags) {
@@ -199,12 +209,12 @@ function compare(flags) {
   for (const isp of ISPS) {
     for (const pkg of isp.packages) {
       if (pkg.speed >= speed * 0.8 && pkg.speed <= speed * 1.5) {
-        results.push({ isp: isp.name, package: pkg.name, speedMbps: pkg.speed, uploadMbps: pkg.upload, dataLimit: pkg.dataLimit, pricePKR: pkg.pricePKR });
+        results.push({ isp: isp.name, package: pkg.name, speedMbps: pkg.speed, uploadMbps: pkg.upload, dataLimit: pkg.dataLimit, pricePKR: pkg.pricePKR, estimate: pkg.estimate, lastVerified: pkg.lastVerified, note: pkg.note });
       }
     }
   }
   results.sort((a, b) => a.pricePKR - b.pricePKR);
-  return { targetSpeedMbps: speed, packages: results, count: results.length };
+  return { targetSpeedMbps: speed, packages: results, count: results.length, disclaimer: DISCLAIMER };
 }
 
 const { cmd, flags } = parseArgs(process.argv.slice(2));

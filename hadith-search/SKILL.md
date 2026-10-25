@@ -1,13 +1,13 @@
 ---
 name: hadith-search
-description: Search Hadith collections — Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah via sunnah.com API
+description: Search Hadith collections — Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai, Ibn Majah. English, Arabic, Urdu. Keyless (fawazahmed0/hadith-api via jsDelivr)
 tools:
   - bash
 ---
 
 # Hadith Search
 
-Search across six major Hadith collections via sunnah.com API.
+Search across six major Hadith collections via the free, keyless fawazahmed0/hadith-api (served from jsDelivr CDN).
 
 ## Commands
 
@@ -15,14 +15,20 @@ Search across six major Hadith collections via sunnah.com API.
 # Search hadith by keyword
 node scripts/hadith.mjs search --query "patience"
 
+# Search one collection only
+node scripts/hadith.mjs search --query "intention" --collection bukhari --limit 5
+
 # Get a random hadith
-node scripts/hadith.mjs random
+node scripts/hadith.mjs random [--collection muslim]
 
 # List available collections
 node scripts/hadith.mjs collections
 
 # Get specific hadith by collection and number
 node scripts/hadith.mjs hadith --collection bukhari --number 1
+
+# Urdu translation
+node scripts/hadith.mjs hadith --collection bukhari --number 1 --lang ur
 ```
 
 ## Prerequisites
@@ -31,7 +37,8 @@ node scripts/hadith.mjs hadith --collection bukhari --number 1
 
 ## Limitations
 
-- Rate limited by sunnah.com API
-- 10 results per page for search
-- Some hadith may not have English translation
-- Read-only — no bookmarking or saving
+- Search is plain keyword match (all words must appear) over English text; no fuzzy/semantic search
+- First search/random per collection downloads ~1MB edition JSON, cached in the OS temp dir
+- Hadith numbering follows the hadith-api editions; sunnah.com links are best-effort
+- Grades present only where the source edition includes them (mostly Sunan collections)
+- Read-only

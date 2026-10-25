@@ -1,0 +1,6 @@
+{
+  "name": "hijri-calendar",
+  "description": "Hijri (Islamic) calendar via Aladhan API — today's Hijri date, Gregorian↔Hijri conversion, monthly calendar, and upcoming Islamic events (Ramadan, Eids, Ashura, Shab-e-Barat, 12 Rabi ul Awal). Dates are calculated; Pakistan's Ruet-e-Hilal sighting can differ by ±1 day. No API key.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: hijri-calendar\ndescription: Hijri calendar — today's Islamic date, Gregorian↔Hijri conversion, monthly calendar, upcoming Ramadan/Eid/Ashura dates. Aladhan API, no key.\nlicense: MIT\nmetadata:\n  category: religious\n  locale: en-PK\n  phase: v1"
+}

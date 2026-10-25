@@ -40,7 +40,8 @@ node scripts/qurbani.mjs checklist
 
 ## Limitations
 
-- Prices are approximate 2024 estimates — actual prices vary by season and market
+- Prices change often; confirm at the mandi or with sellers
+- `prices` includes reported Eid ul Adha 2026 national ranges (and Lahore) from May 2026 news; per-city tables are unverified 2024 estimates (`estimate: true`)
 - Hanafi fiqh rules only — consult a scholar for other schools
 - Meat yield percentages are approximate averages
 - All data offline — no live price feeds

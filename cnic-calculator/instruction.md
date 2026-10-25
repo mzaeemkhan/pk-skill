@@ -33,6 +33,14 @@ node scripts/cnic.mjs validate --cnic 42201-1234567-1
 
 Checks 13-digit format only.
 
+### Age / CNIC eligibility
+
+```bash
+node scripts/cnic.mjs age --dob 2008-05-15
+```
+
+Returns age, days to next birthday, and the date the person turns 18 (adult CNIC eligibility). The CNIC number does not contain the date of birth — ask the user for it.
+
 ### 3. List regions
 
 ```bash

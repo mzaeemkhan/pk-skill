@@ -43,7 +43,9 @@ node scripts/simpackages.mjs balance --operator jazz
 
 ## Limitations
 
-- Prices and packages are approximate — operators change frequently
-- USSD codes may vary by region
+- Prices change often; confirm with operator via USSD/website/app before subscribing
+- 19 weekly/monthly bundles verified against the PTA price list (Oct 2026, `estimate: false`); older v1 entries are `estimate: true` and likely outdated — use `--verified` to hide them
+- Jazz/Telenor PTA prices may exclude 15% withholding tax; Zong/Ufone include it
+- Only the Ufone balance code (*124#) is re-verified; other USSD codes may vary by region or have changed
 - Does not include corporate or postpaid plans
 - No live status or balance check

@@ -1,0 +1,6 @@
+{
+  "name": "pakistan-inflation",
+  "description": "Live Pakistan inflation from Pakistan Bureau of Statistics — latest monthly CPI (national/urban/rural YoY and MoM), monthly SPI and WPI, and weekly SPI with release links. No API key.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: pakistan-inflation\ndescription: Latest Pakistan CPI inflation (national/urban/rural), weekly SPI and WPI from PBS releases. Live, no key.\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+}

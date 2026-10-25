@@ -42,5 +42,7 @@ node scripts/isps.mjs compare --speed 50
 
 - Offline data — prices and packages change frequently
 - 15+ ISPs covered (major providers)
-- Prices are approximate 2024 rates
+- Prices change often; confirm with the ISP via website/helpline before subscribing
+- PTCL Flash Fiber (Sep 2026) and 3 StormFiber tiers (single source) verified; all other packages are `estimate: true` v1 data
+- Nayatel 2026 prices conflict across sources (city/tax dependent) — left unverified
 - Coverage is city-level, not area-specific

@@ -1,0 +1,6 @@
+{
+  "name": "govt-jobs",
+  "description": "Live Pakistan federal government jobs from the National Job Portal (njp.gov.pk) — latest openings, keyword search, and job details (department, grade/BPS, vacancies, experience, last date). Read-only, no API key.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: govt-jobs\ndescription: Pakistan government jobs from National Job Portal (njp.gov.pk) — latest, search, details with BPS grade and last date. Live, read-only.\nlicense: MIT\nmetadata:\n  category: government\n  locale: en-PK\n  phase: v1"
+}

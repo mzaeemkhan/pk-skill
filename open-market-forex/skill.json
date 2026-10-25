@@ -1,0 +1,6 @@
+{
+  "name": "open-market-forex",
+  "description": "Pakistan open-market (kerb) currency buying and selling rates for 23 currencies, plus the gap against interbank mid-market rates. Live, no API key.",
+  "profiles": ["lookup"],
+  "frontmatter": "name: open-market-forex\ndescription: Pakistan open-market currency rates — buy/sell PKR rates for USD, SAR, AED, GBP, EUR and 18 more, compared with interbank mid-market. Live, no API key.\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+}

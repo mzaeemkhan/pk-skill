@@ -1,6 +1,6 @@
 {
   "name": "pk-skill",
-  "description": "Pakistan daily-life skills for coding agents — 60 skills covering transport, utility, weather, religion, finance, government, real estate, shopping, news, sports, education, healthcare, Urdu, courier, maps, banking, census, courts, radio, telecom, recipes, pilgrimage, constitution, military, tax, history, and more",
+  "description": "Pakistan daily-life skills for coding agents — 67 skills covering transport, utility, weather, earthquakes, religion, Hijri calendar, finance, mutual funds, SBP rates, open-market forex, inflation, government jobs, real estate, shopping, news, sports, education, healthcare, Urdu, courier, maps, banking, census, courts, radio, telecom, recipes, pilgrimage, constitution, military, tax, history, and more",
   "version": "1.0.0",
   "author": {
     "name": "mzaeemkhan"
@@ -68,6 +68,13 @@
     "./pakistan-flags-symbols",
     "./pakistan-tax-calculator",
     "./pakistan-sim-packages",
-    "./pakistan-history"
+    "./pakistan-history",
+    "./earthquake-alerts",
+    "./mutual-funds",
+    "./sbp-rates",
+    "./open-market-forex",
+    "./hijri-calendar",
+    "./pakistan-inflation",
+    "./govt-jobs"
   ]
 }

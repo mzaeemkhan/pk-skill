@@ -26,6 +26,9 @@ node scripts/cnic.mjs regions
 
 # Search region by name
 node scripts/cnic.mjs search --region "Karachi"
+
+# Age and CNIC eligibility from date of birth (CNIC does not encode DOB)
+node scripts/cnic.mjs age --dob 2008-05-15
 ```
 
 ## Prerequisites

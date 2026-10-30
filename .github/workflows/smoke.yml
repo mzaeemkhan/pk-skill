@@ -34,7 +34,7 @@ jobs:
           if [ "${{ github.event_name }}" = "push" ] || [ "${{ github.event_name }}" = "pull_request" ]; then
             node scripts/smoke.mjs --only offline
           else
-            node scripts/smoke.mjs
+            node scripts/smoke.mjs --ci
           fi
 
       - name: Open, update or close the failure issue

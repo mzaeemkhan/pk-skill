@@ -26,14 +26,26 @@ function resolveDenom(input) {
   return null;
 }
 
-async function fetchDrawDates(denomId) {
-  const res = await fetch(AJAX_URL, {
+const MANUAL_URL = `${BASE}/results.php`;
+
+// savings.gov.pk's Fortinet WAF answers scripted POSTs with a 500 "Web Page Blocked" page (since late Oct 2026).
+async function postForm(url, body) {
+  const res = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: `id=${denomId}`,
+    body,
+    signal: AbortSignal.timeout(20000),
   });
-  if (!res.ok) throw new Error(`AJAX failed: HTTP ${res.status}`);
   const html = await res.text();
+  if (/has been blocked|Web Page Blocked/i.test(html)) {
+    throw new Error(`savings.gov.pk firewall blocks automated requests (HTTP ${res.status}). Check manually at ${MANUAL_URL}`);
+  }
+  if (!res.ok) throw new Error(`savings.gov.pk returned HTTP ${res.status}`);
+  return html;
+}
+
+async function fetchDrawDates(denomId) {
+  const html = await postForm(AJAX_URL, `id=${denomId}`);
   const draws = [];
   const re = /<option\s+value="(\d+)">([^<]+)<\/option>/gi;
   let m;
@@ -83,13 +95,10 @@ async function checkNumber(denomination, number, drawId = "all") {
   const denom = resolveDenom(denomination);
   if (!denom) throw new Error(`Unknown denomination: ${denomination}. Use 'denominations' command to list.`);
 
-  const res = await fetch(RESULTS_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: `country=${denom.id}&state=${drawId}&range_from=&range_to=&pb_number_list=${encodeURIComponent(number)}&btnsearch=Search`,
-  });
-  if (!res.ok) throw new Error(`Search failed: HTTP ${res.status}`);
-  const html = await res.text();
+  const html = await postForm(
+    RESULTS_URL,
+    `country=${denom.id}&state=${encodeURIComponent(drawId)}&range_from=&range_to=&pb_number_list=${encodeURIComponent(number)}&btnsearch=Search`,
+  );
   const parsed = parseResults(html);
   return {
     denomination: denom.name,

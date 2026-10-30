@@ -291,7 +291,7 @@ node scripts/smoke.mjs --only offline  # no network
 node scripts/smoke.mjs --skill sbp-rates
 ```
 
-GitHub Actions runs offline checks on every push/PR touching scripts, and the full suite daily at 08:00 PKT. A failing scheduled run opens a "Smoke test failures" issue; the next passing run closes it. Cloudflare may block GitHub runner IPs, so a CI failure on a scraped source may not reproduce locally.
+GitHub Actions runs offline checks on every push/PR touching scripts, and the full suite daily at 08:00 PKT. A failing scheduled run opens a "Smoke test failures" issue; the next passing run closes it. Some Pakistani sources (FPSC, NJP, Pakistan Railways, SBP, hamariweb) drop or block non-Pakistani datacenter IPs; their `smoke.json` entries have `"ci": false`, so CI (`--ci`) skips them. Run the full suite locally from Pakistan to cover them.
 
 ## License
 

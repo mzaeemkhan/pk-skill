@@ -8,7 +8,8 @@
       "--to",
       "Karachi"
     ],
-    "live": true
+    "live": true,
+    "ci": false
   },
   "bookme-search": {
     "script": "scripts/bookme.mjs",
@@ -65,7 +66,8 @@
       "--denomination",
       "200"
     ],
-    "live": true
+    "live": true,
+    "ci": false
   },
   "pakistan-post": {
     "script": "scripts/tracking.mjs",
@@ -165,7 +167,8 @@
       "--limit",
       "5"
     ],
-    "live": true
+    "live": true,
+    "group": "nominatim"
   },
   "urdu-tools": {
     "script": "scripts/urdu.mjs",
@@ -188,7 +191,8 @@
     "args": [
       "fpsc"
     ],
-    "live": true
+    "live": true,
+    "ci": false
   },
   "hospital-finder": {
     "script": "scripts/hospitals.mjs",
@@ -201,7 +205,8 @@
       "--limit",
       "5"
     ],
-    "live": true
+    "live": true,
+    "group": "nominatim"
   },
   "zakat-calculator": {
     "script": "scripts/zakat.mjs",
@@ -247,7 +252,8 @@
     "args": [
       "major"
     ],
-    "live": true
+    "live": true,
+    "group": "nominatim"
   },
   "fuel-prices": {
     "script": "scripts/fuel.mjs",
@@ -295,7 +301,8 @@
       "--to",
       "Peshawar"
     ],
-    "live": true
+    "live": true,
+    "group": "nominatim"
   },
   "cnic-calculator": {
     "script": "scripts/cnic.mjs",
@@ -340,7 +347,8 @@
       "--number",
       "PK36SCBL0000001123456702"
     ],
-    "live": true
+    "live": true,
+    "group": "nominatim"
   },
   "urdu-dictionary": {
     "script": "scripts/dictionary.mjs",
@@ -526,7 +534,8 @@
     "args": [
       "policy-rate"
     ],
-    "live": true
+    "live": true,
+    "ci": false
   },
   "open-market-forex": {
     "script": "scripts/forex.mjs",
@@ -535,7 +544,8 @@
       "--currency",
       "usd"
     ],
-    "live": true
+    "live": true,
+    "ci": false
   },
   "hijri-calendar": {
     "script": "scripts/hijri.mjs",
@@ -558,7 +568,8 @@
       "--count",
       "5"
     ],
-    "live": true
+    "live": true,
+    "ci": false
   },
   "psx-announcements": {
     "script": "scripts/psx.mjs",

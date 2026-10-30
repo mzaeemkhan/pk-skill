@@ -50,41 +50,76 @@ async function findMosques(cityName, radius = 2000, limit = 20) {
 
   const query = `[out:json][timeout:15];(node["amenity"="place_of_worship"]["religion"="muslim"](${bbox});way["amenity"="place_of_worship"]["religion"="muslim"](${bbox}););out center ${limit};`;
 
-  const res = await fetch("https://overpass-api.de/api/interpreter", {
-    method: "POST",
-    // Overpass returns 406 to requests without a User-Agent.
-    headers: { "Content-Type": "application/x-www-form-urlencoded", "User-Agent": "pk-skill/1.0 (+https://github.com/mzaeemkhan/pk-skill)" },
-    body: "data=" + encodeURIComponent(query),
-    signal: AbortSignal.timeout(20000),
-  });
-
-  if (!res.ok) {
-    const ct = res.headers.get("content-type") || "";
-    if (ct.includes("html")) throw new Error(`Overpass API returned ${res.status}. Service may be temporarily unavailable.`);
-    throw new Error(`Overpass API HTTP ${res.status}`);
+  const errors = [];
+  let result = null;
+  for (const url of OVERPASS_MIRRORS) {
+    try { result = { source: new URL(url).host, mosques: await overpass(url, query) }; break; }
+    catch (e) { errors.push(`${new URL(url).host}: ${e.message}`); }
   }
-
-  const data = await res.json();
-  const mosques = (data.elements || []).map(e => {
-    const lat = e.lat || e.center?.lat;
-    const lon = e.lon || e.center?.lon;
-    const tags = e.tags || {};
-    return {
-      name: tags.name || tags["name:en"] || tags["name:ur"] || "Unnamed Mosque",
-      nameUrdu: tags["name:ur"] || "",
-      lat, lon,
-      address: tags["addr:street"] || tags["addr:full"] || "",
-      denomination: tags.denomination || "",
-    };
-  });
+  if (!result) {
+    try { result = { source: "nominatim.openstreetmap.org", mosques: await nominatim(city, delta, limit) }; }
+    catch (e) { errors.push(`nominatim: ${e.message}`); throw new Error(`All map backends failed — ${errors.join("; ")}`); }
+  }
 
   console.log(JSON.stringify({
     city: city.name,
     center: { lat: city.lat, lon: city.lon },
     radiusMeters: radius,
-    found: mosques.length,
-    mosques,
+    source: result.source,
+    ...(errors.length && { fallbackReason: errors }),
+    found: result.mosques.length,
+    mosques: result.mosques,
   }, null, 2));
+}
+
+// Per-mirror 6s timeout keeps the chain (4 mirrors + Nominatim) under ~35s.
+const OVERPASS_MIRRORS = [
+  "https://overpass-api.de/api/interpreter",
+  "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "https://overpass.private.coffee/api/interpreter",
+  "https://overpass.kumi.systems/api/interpreter",
+];
+// Overpass returns 406 and Nominatim blocks requests without a User-Agent.
+const UA = "pk-skill/1.0 (+https://github.com/mzaeemkhan/pk-skill)";
+
+async function overpass(url, query) {
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded", "User-Agent": UA },
+    body: "data=" + encodeURIComponent(query),
+    signal: AbortSignal.timeout(6000),
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const data = await res.json();
+  return (data.elements || []).map(e => {
+    const tags = e.tags || {};
+    return {
+      name: tags.name || tags["name:en"] || tags["name:ur"] || "Unnamed Mosque",
+      nameUrdu: tags["name:ur"] || "",
+      lat: e.lat || e.center?.lat,
+      lon: e.lon || e.center?.lon,
+      address: tags["addr:street"] || tags["addr:full"] || "",
+      denomination: tags.denomination || "",
+    };
+  });
+}
+
+async function nominatim(city, delta, limit) {
+  const viewbox = `${city.lon - delta},${city.lat + delta},${city.lon + delta},${city.lat - delta}`;
+  // ponytail: one page of 50 places of worship, filtered to Muslim; dense cities may return fewer than `limit`.
+  const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent("[amenity=place_of_worship]")}&format=json&limit=50&countrycodes=pk&viewbox=${viewbox}&bounded=1&addressdetails=1&namedetails=1&extratags=1`;
+  const res = await fetch(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(10000) });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const isMosque = p => p.extratags?.religion === "muslim" ||
+    (!p.extratags?.religion && /mosque|masjid|مسجد/i.test(Object.values(p.namedetails || {}).join(" ") + (p.name || "")));
+  return (await res.json()).filter(isMosque).slice(0, limit).map(p => ({
+    name: p.namedetails?.name || p.namedetails?.["name:en"] || p.name || "Unnamed Mosque",
+    nameUrdu: p.namedetails?.["name:ur"] || "",
+    lat: Number(p.lat),
+    lon: Number(p.lon),
+    address: [p.address?.road, p.address?.suburb || p.address?.neighbourhood].filter(Boolean).join(", "),
+    denomination: p.extratags?.denomination || "",
+  }));
 }
 
 function showCities() {

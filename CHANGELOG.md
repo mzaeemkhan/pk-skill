@@ -3,6 +3,15 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [Semantic Versioning](https://semver.org/).
 
+## [2.0.1] - 2026-10-30
+
+### Fixed
+- mosque-finder: Overpass mirror chain with Nominatim fallback (overpass-api.de at capacity); output adds `source`.
+- Smoke CI: Nominatim-backed skills share `"group": "nominatim"` and run serially (1 req/s policy). `--ci` flag skips sources that block non-Pakistani datacenter IPs (`"ci": false` in smoke.json: exam-results, govt-jobs, pakistan-railways, sbp-rates, open-market-forex, prize-bonds).
+
+### Changed
+- prize-bonds: savings.gov.pk firewall now blocks automated lookups; check/latest/schedule exit with a clear message and the official results link.
+
 ## [2.0.0] - 2026-10-25
 
 ### Added
@@ -67,6 +76,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [S
 - drap-drugs placeholder (not functional)
 - `.claude-plugin/plugin.json` manifest for `npx skills add` installation
 
+[2.0.1]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/mzaeemkhan/pk-skill/compare/v1.6.0...v2.0.0
 [1.6.0]: https://github.com/mzaeemkhan/pk-skill/compare/1b13bdb...9dec3a4
 [1.5.0]: https://github.com/mzaeemkhan/pk-skill/compare/7e8dc8e...1b13bdb

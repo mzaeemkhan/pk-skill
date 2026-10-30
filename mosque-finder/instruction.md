@@ -48,7 +48,8 @@ Built-in city map resolves common Pakistani cities instantly. Others fall back t
 
 ## Sources and failure modes
 
-- Overpass API: Free, community-maintained. May be slow under heavy load or temporarily unavailable (returns HTTP 406/429).
+- Overpass API: Free, community-maintained, often overloaded (502/504/timeouts). The script tries overpass-api.de, maps.mail.ru, overpass.private.coffee, overpass.kumi.systems in order (6s each).
+- Fallback: Nominatim `[amenity=place_of_worship]` search in the same bounding box, filtered to `religion=muslim` (or mosque/masjid/مسجد in the name). Fewer results than Overpass. Output `source` says which backend answered; `fallbackReason` lists mirror errors — mention to the user when results came from the fallback.
 - OpenStreetMap data: Community-contributed, not comprehensive. Many smaller mosques are not mapped.
 - Geocoding: May return unexpected results for ambiguous city names.
 

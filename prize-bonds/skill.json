@@ -1,6 +1,6 @@
 {
   "name": "prize-bonds",
-  "description": "Check prize bond numbers against National Savings draw results; latest draws, schedule, denominations (live, savings.gov.pk). Use for \"prize bond result\", \"750 bond draw\".",
+  "description": "Prize bond draw results, schedule and denominations from savings.gov.pk. Live lookups are currently blocked by the site firewall (since Oct 2026); returns the official results link instead. Use for \"prize bond result\", \"750 bond draw\".",
   "profiles": ["lookup"],
-  "frontmatter": "name: prize-bonds\ndescription: \"Check prize bond numbers against National Savings draw results; latest draws, schedule, denominations (live, savings.gov.pk). Use for \\\"prize bond result\\\", \\\"750 bond draw\\\".\"\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: prize-bonds\ndescription: \"Prize bond draw results, schedule and denominations from savings.gov.pk. Live lookups are currently blocked by the site firewall (since Oct 2026); returns the official results link instead. Use for \\\"prize bond result\\\", \\\"750 bond draw\\\".\"\nlicense: MIT\nmetadata:\n  category: finance\n  locale: en-PK\n  phase: v1"
 }

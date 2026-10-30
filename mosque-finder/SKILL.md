@@ -35,5 +35,5 @@ node scripts/mosques.mjs cities
 ## Limitations
 
 - Depends on OpenStreetMap data quality — not all mosques are mapped
-- Overpass API may be slow or temporarily unavailable
+- Tries 4 Overpass mirrors (6s each), then falls back to Nominatim; output `source` names the backend that answered and `fallbackReason` lists failures. Nominatim results are fewer (one page of 50 places of worship, filtered to Muslim)
 - No prayer times or mosque schedules (use prayer-times skill instead)

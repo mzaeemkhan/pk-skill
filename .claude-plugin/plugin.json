@@ -1,7 +1,7 @@
 {
   "name": "pk-skill",
   "description": "Pakistan daily-life skills for coding agents — 70 skills covering transport, utility, weather, earthquakes, religion, Hijri calendar, finance, mutual funds, SBP rates, open-market forex, inflation, government jobs, PSX announcements, airport flights, NDMA alerts, real estate, shopping, news, sports, education, healthcare, Urdu, courier, maps, banking, census, courts, radio, telecom, recipes, pilgrimage, constitution, military, tax, history, and more",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": {
     "name": "mzaeemkhan"
   },

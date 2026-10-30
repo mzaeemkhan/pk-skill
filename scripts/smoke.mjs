@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Smoke test: run one cheap subcommand per skill (see smoke.json), check exit 0 + non-empty JSON.
-// Usage: node scripts/smoke.mjs [--only live|offline] [--skill <name>]
+// Usage: node scripts/smoke.mjs [--only live|offline] [--skill <name>] [--ci]
 import { execFile } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
@@ -14,11 +14,13 @@ const argv = process.argv.slice(2);
 const flag = (name) => { const i = argv.indexOf(`--${name}`); return i >= 0 ? argv[i + 1] : undefined; };
 const only = flag("only");
 const skill = flag("skill");
+// Some Pakistani sources drop or 403 non-PK datacenter IPs (GitHub runners); they set "ci": false.
+const ci = argv.includes("--ci");
 if (only && !["live", "offline"].includes(only)) { console.error("--only must be live or offline"); process.exit(2); }
 
 const config = JSON.parse(readFileSync(join(ROOT, "smoke.json"), "utf8"));
 const entries = Object.entries(config).filter(([name, e]) =>
-  (!skill || name === skill) && (!only || (only === "live") === e.live));
+  (!skill || name === skill) && (!only || (only === "live") === e.live) && !(ci && e.ci === false));
 if (!entries.length) { console.error("no matching skills"); process.exit(2); }
 
 const isEmpty = (v) => v == null || (Array.isArray(v) ? v.length === 0 : typeof v === "object" && Object.keys(v).length === 0);
@@ -43,10 +45,19 @@ function run(name, { script, args, live }) {
   });
 }
 
+// Entries sharing a "group" (e.g. nominatim: 1 req/s policy) run one at a time, 1s apart.
+const groupTail = {};
+const runGrouped = (name, e) => {
+  if (!e.group) return run(name, e);
+  const p = (groupTail[e.group] ?? Promise.resolve()).then(() => run(name, e));
+  groupTail[e.group] = p.then(() => new Promise((r) => setTimeout(r, 1000)));
+  return p;
+};
+
 const results = [];
 let next = 0;
 await Promise.all(Array.from({ length: Math.min(CONCURRENCY, entries.length) }, async () => {
-  while (next < entries.length) { const [name, e] = entries[next++]; results.push(await run(name, e)); }
+  while (next < entries.length) { const [name, e] = entries[next++]; results.push(await runGrouped(name, e)); }
 }));
 results.sort((a, b) => a.skill.localeCompare(b.skill));
 

@@ -14,6 +14,8 @@ Calculate Qurbani meat distribution, check animal eligibility, estimate prices, 
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Calculate meat distribution
 node scripts/qurbani.mjs calculate --animal cow --shares 7 --weight 300

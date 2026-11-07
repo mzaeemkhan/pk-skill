@@ -14,6 +14,8 @@ Islamic marriage financial calculator and reference for Pakistan.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Calculate Mehr by gold tola
 node scripts/nikah.mjs mehr --gold-tola 5

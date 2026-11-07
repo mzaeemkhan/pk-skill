@@ -14,6 +14,8 @@ Live federal government job openings from Pakistan's National Job Portal (njp.go
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Latest open jobs (default 20, max 100)
 node scripts/jobs.mjs latest --count 20

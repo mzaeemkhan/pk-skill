@@ -14,6 +14,8 @@ Urdu text processing utilities. Runs entirely offline — no API calls.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Roman Urdu to Urdu script transliteration
 node scripts/urdu.mjs transliterate --text "pakistan zindabad"

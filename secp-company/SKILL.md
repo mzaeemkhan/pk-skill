@@ -14,6 +14,8 @@ SECP (Securities and Exchange Commission of Pakistan) company registration refer
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Get company types and registration info
 node scripts/secp.mjs info

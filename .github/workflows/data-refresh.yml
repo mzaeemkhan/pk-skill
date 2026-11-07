@@ -1,0 +1,54 @@
+name: Data refresh reminders
+
+# Offline datasets go stale on known dates; the smoke test can't catch that
+# (stale numbers still print valid JSON). On the 1st of each listed month this
+# opens one issue per dataset due that month. workflow_dispatch with a month
+# number lets you test it.
+
+on:
+  schedule:
+    - cron: "0 4 1 1,4,5,7,10 *" # 09:00 PKT on 1 Jan/Apr/May/Jul/Oct
+  workflow_dispatch:
+    inputs:
+      month:
+        description: "Month number to simulate (1-12)"
+        required: true
+
+permissions:
+  issues: write
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        env:
+          MONTH: ${{ inputs.month }}
+        with:
+          script: |
+            const month = Number(process.env.MONTH || new Date().getUTCMonth() + 1);
+            const year = new Date().getUTCFullYear();
+            const quarterly = [1, 4, 7, 10];
+            const due = [
+              { when: (m) => m === 7, skill: "pakistan-tax-calculator",
+                what: "Add the new fiscal year's income tax slabs from the Finance Act passed in June, make it the default year, and re-check withholding rates and the IT-export rate." },
+              { when: (m) => m === 5, skill: "qurbani-calculator",
+                what: "Update animal price ranges by city for this year's Eid ul Adha from recent market reporting; mark unverified ranges `estimate: true`." },
+              { when: (m) => quarterly.includes(m), skill: "pakistan-sim-packages, pakistan-isps, fuel-prices",
+                what: "Re-check Jazz/Telenor/Zong/Ufone bundles and USSD codes, PTCL/StormFiber/Nayatel packages, and the latest OGRA petrol/diesel prices. Update `lastVerified`." },
+              { when: (m) => m === 10, skill: "pakistan-holidays",
+                what: "Check the holiday data covers next year (Islamic holidays shift ~11 days a year); add the next year's gazetted list once announced." },
+            ].filter((d) => d.when(month));
+
+            for (const d of due) {
+              const title = `Data refresh: ${d.skill} (${year}-${String(month).padStart(2, "0")})`;
+              const { data: open } = await github.rest.issues.listForRepo({
+                owner: context.repo.owner, repo: context.repo.repo, state: "open", labels: "data-refresh",
+              });
+              if (open.some((i) => i.title === title)) continue;
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo, title, labels: ["data-refresh"],
+                body: `${d.what}\n\nVerify against primary sources (FBR, OGRA, operator/ISP sites). After updating, run \`node scripts/smoke.mjs --skill <name>\`.`,
+              });
+            }
+            core.info(`month ${month}: ${due.length} reminder(s)`);

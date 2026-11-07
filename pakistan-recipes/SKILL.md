@@ -11,6 +11,8 @@ tools:
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search recipes by name or ingredient
 node scripts/recipes.mjs search --query "biryani"

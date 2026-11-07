@@ -90,7 +90,7 @@ async function main() {
       if (!ALL.includes(t)) throw new Error("--name must be advisory, sitrep or alert");
       const items = await collect([t], Number(a.pages) || 1);
       out = { type: t, count: Math.min(count, items.length), items: items.slice(0, count) };
-      if (!items.length && t === "alert") out.note = "No active NDMA alerts right now.";
+      if (!items.length && t === "alert") out.note = "No active NDMA alerts right now. Flood and weather warnings are usually filed as advisories: try --name advisory.";
       break;
     }
     default:

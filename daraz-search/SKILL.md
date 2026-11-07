@@ -14,6 +14,8 @@ Search Pakistan's largest e-commerce platform for products with prices, ratings,
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search for products
 node scripts/daraz.mjs search --query 'laptop'

@@ -14,6 +14,8 @@ Find mosques and masjids near any Pakistani city using OpenStreetMap data.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Find mosques near a city
 node scripts/mosques.mjs find --city Lahore [--radius 2000] [--limit 20]

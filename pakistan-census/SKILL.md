@@ -14,6 +14,8 @@ Pakistan 2023 Digital Census population data. Search by province, district, or c
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # National summary
 node scripts/census.mjs summary

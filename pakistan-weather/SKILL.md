@@ -14,6 +14,8 @@ Current weather, forecasts, air quality, and PMD severe weather alerts for Pakis
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Current weather
 node scripts/weather.mjs current --city islamabad

@@ -11,6 +11,8 @@ Comprehensive guide for Pakistani pilgrims — step-by-step rituals, packing che
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Hajj step-by-step ritual guide
 node scripts/hajjumrah.mjs hajj

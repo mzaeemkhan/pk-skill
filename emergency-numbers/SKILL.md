@@ -14,6 +14,8 @@ Pakistan emergency and helpline numbers — national and city-specific.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # List all emergency numbers
 node scripts/emergency.mjs list

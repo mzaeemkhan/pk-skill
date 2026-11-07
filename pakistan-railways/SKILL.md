@@ -14,6 +14,8 @@ Query Pakistan Railways schedules from pakrail.gov.pk.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search trains between stations
 node scripts/pak_railways.mjs search --from Lahore --to Karachi
@@ -43,3 +45,4 @@ node scripts/pak_railways.mjs stations
 - Read-only schedule data from pakrail.gov.pk
 - No booking, payment, or cancellation
 - Fare data may be incomplete on the API side
+- `search` takes times from each train's stop schedule. When the source lists one identical departure for 3+ trains at a station (currently true for Lahore Jn.), that time is a placeholder: `departure` is `null` and a `note` says so. Tell the user the departure isn't published and point to pakrail.gov.pk; arrival times are still usable.

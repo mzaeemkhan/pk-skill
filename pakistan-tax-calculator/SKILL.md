@@ -14,6 +14,8 @@ FBR income tax calculator — salaried/business slabs, freelancer IT export rate
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Calculate annual income tax (salaried, default FY2026-27)
 node scripts/tax.mjs calculate --income 1500000 --type salaried

@@ -3,6 +3,22 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [Semantic Versioning](https://semver.org/).
 
+## [2.0.2] - 2026-11-07
+
+Fixes from an agent-experience audit (7 agents, 14 real requests: 14/14 routed to the right skill, 13/14 on the first pick).
+
+### Fixed
+- pakistan-railways: `search` took times from the route endpoint, which lists placeholders (06:30 for every train). It now reads each train's stop schedule and adds `duration`; a departure shared by 3+ trains at the queried station (currently every Lahore Jn. departure, 08:20) is returned as `null` with a note. `count` is now computed after the TEST-train filter.
+- electricity-calculator: rates were FY2024-25 (Rs 7.74/unit for 1-100). Now the NEPRA FY2025-26 base tariff (Rs 22.44 / 28.91 / 33.10; protected 10.54 / 13.01), 301+ slabs marked `estimate`, GST 18% on every bill (was 17% above Rs 25,000 only), new `--protected` flag, tariff `asOf` and source in output. A 300-unit bill now estimates about Rs 11,450 (was Rs 4,710).
+- mutual-funds: offer/repurchase prices come from the monthly report, so `nav` returns them under `reportPrices` with their own `asOf`.
+- earthquake-alerts: zero results say so explicitly. ndma-alerts: an empty `alert` list points to `--name advisory`.
+
+### Changed
+- Every SKILL.md: "Run these from this skill's base directory" under Commands (all 7 audit agents had to work this out).
+
+### Added
+- `data-refresh.yml` workflow: opens a reminder issue on 1 Jan/Apr/May/Jul/Oct for datasets that go stale (tax slabs, Qurbani prices, SIM/ISP/fuel prices, holidays).
+
 ## [2.0.1] - 2026-10-30
 
 ### Fixed
@@ -76,6 +92,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [S
 - drap-drugs placeholder (not functional)
 - `.claude-plugin/plugin.json` manifest for `npx skills add` installation
 
+[2.0.2]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/mzaeemkhan/pk-skill/compare/v1.6.0...v2.0.0
 [1.6.0]: https://github.com/mzaeemkhan/pk-skill/compare/1b13bdb...9dec3a4

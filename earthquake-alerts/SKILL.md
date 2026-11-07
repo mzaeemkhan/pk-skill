@@ -14,6 +14,8 @@ Live earthquake data for Pakistan and nearby regions from the USGS feed.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Earthquakes in the last 7 days, magnitude 3+
 node scripts/quakes.mjs recent --days 7 --min-mag 3

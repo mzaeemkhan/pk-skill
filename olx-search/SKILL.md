@@ -14,6 +14,8 @@ Search OLX Pakistan classifieds — electronics, vehicles, property, services, a
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search OLX listings
 node scripts/olx.mjs search --query 'iphone 15'

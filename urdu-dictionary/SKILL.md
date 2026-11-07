@@ -14,6 +14,8 @@ Urdu-English dictionary with romanized transliteration. Search across Urdu scrip
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search for a word
 node scripts/dictionary.mjs search --query "hello"

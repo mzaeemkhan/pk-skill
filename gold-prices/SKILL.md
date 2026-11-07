@@ -14,6 +14,8 @@ International spot prices for gold, silver, platinum, and palladium in PKR and U
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Today's gold and silver prices in PKR and USD
 node scripts/gold.mjs today

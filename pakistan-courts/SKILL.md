@@ -14,6 +14,8 @@ Pakistan judiciary reference — court hierarchy, Supreme Court, high courts, sp
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Court hierarchy
 node scripts/courts.mjs hierarchy

@@ -58,5 +58,5 @@ All commands return JSON.
 
 - Residential tariff only (not commercial/industrial/agricultural)
 - FPA is a reference value, actual varies monthly
-- Rates approximate FY2024-25 NEPRA schedule
+- Base rates: NEPRA FY2025-26 uniform tariff (2 Jul 2025). 1-300 unit and protected rates are from published reporting; 301+ slabs are estimates (`estimate: true`). GST 18% on all bills. Use `--protected` for consumers with <=200 units/month and a 6-month average <=200
 - Not a substitute for official DISCO billing

@@ -14,6 +14,8 @@ Pakistan passport office reference — fees, offices, requirements, and process.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # List passport offices by city
 node scripts/passport.mjs offices

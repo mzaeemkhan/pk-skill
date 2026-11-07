@@ -1,15 +1,28 @@
 #!/usr/bin/env node
 
+// NEPRA uniform base tariff FY2025-26 (decision of 2 Jul 2025, reported by Pakistan Observer).
+// 1-300 unit rates are from that report; 301+ are estimates (the report gives only one TOU rate, Rs 41.78).
+const TARIFF_SOURCE = {
+  asOf: "2025-07-02",
+  basis: "NEPRA FY2025-26 uniform base tariff (residential, excl. FPA/QTA/taxes)",
+  source: "https://pakobserver.net/new-per-unit-electricity-price-of-all-slabs-as-nepra-cuts-base-tariff-for-fy2026/",
+};
 const RESIDENTIAL_SLABS = [
-  { min: 1, max: 100, rate: 7.74, label: "1-100 units" },
-  { min: 101, max: 200, rate: 11.50, label: "101-200 units" },
-  { min: 201, max: 300, rate: 16.00, label: "201-300 units" },
-  { min: 301, max: 400, rate: 20.40, label: "301-400 units" },
-  { min: 401, max: 500, rate: 25.10, label: "401-500 units" },
-  { min: 501, max: 600, rate: 29.00, label: "501-600 units" },
-  { min: 601, max: 700, rate: 32.50, label: "601-700 units" },
-  { min: 701, max: Infinity, rate: 35.24, label: "Above 700 units" },
+  { min: 1, max: 100, rate: 22.44, label: "1-100 units" },
+  { min: 101, max: 200, rate: 28.91, label: "101-200 units" },
+  { min: 201, max: 300, rate: 33.10, label: "201-300 units" },
+  { min: 301, max: 400, rate: 37.99, label: "301-400 units", estimate: true },
+  { min: 401, max: 500, rate: 40.22, label: "401-500 units", estimate: true },
+  { min: 501, max: 600, rate: 41.62, label: "501-600 units", estimate: true },
+  { min: 601, max: 700, rate: 42.76, label: "601-700 units", estimate: true },
+  { min: 701, max: Infinity, rate: 47.69, label: "Above 700 units", estimate: true },
 ];
+// Protected: <=200 units/month and a 6-month average <=200.
+const PROTECTED_SLABS = [
+  { min: 1, max: 100, rate: 10.54, label: "1-100 units (protected)" },
+  { min: 101, max: 200, rate: 13.01, label: "101-200 units (protected)" },
+];
+const GST_RATE = 0.18;
 
 const DISCOS = {
   LESCO: { name: "Lahore Electric Supply Company", region: "Lahore Division", fpa: 3.23, qta: 0.43 },
@@ -26,40 +39,31 @@ const DISCOS = {
   KELECTRIC: { name: "K-Electric", region: "Karachi", fpa: 3.95, qta: 0.50 },
 };
 
-function calculateBill(units, discoKey) {
+function calculateBill(units, discoKey, isProtected = false) {
   const disco = DISCOS[discoKey] || DISCOS.LESCO;
   const discoName = discoKey && DISCOS[discoKey] ? discoKey : "LESCO";
 
   if (units <= 0) return { success: false, error: "Units must be positive" };
+  const protectedApplied = isProtected && units <= 200;
+  const slabs = protectedApplied ? PROTECTED_SLABS : RESIDENTIAL_SLABS;
 
+  // ponytail: telescoping slabs; the non-protected "one previous slab benefit" rule isn't modelled.
   const slabBreakdown = [];
   let remaining = units;
   let baseCost = 0;
-
-  if (units <= 200) {
-    const applicableSlabs = RESIDENTIAL_SLABS.filter((s) => s.min <= units);
-    const lastSlab = applicableSlabs[applicableSlabs.length - 1];
-    baseCost = units * lastSlab.rate;
+  for (const slab of slabs) {
+    if (remaining <= 0) break;
+    const slabUnits = Math.min(remaining, slab.max - slab.min + 1);
+    const cost = slabUnits * slab.rate;
+    baseCost += cost;
     slabBreakdown.push({
-      slab: lastSlab.label,
-      units,
-      rate_pkr: lastSlab.rate,
-      cost_pkr: Math.round(baseCost * 100) / 100,
+      slab: slab.label,
+      units: slabUnits,
+      rate_pkr: slab.rate,
+      cost_pkr: Math.round(cost * 100) / 100,
+      ...(slab.estimate && { estimate: true }),
     });
-  } else {
-    for (const slab of RESIDENTIAL_SLABS) {
-      if (remaining <= 0) break;
-      const slabUnits = Math.min(remaining, slab.max - slab.min + 1);
-      const cost = slabUnits * slab.rate;
-      baseCost += cost;
-      slabBreakdown.push({
-        slab: slab.label,
-        units: slabUnits,
-        rate_pkr: slab.rate,
-        cost_pkr: Math.round(cost * 100) / 100,
-      });
-      remaining -= slabUnits;
-    }
+    remaining -= slabUnits;
   }
 
   const fpaTotal = units * disco.fpa;
@@ -68,7 +72,7 @@ function calculateBill(units, discoKey) {
   const tvFee = 35;
 
   const subtotal = baseCost + fpaTotal + qtaTotal + electricityDuty + tvFee;
-  const gst = subtotal > 25000 ? subtotal * 0.17 : 0;
+  const gst = subtotal * GST_RATE;
   const total = subtotal + gst;
 
   return {
@@ -77,6 +81,8 @@ function calculateBill(units, discoKey) {
     disco_name: disco.name,
     region: disco.region,
     units,
+    consumer_type: protectedApplied ? "protected" : "non-protected",
+    ...(isProtected && !protectedApplied && { protected_note: "Protected rates apply only up to 200 units; non-protected rates used." }),
     slab_breakdown: slabBreakdown,
     base_cost_pkr: Math.round(baseCost),
     fuel_price_adjustment_pkr: Math.round(fpaTotal),
@@ -84,10 +90,11 @@ function calculateBill(units, discoKey) {
     electricity_duty_pkr: Math.round(electricityDuty),
     tv_fee_pkr: tvFee,
     subtotal_pkr: Math.round(subtotal),
-    gst_17_percent_pkr: Math.round(gst),
-    gst_note: gst > 0 ? "GST 17% applied (bill > Rs 25,000)" : "No GST (bill <= Rs 25,000)",
+    gst_18_percent_pkr: Math.round(gst),
     total_bill_pkr: Math.round(total),
-    note: "Approximate. FPA/QTA vary monthly. Verify with your DISCO.",
+    tariff: TARIFF_SOURCE,
+    estimate: true,
+    note: "Estimate. FPA/QTA change monthly, slab rules and income tax (non-filers) are simplified. Verify with your DISCO.",
   };
 }
 
@@ -97,18 +104,20 @@ function showSlabs(discoKey) {
   return {
     success: true,
     disco: name,
-    tariff_type: "Residential (Protected + Unprotected)",
-    fiscal_year: "FY2024-25 (approximate)",
+    tariff_type: "Residential",
+    tariff: TARIFF_SOURCE,
     slabs: RESIDENTIAL_SLABS.map((s) => ({
       range: s.label,
       rate_per_unit_pkr: s.rate,
+      ...(s.estimate && { estimate: true }),
     })),
+    protected_slabs: PROTECTED_SLABS.map((s) => ({ range: s.label, rate_per_unit_pkr: s.rate })),
     surcharges: {
       fuel_price_adjustment_per_unit: disco.fpa,
       quarterly_tariff_adjustment_per_unit: disco.qta,
       electricity_duty: "1.5% of base cost",
       tv_fee: "Rs 35 fixed",
-      gst: "17% on bills above Rs 25,000",
+      gst: "18% on the bill",
     },
   };
 }
@@ -156,7 +165,7 @@ function main() {
     console.log(JSON.stringify({
       usage: "node electricity.mjs <command> [options]",
       commands: {
-        calculate: "--units <number> [--disco <name>] — Calculate bill",
+        calculate: "--units <number> [--disco <name>] [--protected] — Calculate bill",
         slabs: "[--disco <name>] — Show tariff slabs",
         discos: "List all DISCOs",
         compare: "--units <number> — Compare across DISCOs",
@@ -177,7 +186,7 @@ function main() {
       process.exit(1);
     }
     const disco = (getFlag("--disco") || "LESCO").toUpperCase();
-    console.log(JSON.stringify(calculateBill(units, disco), null, 2));
+    console.log(JSON.stringify(calculateBill(units, disco, args.includes("--protected")), null, 2));
   } else if (cmd === "slabs") {
     const disco = getFlag("--disco") ? getFlag("--disco").toUpperCase() : undefined;
     console.log(JSON.stringify(showSlabs(disco), null, 2));

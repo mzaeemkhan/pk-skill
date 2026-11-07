@@ -14,6 +14,8 @@ Calculate Zakat on your assets — gold, silver, cash, investments, property min
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Calculate zakat on assets
 node scripts/zakat.mjs calculate --gold 10 --silver 0 --cash 500000 --investments 200000 --debts 100000

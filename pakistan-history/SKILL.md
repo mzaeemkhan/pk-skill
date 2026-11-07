@@ -14,6 +14,8 @@ Key historical events from 1906 to present — eras, leaders, on-this-day lookup
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search events by keyword
 node scripts/history.mjs search --query "independence"

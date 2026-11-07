@@ -14,6 +14,8 @@ Search Zameen.com property listings across 14 major Pakistan cities.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search homes for sale in Lahore
 node scripts/zameen.mjs search --city Lahore

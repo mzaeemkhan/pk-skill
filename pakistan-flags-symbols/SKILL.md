@@ -14,6 +14,8 @@ Pakistan national symbols — flag specifications, anthem, state emblem, nationa
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Flag specifications
 node scripts/symbols.mjs flag

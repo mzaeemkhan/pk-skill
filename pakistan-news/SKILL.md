@@ -14,6 +14,8 @@ Latest headlines from major Pakistani news sources via RSS.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Latest headlines from all sources
 node scripts/news.mjs headlines [--limit 20]

@@ -14,6 +14,8 @@ Pakistan public and Islamic holidays for 2024-2027.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # List all holidays for a year
 node scripts/holidays.mjs list --year 2026

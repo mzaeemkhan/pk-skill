@@ -14,6 +14,8 @@ Live NAVs, returns and costs for Pakistani mutual and pension funds.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search funds by name or symbol
 node scripts/funds.mjs search --query "meezan"

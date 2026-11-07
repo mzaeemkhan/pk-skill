@@ -14,6 +14,8 @@ Live disaster advisories, alerts and situation reports from Pakistan's National 
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Newest items across advisories, sitreps and active alerts
 node scripts/ndma.mjs latest --count 10
@@ -34,5 +36,6 @@ node scripts/ndma.mjs type --name sitrep --pages 2
 
 - Returns titles, dates and PDF links; PDF contents are not parsed
 - `search` matches titles only and scans the first 3 pages per type by default (`--pages` to widen)
-- National NDMA only, not provincial PDMAs
+- National NDMA only, not provincial PDMAs; no province filter, so for "flood alert in Sindh" search titles and say so if nothing matches
+- Flood and weather warnings are usually filed as `advisory`, not `alert`
 - For weather forecasts and PMD alerts use `pakistan-weather`; for quakes use `earthquake-alerts`

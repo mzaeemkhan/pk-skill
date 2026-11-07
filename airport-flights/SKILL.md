@@ -14,6 +14,8 @@ Live flight boards for Pakistan Airports Authority airports.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Today's arrivals at Lahore
 node scripts/flights.mjs arrivals --airport LHE

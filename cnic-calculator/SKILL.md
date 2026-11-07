@@ -14,6 +14,8 @@ Parse and validate Pakistan CNIC (Computerized National Identity Card) numbers. 
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Parse CNIC — extract all info
 node scripts/cnic.mjs parse --cnic 42201-1234567-1

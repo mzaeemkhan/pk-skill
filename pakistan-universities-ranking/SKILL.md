@@ -14,6 +14,8 @@ Pakistan university rankings — HEC categories, QS world rankings, city, sector
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # List top universities
 node scripts/universities.mjs top --limit 20

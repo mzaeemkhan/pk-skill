@@ -14,6 +14,8 @@ Quran verse lookup, keyword search, and surah info via alquran.cloud API.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Look up a specific ayah (Arabic + English + Urdu)
 node scripts/quran.mjs ayah --ref 2:255 [--lang all|arabic|english|urdu]

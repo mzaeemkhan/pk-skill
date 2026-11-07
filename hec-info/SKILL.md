@@ -14,6 +14,8 @@ Search and filter HEC-recognized universities in Pakistan.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search by name
 node scripts/hec.mjs search --query LUMS

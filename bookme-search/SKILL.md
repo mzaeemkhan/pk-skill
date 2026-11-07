@@ -14,6 +14,8 @@ Search bus schedules across 120+ Pakistani operators via bookme.pk (Daewoo, Fais
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search buses between cities
 node scripts/bookme.mjs search --from Lahore --to Islamabad --date 2026-10-22

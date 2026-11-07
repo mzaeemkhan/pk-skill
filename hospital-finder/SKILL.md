@@ -14,6 +14,8 @@ Find healthcare facilities across Pakistan.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search hospitals in a city
 node scripts/hospitals.mjs search --city Islamabad --type hospital --limit 10

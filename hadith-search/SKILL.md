@@ -11,6 +11,8 @@ Search across six major Hadith collections via the free, keyless fawazahmed0/had
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search hadith by keyword
 node scripts/hadith.mjs search --query "patience"

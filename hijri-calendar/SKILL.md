@@ -14,6 +14,8 @@ Islamic (Hijri) dates and upcoming Islamic events, live from the Aladhan API.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Today's Hijri date (Pakistan time)
 node scripts/hijri.mjs today

@@ -14,6 +14,8 @@ Pakistan petroleum fuel prices from OGRA (Oil and Gas Regulatory Authority).
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Current fuel prices
 node scripts/fuel.mjs current

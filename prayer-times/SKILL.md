@@ -14,6 +14,8 @@ Daily prayer times, monthly calendar, and next-prayer lookup for Pakistani citie
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Today's prayer times
 node scripts/prayers.mjs today --city Lahore

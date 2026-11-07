@@ -14,6 +14,8 @@ Calculate Pakistan vehicle token tax / excise duty by engine capacity, province,
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Calculate token tax
 node scripts/vehicletax.mjs calculate --cc 1300 --province punjab

@@ -14,6 +14,8 @@ Latest official inflation figures from the Pakistan Bureau of Statistics (pbs.go
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Latest monthly CPI: national, urban, rural YoY + MoM, plus monthly SPI and WPI
 node scripts/inflation.mjs cpi

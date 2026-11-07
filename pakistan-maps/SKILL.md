@@ -14,6 +14,8 @@ Driving routes, distances, and nearby place search for Pakistan.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Get driving route between cities
 node scripts/maps.mjs route --from Lahore --to Islamabad

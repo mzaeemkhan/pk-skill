@@ -14,6 +14,8 @@ Constitution of Pakistan 1973 reference. Browse articles, fundamental rights, pr
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search articles by keyword
 node scripts/constitution.mjs search --query "freedom of speech"

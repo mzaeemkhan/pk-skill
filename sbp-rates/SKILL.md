@@ -14,6 +14,8 @@ Live interest-rate data from the State Bank of Pakistan homepage.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Policy rate, corridor (ceiling/floor), overnight repo, FX reserves
 node scripts/sbp.mjs policy-rate

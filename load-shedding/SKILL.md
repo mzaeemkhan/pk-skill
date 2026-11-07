@@ -14,6 +14,8 @@ Pakistan electricity load shedding information for all power distribution compan
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # List all DISCOs with helplines and SMS codes
 node scripts/loadshedding.mjs discos

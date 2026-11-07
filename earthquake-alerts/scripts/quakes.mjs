@@ -39,7 +39,11 @@ function shape(f) {
 
 function list(data, meta) {
   const quakes = data.features.map(shape);
-  return { ...meta, count: quakes.length, quakes, source: "USGS Earthquake Hazards Program" };
+  return {
+    ...meta, count: quakes.length, quakes,
+    ...(!quakes.length && { note: "No earthquakes found matching these filters (the query succeeded). Smaller quakes below the minimum magnitude are not included." }),
+    source: "USGS Earthquake Hazards Program",
+  };
 }
 
 function arg(args, name, def) {

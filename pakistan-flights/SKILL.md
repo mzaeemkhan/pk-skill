@@ -14,6 +14,8 @@ Search flights across Pakistani airlines and international routes via bookme.pk 
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search flights between cities
 node scripts/flights.mjs search --from Lahore --to Islamabad --date 2026-10-22

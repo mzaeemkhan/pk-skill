@@ -14,6 +14,8 @@ Mobile operator packages — Jazz, Telenor, Zong, Ufone, SCOM. Data/call/SMS bun
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search packages by keyword
 node scripts/simpackages.mjs search --query "weekly"

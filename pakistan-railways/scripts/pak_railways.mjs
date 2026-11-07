@@ -44,26 +44,77 @@ function cleanTime(raw) {
 async function searchRoute(from, to) {
   const fromCode = resolveStation(from);
   const toCode = resolveStation(to);
-  const trains = await post("getRouteWiseTrain", {
+  const raw = await post("getRouteWiseTrain", {
     fromStationCode: fromCode,
     toStationCode: toCode,
   });
+  // Route-level times from getRouteWiseTrain are unreliable (same departure for every train),
+  // so take departure/arrival from each train's own stop schedule.
+  const trains = await Promise.all(
+    raw
+      .filter((t) => !t.Train_Name.includes("TEST"))
+      .map(async (t) => {
+        const base = {
+          train_id: t.TrainId,
+          train_code: t.Train_Code,
+          train_name: t.Train_Name.replace(/\(.*\)$/, "").trim(),
+          from_station: t.frmStationName,
+          to_station: t.toStationName,
+        };
+        try {
+          const stops = await post("getScheduleByTrain", {
+            train_id: String(t.TrainId),
+            date: new Date().toLocaleDateString("en-US"),
+          });
+          const code = (s) => s.Station_Code?.trim();
+          const fromIdx = stops.findIndex((s) => code(s) === fromCode);
+          const from = stops[fromIdx];
+          const to = stops.find((s) => code(s) === toCode);
+          if (!from || !to) throw new Error("station not in schedule");
+          const departure = cleanTime(from.Departure || from.Arrival);
+          const arrival = cleanTime(to.Arrival || to.Departure);
+          const dayOffset = (Number(to.Day_Add) || 0) - (Number(from.Day_Add) || 0);
+          const next = stops[fromIdx + 1];
+          return {
+            ...base, departure, arrival, arrival_day_offset: dayOffset,
+            duration: duration(departure, arrival, dayOffset),
+            _next: next && `${next.Station_Name} arr ${cleanTime(next.Arrival)}`,
+          };
+        } catch (e) {
+          return { ...base, departure: null, arrival: null, note: `schedule unavailable: ${e.message}` };
+        }
+      }),
+  );
+  // pakrail sometimes publishes one placeholder time for every train at a station (e.g. all LHR
+  // departures 08:20; Karachi Express then reaches Raiwind ~25 km away at 18:35). When 3+ trains
+  // share the same departure from the queried station, treat it as a placeholder, not a time.
+  // ponytail: exact-match heuristic; misses a placeholder used by only 1-2 trains on a route.
+  const deps = {};
+  for (const t of trains) if (t.departure) deps[t.departure] = (deps[t.departure] ?? 0) + 1;
+  for (const t of trains) {
+    if (deps[t.departure] >= 3) {
+      t.note = `source lists the same departure (${t.departure}) for ${deps[t.departure]} trains at this station, so it is a placeholder; next stop: ${t._next}. Confirm departure on pakrail.gov.pk`;
+      t.departure = null;
+      t.duration = null;
+      delete t.arrival_day_offset;
+    }
+    delete t._next;
+  }
+  trains.sort((a, b) => (a.departure ?? "99").localeCompare(b.departure ?? "99"));
   return {
     query: { from: fromCode, to: toCode },
     count: trains.length,
-    trains: trains
-      .filter((t) => !t.Train_Name.includes("TEST"))
-      .map((t) => ({
-        train_id: t.TrainId,
-        train_code: t.Train_Code,
-        train_name: t.Train_Name.replace(/\(.*\)$/, "").trim(),
-        from_station: t.frmStationName,
-        to_station: t.toStationName,
-        departure: cleanTime(t.frmStationDeparture),
-        arrival: cleanTime(t.toStationArrival),
-      })),
+    trains,
     source: "https://pakrail.gov.pk/Map.aspx",
   };
+}
+
+function duration(dep, arr, dayOffset) {
+  if (!dep || !arr) return null;
+  const mins = (t) => { const [h, m] = t.split(":").map(Number); return h * 60 + m; };
+  const total = dayOffset * 1440 + mins(arr) - mins(dep);
+  if (total <= 0) return null;
+  return `${Math.floor(total / 60)}h ${String(total % 60).padStart(2, "0")}m`;
 }
 
 async function getSchedule(trainId, date) {

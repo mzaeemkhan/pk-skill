@@ -14,6 +14,8 @@ Check Pakistan National Savings prize bond draw results from savings.gov.pk.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Check if a bond number won (searches all draws)
 node scripts/bonds.mjs check --number 123456 --denomination 750

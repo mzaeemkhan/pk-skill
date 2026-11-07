@@ -14,6 +14,8 @@ Look up Pakistan STD area codes and mobile operator prefixes.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search area code by city name
 node scripts/phonecodes.mjs search --query "Lahore"

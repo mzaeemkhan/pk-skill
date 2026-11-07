@@ -92,6 +92,9 @@ async function main() {
         ...snap,
         nav: latest ? latest.nav : exact.nav, navDate: latest ? latest.date.slice(0, 10) : null,
         navLast7Days: hist.map((h) => ({ date: h.date.slice(0, 10), nav: h.nav })),
+        // Offer/repurchase come from the monthly report, not the daily NAV feed; keep them apart.
+        offerPrice: undefined, repurchasePrice: undefined,
+        reportPrices: { offerPrice: snap.offerPrice, repurchasePrice: snap.repurchasePrice, asOf: snap.dataAsOf, note: "From the monthly fund report; not today's dealing price. Ask the AMC for current offer/redemption prices." },
         reportStatsAsOf: snap.dataAsOf, dataAsOf: undefined,
         otherMatches: hits.filter((f) => f !== exact).slice(0, 10).map((f) => f.name), source: SOURCE };
       break;

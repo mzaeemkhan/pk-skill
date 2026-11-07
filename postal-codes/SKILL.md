@@ -14,6 +14,8 @@ Look up Pakistan postal codes by area, city, or code number.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Search by area name
 node scripts/postcodes.mjs search --query "DHA Lahore"

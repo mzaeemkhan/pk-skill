@@ -14,6 +14,8 @@ Track parcels through Pakistan Post (EMTTS) and TCS Express.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Track a Pakistan Post parcel (auto-detected by prefix EP/CP/RP/RR/EG)
 node scripts/tracking.mjs track --id EP123456789PK

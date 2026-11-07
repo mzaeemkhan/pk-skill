@@ -14,6 +14,8 @@ Check electricity bills for all 11 WAPDA distribution companies (DISCOs) and K-E
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # Check bill by reference number
 node scripts/bills.mjs check --provider lesco --ref 01234567890123

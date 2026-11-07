@@ -14,6 +14,8 @@ Pakistan FM radio stations directory. Search by city, frequency, or category.
 
 ## Commands
 
+Run these from this skill's base directory (cd there first); script paths are relative to it.
+
 ```bash
 # List all stations
 node scripts/radio.mjs list

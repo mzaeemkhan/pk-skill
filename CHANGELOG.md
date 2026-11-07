@@ -3,6 +3,11 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [Semantic Versioning](https://semver.org/).
 
+## [2.0.3] - 2026-11-08
+
+### Fixed
+- pakistan-railways: `search` also catches the placeholder in arrival times (same arrival for 3+ trains, or an arrival on a train with no published departure, e.g. Karachi to Lahore showed 08:20 for two trains). These come back as `null` with a note.
+
 ## [2.0.2] - 2026-11-07
 
 Fixes from an agent-experience audit (7 agents, 14 real requests: 14/14 routed to the right skill, 13/14 on the first pick).
@@ -92,6 +97,7 @@ Fixes from an agent-experience audit (7 agents, 14 real requests: 14/14 routed t
 - drap-drugs placeholder (not functional)
 - `.claude-plugin/plugin.json` manifest for `npx skills add` installation
 
+[2.0.3]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/mzaeemkhan/pk-skill/compare/v1.6.0...v2.0.0

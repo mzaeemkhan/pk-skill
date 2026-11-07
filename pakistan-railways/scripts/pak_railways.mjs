@@ -89,15 +89,29 @@ async function searchRoute(from, to) {
   // departures 08:20; Karachi Express then reaches Raiwind ~25 km away at 18:35). When 3+ trains
   // share the same departure from the queried station, treat it as a placeholder, not a time.
   // ponytail: exact-match heuristic; misses a placeholder used by only 1-2 trains on a route.
-  const deps = {};
-  for (const t of trains) if (t.departure) deps[t.departure] = (deps[t.departure] ?? 0) + 1;
+  const tally = (key) => trains.reduce((m, t) => (t[key] ? { ...m, [t[key]]: (m[t[key]] ?? 0) + 1 } : m), {});
+  const deps = tally("departure");
+  const arrs = tally("arrival");
   for (const t of trains) {
+    const notes = [];
+    if (t.note) notes.push(t.note);
     if (deps[t.departure] >= 3) {
-      t.note = `source lists the same departure (${t.departure}) for ${deps[t.departure]} trains at this station, so it is a placeholder; next stop: ${t._next}. Confirm departure on pakrail.gov.pk`;
+      notes.push(`source lists the same departure (${t.departure}) for ${deps[t.departure]} trains at this station, so it is a placeholder; next stop: ${t._next}`);
       t.departure = null;
+    } else if (!t.departure && t.arrival && !t.note) {
+      // Same placeholder shows up as the arrival of trains with no published departure.
+      notes.push(`source has no departure for this train, so its arrival (${t.arrival}) is not reliable`);
+      t.arrival = null;
+    }
+    if (arrs[t.arrival] >= 3) {
+      notes.push(`source lists the same arrival (${t.arrival}) for ${arrs[t.arrival]} trains, so it is a placeholder`);
+      t.arrival = null;
+    }
+    if (!t.departure || !t.arrival) {
       t.duration = null;
       delete t.arrival_day_offset;
     }
+    if (notes.length > (t.note ? 1 : 0)) t.note = `${notes.join("; ")}. Confirm on pakrail.gov.pk`;
     delete t._next;
   }
   trains.sort((a, b) => (a.departure ?? "99").localeCompare(b.departure ?? "99"));

@@ -40,7 +40,7 @@ npx --yes skills add mzaeemkhan/pk-skill --skill pakistan-railways -g
 
 | اسکل | تفصیل | حالت |
 |-------|-------------|--------|
-| utility-bills | واپڈا کی تمام 11 ڈسکوز (LESCO، FESCO، IESCO، MEPCO، PESCO، HESCO، SEPCO، QESCO، GEPCO، TESCO، HAZECO) اور کے الیکٹرک کا بجلی کا بل چیک کریں | مکمل |
+| utility-bills | واپڈا کی تمام 11 ڈسکوز (LESCO، FESCO، IESCO، MEPCO، PESCO، HESCO، SEPCO، QESCO، GEPCO، TESCO، HAZECO) اور کے الیکٹرک کے بل کا سرکاری صفحہ اور طریقہ۔ بل کے صفحے پر کیپچا آپ خود حل کرتے ہیں، اس لیے رقم خودکار طور پر نہیں آتی | مکمل |
 | electricity-calculator | نیپرا بجلی بل کیلکولیٹر — 8 سلیب، 12 ڈسکوز، FPA/QTA/GST/ٹی وی فیس کی تفصیل، ڈسکوز کا موازنہ۔ آف لائن | مکمل |
 | load-shedding | لوڈشیڈنگ کی معلومات — تمام ڈسکوز اور کے الیکٹرک کی ہیلپ لائنز، SMS کوڈز، شکایت نمبرز۔ آف لائن | مکمل |
 

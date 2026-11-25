@@ -30,9 +30,13 @@
   "utility-bills": {
     "script": "scripts/bills.mjs",
     "args": [
-      "providers"
+      "check",
+      "--provider",
+      "lesco",
+      "--ref",
+      "01234567890123"
     ],
-    "live": true
+    "live": false
   },
   "pakistan-weather": {
     "script": "scripts/weather.mjs",

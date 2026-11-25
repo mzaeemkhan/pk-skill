@@ -3,6 +3,11 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [Semantic Versioning](https://semver.org/).
 
+## [2.0.5] - 2026-11-25
+
+### Changed
+- utility-bills: no longer fetches bills. The K-Electric path read the CAPTCHA text off a KE staging server and submitted it, which defeats a check meant to keep scripts out; PITC (all 11 DISCOs) has since added a CAPTCHA too. `check` now validates the number's format and returns the official bill page and steps, with no network requests. Description, docs and smoke entry updated.
+
 ## [2.0.4] - 2026-11-25
 
 ### Changed
@@ -102,6 +107,7 @@ Fixes from an agent-experience audit (7 agents, 14 real requests: 14/14 routed t
 - drap-drugs placeholder (not functional)
 - `.claude-plugin/plugin.json` manifest for `npx skills add` installation
 
+[2.0.5]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.1...v2.0.2

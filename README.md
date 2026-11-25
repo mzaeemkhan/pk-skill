@@ -34,7 +34,7 @@ Requires Node.js 18+ and npx.
 
 | Skill | Description | Status |
 |-------|-------------|--------|
-| utility-bills | Electricity bill check for all 11 WAPDA DISCOs (LESCO, FESCO, IESCO, MEPCO, PESCO, HESCO, SEPCO, QESCO, GEPCO, TESCO, HAZECO) + K-Electric | Done |
+| utility-bills | Official bill page, steps and reference-number check for all 11 WAPDA DISCOs + K-Electric. Bill pages need a CAPTCHA you complete, so amounts are not fetched. | Done |
 | electricity-calculator | NEPRA electricity bill calculator — 8 tariff slabs, 12 DISCOs, FPA/QTA/GST/TV fee breakdown, cross-DISCO comparison. Offline. | Done |
 | load-shedding | Load shedding reference — all 11 DISCOs + K-Electric with helplines, SMS codes, complaint numbers, schedule categories. Offline reference. | Done |
 

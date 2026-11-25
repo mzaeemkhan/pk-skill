@@ -1,6 +1,6 @@
 {
   "name": "utility-bills",
-  "description": "Look up an actual electricity bill by reference number for all 11 DISCOs (LESCO, MEPCO, IESCO…) and K-Electric. Use for \"check my bijli bill\", \"bill due date\". Not for estimating a bill from units — use electricity-calculator.",
+  "description": "Where and how to view your electricity bill for all 11 DISCOs (LESCO, MEPCO, IESCO…) and K-Electric — official bill page, steps, and a format check on the reference number. Bill pages need a CAPTCHA, so amounts are not fetched. Use for \"check my bijli bill\", \"bill due date\". Not for estimating a bill from units — use electricity-calculator.",
   "profiles": ["lookup"],
-  "frontmatter": "name: utility-bills\ndescription: \"Look up an actual electricity bill by reference number for all 11 DISCOs (LESCO, MEPCO, IESCO…) and K-Electric. Use for \\\"check my bijli bill\\\", \\\"bill due date\\\". Not for estimating a bill from units — use electricity-calculator.\"\nlicense: MIT\nmetadata:\n  category: utilities\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: utility-bills\ndescription: \"Where and how to view your electricity bill for all 11 DISCOs (LESCO, MEPCO, IESCO…) and K-Electric — official bill page, steps, and a format check on the reference number. Bill pages need a CAPTCHA, so amounts are not fetched. Use for \\\"check my bijli bill\\\", \\\"bill due date\\\". Not for estimating a bill from units — use electricity-calculator.\"\nlicense: MIT\nmetadata:\n  category: utilities\n  locale: en-PK\n  phase: v1"
 }

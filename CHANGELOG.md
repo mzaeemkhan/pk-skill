@@ -3,6 +3,14 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [Semantic Versioning](https://semver.org/).
 
+## [2.0.6] - 2026-11-25
+
+### Added
+- load-shedding: `feeder --code <6 digits>` gives live status for one WAPDA feeder from PITC's load-management portal (ccms.pitc.com.pk): power now, loss category, scheduled cuts today/tomorrow, unplanned outage minutes by hour today/yesterday. One retry on dropped connections. Bill reference numbers are rejected because PITC's lookup by reference returns the account holder's name, CNIC and phone; the consumer-info table is never parsed.
+
+### Fixed
+- load-shedding: schedule links for MEPCO (moved), FESCO, IESCO, GEPCO, PESCO, HAZECO and K-Electric were dead or unreachable. WAPDA DISCOs without a working page now point to PITC's feeder page; K-Electric points to its homepage.
+
 ## [2.0.5] - 2026-11-25
 
 ### Changed
@@ -107,6 +115,7 @@ Fixes from an agent-experience audit (7 agents, 14 real requests: 14/14 routed t
 - drap-drugs placeholder (not functional)
 - `.claude-plugin/plugin.json` manifest for `npx skills add` installation
 
+[2.0.6]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.5...v2.0.6
 [2.0.5]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.2...v2.0.3

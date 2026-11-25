@@ -280,9 +280,12 @@
   "load-shedding": {
     "script": "scripts/loadshedding.mjs",
     "args": [
-      "discos"
+      "feeder",
+      "--code",
+      "006513"
     ],
-    "live": false
+    "live": true,
+    "ci": false
   },
   "secp-company": {
     "script": "scripts/secp.mjs",

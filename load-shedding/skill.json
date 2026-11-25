@@ -1,6 +1,6 @@
 {
   "name": "load-shedding",
-  "description": "Offline load shedding reference for 11 DISCOs + K-Electric — helplines, SMS codes, complaint numbers, schedule categories. Use for \"bijli kab jayegi\", \"LESCO complaint\". Not for bills (utility-bills, electricity-calculator).",
+  "description": "Live load shedding status for a WAPDA feeder (6-digit feeder code from the bill: power now, scheduled cuts, outage minutes today/yesterday) plus helplines, SMS codes and schedule pages for 11 DISCOs + K-Electric. Use for \"bijli kab jayegi\", \"load shedding on my feeder\", \"LESCO complaint\". Not for bills (utility-bills, electricity-calculator).",
   "profiles": ["lookup"],
-  "frontmatter": "name: load-shedding\ndescription: \"Offline load shedding reference for 11 DISCOs + K-Electric — helplines, SMS codes, complaint numbers, schedule categories. Use for \\\"bijli kab jayegi\\\", \\\"LESCO complaint\\\". Not for bills (utility-bills, electricity-calculator).\"\nlicense: MIT\nmetadata:\n  category: utility\n  locale: en-PK\n  phase: v1"
+  "frontmatter": "name: load-shedding\ndescription: \"Live load shedding status for a WAPDA feeder (6-digit feeder code from the bill: power now, scheduled cuts, outage minutes today/yesterday) plus helplines, SMS codes and schedule pages for 11 DISCOs + K-Electric. Use for \\\"bijli kab jayegi\\\", \\\"load shedding on my feeder\\\", \\\"LESCO complaint\\\". Not for bills (utility-bills, electricity-calculator).\"\nlicense: MIT\nmetadata:\n  category: utility\n  locale: en-PK\n  phase: v1"
 }

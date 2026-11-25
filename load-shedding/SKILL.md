@@ -1,6 +1,6 @@
 ---
 name: load-shedding
-description: "Offline load shedding reference for 11 DISCOs + K-Electric — helplines, SMS codes, complaint numbers, schedule categories. Use for \"bijli kab jayegi\", \"LESCO complaint\". Not for bills (utility-bills, electricity-calculator)."
+description: "Live load shedding status for a WAPDA feeder (6-digit feeder code from the bill: power now, scheduled cuts, outage minutes today/yesterday) plus helplines, SMS codes and schedule pages for 11 DISCOs + K-Electric. Use for \"bijli kab jayegi\", \"load shedding on my feeder\", \"LESCO complaint\". Not for bills (utility-bills, electricity-calculator)."
 license: MIT
 metadata:
   category: utility
@@ -17,6 +17,9 @@ Pakistan electricity load shedding information for all power distribution compan
 Run these from this skill's base directory (cd there first); script paths are relative to it.
 
 ```bash
+# Live status of one feeder (6-digit code from the bill; WAPDA DISCOs)
+node scripts/loadshedding.mjs feeder --code 006513
+
 # List all DISCOs with helplines and SMS codes
 node scripts/loadshedding.mjs discos
 
@@ -39,7 +42,7 @@ node scripts/loadshedding.mjs info
 
 ## Limitations
 
-- Live schedules not available — DISCO websites use server-side ASP forms or are unreliable
-- Provides SMS codes and website links for users to check their specific feeder schedule
-- Load shedding varies by feeder, area, and loss category — no single schedule fits all
-- K-Electric (Karachi) has a different system than WAPDA DISCOs
+- Live data covers one feeder at a time and needs its 6-digit feeder code (printed on the bill). Bill reference numbers are rejected: PITC's lookup by reference exposes the account holder's name, CNIC and phone.
+- K-Electric (Karachi) feeders are not in PITC's portal; use the KE Live app or 118.
+- Helplines, SMS codes and DISCO details are offline reference data and not individually verified.
+- Several DISCO websites' schedule pages are dead; those DISCOs point to PITC's feeder page instead.

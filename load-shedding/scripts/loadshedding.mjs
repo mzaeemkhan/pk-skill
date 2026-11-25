@@ -20,7 +20,7 @@ const DISCOS = [
     name: "FESCO",
     fullName: "Faisalabad Electric Supply Company",
     website: "https://fesco.gov.pk",
-    scheduleUrl: "https://fesco.gov.pk/loadshedding",
+    scheduleUrl: "https://ccms.pitc.com.pk/FeederDetails",
     helpline: "118",
     complaintHelpline: "0800-66555",
     smsCode: "Send feeder code to 8118",
@@ -33,7 +33,7 @@ const DISCOS = [
     name: "IESCO",
     fullName: "Islamabad Electric Supply Company",
     website: "https://iesco.com.pk",
-    scheduleUrl: "https://iesco.com.pk/index.php/customer-services/load-management-schedule",
+    scheduleUrl: "https://ccms.pitc.com.pk/FeederDetails",
     helpline: "118",
     complaintHelpline: "051-9252933",
     smsCode: "Send feeder code to 8118",
@@ -46,7 +46,7 @@ const DISCOS = [
     name: "MEPCO",
     fullName: "Multan Electric Power Company",
     website: "https://mepco.com.pk",
-    scheduleUrl: "https://mepco.com.pk/loadshedding",
+    scheduleUrl: "https://mepco.com.pk/load-shedding-schedule-for-consumer/",
     helpline: "118",
     complaintHelpline: "0800-63726",
     smsCode: "Send feeder code to 8118",
@@ -59,7 +59,7 @@ const DISCOS = [
     name: "GEPCO",
     fullName: "Gujranwala Electric Power Company",
     website: "https://gepco.com.pk",
-    scheduleUrl: "https://gepco.com.pk/ls.aspx",
+    scheduleUrl: "https://ccms.pitc.com.pk/FeederDetails",
     helpline: "118",
     complaintHelpline: "0800-43726",
     smsCode: "Send feeder code to 8118",
@@ -72,7 +72,7 @@ const DISCOS = [
     name: "PESCO",
     fullName: "Peshawar Electric Supply Company",
     website: "https://pesco.gov.pk",
-    scheduleUrl: "https://pesco.gov.pk/load-shedding-schedule/",
+    scheduleUrl: "https://ccms.pitc.com.pk/FeederDetails",
     helpline: "118",
     complaintHelpline: "0800-73726",
     smsCode: "Send feeder code to 8118",
@@ -85,7 +85,7 @@ const DISCOS = [
     name: "HESCO",
     fullName: "Hyderabad Electric Supply Company",
     website: "https://hesco.gov.pk",
-    scheduleUrl: "https://hesco.gov.pk",
+    scheduleUrl: "https://ccms.pitc.com.pk/FeederDetails",
     helpline: "118",
     complaintHelpline: "0800-43726",
     smsCode: "Send feeder code to 8118",
@@ -98,7 +98,7 @@ const DISCOS = [
     name: "SEPCO",
     fullName: "Sukkur Electric Power Company",
     website: "https://sepco.com.pk",
-    scheduleUrl: "https://sepco.com.pk",
+    scheduleUrl: "https://ccms.pitc.com.pk/FeederDetails",
     helpline: "118",
     complaintHelpline: "0800-73726",
     smsCode: "Send feeder code to 8118",
@@ -111,7 +111,7 @@ const DISCOS = [
     name: "QESCO",
     fullName: "Quetta Electric Supply Company",
     website: "https://qesco.com.pk",
-    scheduleUrl: "https://qesco.com.pk",
+    scheduleUrl: "https://ccms.pitc.com.pk/FeederDetails",
     helpline: "118",
     complaintHelpline: "0800-78726",
     smsCode: "Send feeder code to 8118",
@@ -124,7 +124,7 @@ const DISCOS = [
     name: "TESCO",
     fullName: "Tribal Areas Electric Supply Company",
     website: "https://tesco.gov.pk",
-    scheduleUrl: "https://tesco.gov.pk",
+    scheduleUrl: "https://ccms.pitc.com.pk/FeederDetails",
     helpline: "118",
     complaintHelpline: "091-9219498",
     smsCode: "Send feeder code to 8118",
@@ -137,7 +137,7 @@ const DISCOS = [
     name: "HAZECO",
     fullName: "Hazara Electric Supply Company",
     website: "https://hazeco.gov.pk",
-    scheduleUrl: "https://hazeco.gov.pk",
+    scheduleUrl: "https://ccms.pitc.com.pk/FeederDetails",
     helpline: "118",
     complaintHelpline: "0992-383600",
     smsCode: "Send feeder code to 8118",
@@ -150,7 +150,7 @@ const DISCOS = [
     name: "K-Electric",
     fullName: "K-Electric Limited (formerly KESC)",
     website: "https://www.ke.com.pk",
-    scheduleUrl: "https://www.ke.com.pk/load-management-schedule/",
+    scheduleUrl: "https://www.ke.com.pk",
     helpline: "118",
     complaintHelpline: "0800-66300",
     smsCode: "SMS 'LS' to 8119 with your account number",
@@ -271,6 +271,102 @@ function generalInfo() {
   };
 }
 
+// Live feeder status from PITC's load-management portal (all 11 WAPDA DISCOs).
+// Only 6-digit feeder codes are accepted: the same endpoint returns the account
+// holder's name, CNIC and phone for a 14-digit bill reference.
+const PITC_FEEDER = "https://ccms.pitc.com.pk/FeederDetails";
+const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36";
+
+function cellsOf(html) {
+  return html
+    .replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<!--[\s\S]*?-->/g, "")
+    .split(/<[^>]+>/)
+    .map((c) => c.replace(/&nbsp;|&#\d+;|&amp;/g, " ").replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+}
+
+const after = (cells, label) => { const i = cells.indexOf(label); return i >= 0 ? cells[i + 1] : null; };
+const isHour = (c) => /^\d{2}:00$/.test(c);
+const minutesOf = (v) => (/^\d+$/.test(v) ? Number(v) : null);
+
+function parseFeeder(html) {
+  const all = cellsOf(html);
+  const cut = all.indexOf("Title");
+  const cells = cut >= 0 ? all.slice(0, cut) : all; // drop the consumer-info table
+  const feeder = after(cells, "Feeder:");
+  if (!feeder) return null;
+  const statusIdx = cells.indexOf("Feeder Status:");
+  const hours = {};
+  // Grid: per hour → [tomorrowSchedule, todaySchedule, todayActual, yesterdayActual]
+  for (let i = 0; i < cells.length; i++) {
+    if (isHour(cells[i]) && i + 4 < cells.length && !isHour(cells[i + 1])) {
+      hours[cells[i]] = cells.slice(i + 1, i + 5);
+    }
+  }
+  const pick = (col) => Object.entries(hours)
+    .map(([h, v]) => ({ hour: h, value: v[col] }))
+    .sort((a, b) => a.hour.localeCompare(b.hour));
+  const outages = (col) => pick(col).filter((x) => minutesOf(x.value) !== null).map((x) => ({ hour: x.hour, minutesOff: minutesOf(x.value) }));
+  const scheduledOff = (col) => pick(col).filter((x) => x.value && x.value !== "ON" && x.value !== "-").map((x) => ({ hour: x.hour, schedule: x.value }));
+  const sum = (list) => list.reduce((t, x) => t + x.minutesOff, 0);
+  const today = outages(2), yesterday = outages(3);
+  return {
+    feeder,
+    grid: after(cells, "Grid:"),
+    subDivision: after(cells, "Sub Division:"),
+    statusNow: statusIdx >= 0 ? cells[statusIdx + 1] : null,
+    lossCategory: after(cells, "Category:"),
+    lineLoss: after(cells, "Line Loss:"),
+    scheduledCuts: { today: scheduledOff(1), tomorrow: scheduledOff(0) },
+    unplannedOutages: {
+      today: { totalMinutes: sum(today), byHour: today },
+      yesterday: { totalMinutes: sum(yesterday), byHour: yesterday },
+    },
+  };
+}
+
+// PITC drops some connections outright; one retry after a pause clears most of them.
+async function fetchRetry(url, opts) {
+  try { return await fetch(url, { ...opts, signal: AbortSignal.timeout(45000) }); }
+  catch (e) {
+    if (e.name === "TimeoutError") throw e;
+    await new Promise((r) => setTimeout(r, 2000));
+    return fetch(url, { ...opts, signal: AbortSignal.timeout(45000) });
+  }
+}
+
+async function feederStatus(code) {
+  if (!/^\d{6}$/.test(code || "")) {
+    console.error("Feeder code must be exactly 6 digits (printed on the electricity bill as 'Feeder Code'). Bill reference numbers are not accepted: that lookup exposes the account holder's personal details.");
+    process.exit(1);
+  }
+  const page = await fetchRetry(PITC_FEEDER, { headers: { "User-Agent": UA } });
+  if (!page.ok) throw new Error(`PITC feeder page HTTP ${page.status}`);
+  const html = await page.text();
+  const token = html.match(/_token:\s*"([^"]+)"/)?.[1];
+  if (!token) throw new Error("PITC feeder page changed: no request token found");
+  const cookie = (page.headers.getSetCookie?.() || []).map((c) => c.split(";")[0]).join("; ");
+  const res = await fetchRetry(`${PITC_FEEDER}/info`, {
+    method: "POST",
+    headers: {
+      "User-Agent": UA, "Cookie": cookie, "Referer": PITC_FEEDER, "Accept": "application/json",
+      "X-Requested-With": "XMLHttpRequest", "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({ _token: token, reference: code }).toString(),
+  });
+  if (!res.ok) throw new Error(`PITC feeder lookup HTTP ${res.status}`);
+  const data = await res.json();
+  if (!data.success || !data.html) throw new Error(data.message || "No records found for this feeder code");
+  const parsed = parseFeeder(data.html);
+  if (!parsed) throw new Error("No feeder data in PITC's response (page format may have changed)");
+  return {
+    ...parsed,
+    legend: "Schedule 'ON' = no planned cut. Outage minutes are actual supply interruptions in that hour.",
+    asOf: new Date().toLocaleString("en-GB", { timeZone: "Asia/Karachi" }) + " PKT",
+    source: PITC_FEEDER,
+  };
+}
+
 // CLI
 const args = process.argv.slice(2);
 const cmd = args[0];
@@ -295,8 +391,13 @@ if (cmd === "discos") {
   console.log(JSON.stringify(searchByCity(city), null, 2));
 } else if (cmd === "info") {
   console.log(JSON.stringify(generalInfo(), null, 2));
+} else if (cmd === "feeder") {
+  feederStatus(getFlag("code") || args[1])
+    .then((r) => console.log(JSON.stringify(r, null, 2)))
+    .catch((e) => { console.error(`Error: ${e.message}${e.cause ? ` (${e.cause.code || e.cause.message})` : ""}`); process.exit(1); });
 } else {
-  console.error("Commands: discos, disco, schedule, search, info");
+  console.error("Commands: discos, disco, schedule, search, info, feeder");
+  console.error("  feeder --code 006513     — live status of one feeder (WAPDA DISCOs)");
   console.error("  discos                   — list all DISCOs");
   console.error("  disco --name LESCO       — info for one DISCO");
   console.error("  schedule --disco LESCO   — how to find your schedule");

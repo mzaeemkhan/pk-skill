@@ -36,7 +36,7 @@ Requires Node.js 18+ and npx.
 |-------|-------------|--------|
 | utility-bills | Official bill page, steps and reference-number check for all 11 WAPDA DISCOs + K-Electric. Bill pages need a CAPTCHA you complete, so amounts are not fetched. | Done |
 | electricity-calculator | NEPRA electricity bill calculator — 8 tariff slabs, 12 DISCOs, FPA/QTA/GST/TV fee breakdown, cross-DISCO comparison. Offline. | Done |
-| load-shedding | Load shedding reference — all 11 DISCOs + K-Electric with helplines, SMS codes, complaint numbers, schedule categories. Offline reference. | Done |
+| load-shedding | Live feeder status for WAPDA DISCOs by 6-digit feeder code (power now, scheduled cuts, outage minutes) via PITC, plus helplines, SMS codes and schedule pages for 11 DISCOs + K-Electric. | Done |
 
 > **Note:** Gas bills not supported — SNGPL blocked by image CAPTCHA, SSGC blocked by Google reCAPTCHA v2. Live load shedding schedules not available — DISCOs don't expose schedules via API; use SMS codes listed in the skill.
 

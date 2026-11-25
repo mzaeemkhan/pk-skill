@@ -90,7 +90,8 @@
       "--city",
       "Lahore"
     ],
-    "live": true
+    "live": true,
+    "ci": false
   },
   "psx-stocks": {
     "script": "scripts/stocks.mjs",
@@ -138,7 +139,8 @@
       "--query",
       "iphone"
     ],
-    "live": true
+    "live": true,
+    "ci": false
   },
   "pakistan-news": {
     "script": "scripts/news.mjs",

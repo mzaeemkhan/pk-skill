@@ -3,6 +3,11 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [Semantic Versioning](https://semver.org/).
 
+## [2.0.4] - 2026-11-25
+
+### Changed
+- zameen-search, olx-search: both sites (same owner) now put Cloudflare bot protection in front of every page and reject scripted requests (HTTP 401/503). The scripts exit with a clear message and the browser search URL; descriptions and Limitations say so; smoke entries marked `"ci": false` so daily CI stays useful.
+
 ## [2.0.3] - 2026-11-08
 
 ### Fixed
@@ -97,6 +102,7 @@ Fixes from an agent-experience audit (7 agents, 14 real requests: 14/14 routed t
 - drap-drugs placeholder (not functional)
 - `.claude-plugin/plugin.json` manifest for `npx skills add` installation
 
+[2.0.4]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.0...v2.0.1

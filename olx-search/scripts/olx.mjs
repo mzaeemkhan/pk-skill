@@ -51,7 +51,12 @@ async function search(query, page = 1) {
   const slug = query.trim().replace(/\s+/g, "-");
   const url = `${BASE}/items/q-${slug}?page=${page}`;
   const r = await fetch(url, { headers: { "User-Agent": UA, "Accept": "text/html" } });
-  if (!r.ok) throw new Error(`OLX HTTP ${r.status}`);
+  if (!r.ok) {
+    const blocked = [401, 403, 503].includes(r.status) && /cloudflare/i.test(r.headers.get("server") || "");
+    throw new Error(blocked
+      ? `OLX blocked automated requests (HTTP ${r.status}, Cloudflare bot protection since Nov 2026). Open the search in a browser: ${url}`
+      : `OLX HTTP ${r.status}: ${url}`);
+  }
   const html = await r.text();
   const results = extractListings(html);
   return { query, page, count: results.length, results };

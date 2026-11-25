@@ -88,7 +88,7 @@ Requires Node.js 18+ and npx.
 
 | Skill | Description | Status |
 |-------|-------------|--------|
-| zameen-search | Search Zameen.com property listings — buy, rent, or plot search across 14 Pakistan cities. Filter by price, bedrooms, area. Structured data from LD+JSON. | Done |
+| zameen-search | Search Zameen.com property listings — buy, rent, or plot search across 14 Pakistan cities. Filter by price, bedrooms, area. Structured data from LD+JSON. | Blocked (Cloudflare bot protection since Nov 2026) |
 
 > **Note:** Land records (PLRA Punjab fard) not supported — requires paid PSID (Payment Slip ID) obtained via bank payment. Graana.com not supported — no public API.
 
@@ -98,7 +98,7 @@ Requires Node.js 18+ and npx.
 |-------|-------------|--------|
 | daraz-search | Search Daraz.pk product listings — prices, ratings, reviews, seller info via AJAX catalog API | Done |
 | pakwheels-search | Search PakWheels.com car listings — new and used cars, prices, specs via schema.org JSON-LD | Done |
-| olx-search | Search OLX Pakistan classifieds — cars, phones, property, electronics, furniture via embedded JSON | Done |
+| olx-search | Search OLX Pakistan classifieds — cars, phones, property, electronics, furniture via embedded JSON | Blocked (Cloudflare bot protection since Nov 2026) |
 
 > **Note:** Foodpanda not supported — requires authenticated session.
 

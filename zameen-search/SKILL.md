@@ -1,6 +1,6 @@
 ---
 name: zameen-search
-description: "Live Zameen.com property listings in 14 cities — buy, rent, plots with price/bedroom filters. Use for \"house for rent in Lahore\", \"5 marla plot price\". Not for cars — use pakwheels-search."
+description: "Zameen.com property listings in 14 cities — buy, rent, plots with price/bedroom filters. Live search is currently blocked by Zameen's bot protection (since Nov 2026); returns the browser search link instead. Use for \"house for rent in Lahore\", \"5 marla plot price\". Not for cars — use pakwheels-search."
 license: MIT
 metadata:
   category: real-estate

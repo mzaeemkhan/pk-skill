@@ -1,6 +1,6 @@
 ---
 name: olx-search
-description: "Search live OLX Pakistan classifieds — phones, furniture, electronics, bikes and more. Use for \"second-hand on OLX\", \"used mobile price\". Not for new products (daraz-search)."
+description: "OLX Pakistan classifieds — phones, furniture, electronics, bikes and more. Live search is currently blocked by OLX's bot protection (since Nov 2026); returns the browser search link instead. Use for \"second-hand on OLX\", \"used mobile price\". Not for new products (daraz-search)."
 license: MIT
 metadata:
   category: shopping

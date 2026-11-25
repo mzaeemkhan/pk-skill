@@ -99,7 +99,10 @@ async function search(cityName, opts) {
   });
 
   if (!res.ok) {
-    console.log(JSON.stringify({ error: `Zameen.com returned ${res.status}`, url }));
+    const blocked = [401, 403, 503].includes(res.status) && /cloudflare/i.test(res.headers.get("server") || "");
+    console.error(blocked
+      ? `Zameen.com blocked automated requests (HTTP ${res.status}, Cloudflare bot protection since Nov 2026). Open the search in a browser: ${url}`
+      : `Zameen.com returned HTTP ${res.status}: ${url}`);
     process.exit(1);
   }
 

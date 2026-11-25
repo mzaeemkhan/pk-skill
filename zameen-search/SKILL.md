@@ -42,6 +42,7 @@ node scripts/zameen.mjs cities
 
 ## Limitations
 
+- **Blocked since Nov 2026:** Zameen.com's Cloudflare bot protection rejects scripted requests (HTTP 401/503). The script exits with the search URL; give it to the user to open in a browser.
 - 25 results per page (Zameen.com pagination)
 - No keyword/text search — location + filter based only
 - Prices shown are listing prices (asking prices, not market value)

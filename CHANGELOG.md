@@ -3,6 +3,11 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [Semantic Versioning](https://semver.org/).
 
+## [2.0.7] - 2026-11-25
+
+### Fixed
+- zameen-search, olx-search: the "blocked since Nov 2026" note promised in 2.0.4 never reached SKILL.md Limitations (CRLF line endings made the insert a no-op). Added.
+
 ## [2.0.6] - 2026-11-25
 
 ### Added
@@ -115,6 +120,7 @@ Fixes from an agent-experience audit (7 agents, 14 real requests: 14/14 routed t
 - drap-drugs placeholder (not functional)
 - `.claude-plugin/plugin.json` manifest for `npx skills add` installation
 
+[2.0.7]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.6...v2.0.7
 [2.0.6]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.5...v2.0.6
 [2.0.5]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/mzaeemkhan/pk-skill/compare/v2.0.3...v2.0.4

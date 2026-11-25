@@ -30,6 +30,7 @@ node scripts/olx.mjs search --query 'honda civic' --page 2
 
 ## Limitations
 
+- **Blocked since Nov 2026:** OLX's Cloudflare bot protection rejects scripted requests (HTTP 503). The script exits with the search URL; give it to the user to open in a browser.
 - ~20-30 results per page
 - No category filtering — keyword search only
 - Some listings may have price as null (negotiable or contact-for-price)
